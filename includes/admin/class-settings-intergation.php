@@ -41,6 +41,7 @@ class WooCommerce_Product_Subtitle_Settings_Intergation  {
 			
 			
 			$single_product_area = array(
+				'' => __("Disable / Use Shortcode",WCPS_TXT),
 				'title' => __('Product Title',WCPS_TXT),
 				'rating' => __('Product Rating',WCPS_TXT),
 				'price' => __('Product Price',WCPS_TXT),

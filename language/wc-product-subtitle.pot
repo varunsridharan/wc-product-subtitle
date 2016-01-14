@@ -1,0 +1,174 @@
+# Copyright (C) 2016 WooCommerce Product Subtitle
+# This file is distributed under the same license as the WooCommerce Product Subtitle package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Product Subtitle 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-product-"
+"subtitle\n"
+"POT-Creation-Date: 2016-01-14 01:17:35+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/admin/class-admin-init.php:78
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-admin-init.php:79
+msgid "F.A.Q"
+msgstr ""
+
+#: includes/admin/class-admin-init.php:80
+msgid "View On Github"
+msgstr ""
+
+#: includes/admin/class-admin-init.php:81
+msgid "Report Issue"
+msgstr ""
+
+#: includes/admin/class-admin-post-type-fields.php:22
+msgid "Product Sub Title"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:22
+msgid "WC Product Subtitle"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:29
+msgid "p Tag"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:30
+msgid "span Tag"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:31
+msgid "H1 Tag"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:32
+msgid "H2 Tag"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:33
+msgid "H3 Tag"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:34
+msgid "H4 Tag"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:35
+msgid "H5 Tag"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:36
+msgid "H6 Tag"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:40
+msgid "Before"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:40
+msgid "After"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:44
+msgid "Disable / Use Shortcode"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:45
+#: includes/admin/class-settings-intergation.php:54
+msgid "Product Title"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:46
+#: includes/admin/class-settings-intergation.php:55
+msgid "Product Rating"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:47
+#: includes/admin/class-settings-intergation.php:56
+msgid "Product Price"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:48
+msgid "Product Excerpt"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:49
+msgid "Product Add to cart"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:50
+msgid "Product Meta"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:61
+msgid "WC Product Subtitle Settings"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:63
+msgid "The following options are used to configure  WC Product Subtitle "
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:69
+msgid "Single Product Page"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:74
+#: includes/admin/class-settings-intergation.php:110
+msgid "Title Position"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:79
+#: includes/admin/class-settings-intergation.php:87
+#: includes/admin/class-settings-intergation.php:115
+#: includes/admin/class-settings-intergation.php:123
+msgid " Where to show the subtitle "
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:91
+#: includes/admin/class-settings-intergation.php:127
+msgid "Title Element Type"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:92
+#: includes/admin/class-settings-intergation.php:128
+msgid "Which Type of html tag you need to have "
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:97
+#: includes/admin/class-settings-intergation.php:133
+msgid "Any title you want can be added to your slider with this option!"
+msgstr ""
+
+#: includes/admin/class-settings-intergation.php:105
+msgid "Shop Page"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Product Subtitle"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/woocommerce-product-subtitle/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"WC Product Subtitle plugin allows you to easily add a subtitle to your "
+"Products."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Bravo Computing"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://varunsridharan.in"
+msgstr ""

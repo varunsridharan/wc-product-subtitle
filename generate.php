@@ -2,10 +2,12 @@
 if(isset($_REQUEST['makePOT'])){
 	$current_dir = __DIR__;
 	$file_name = basename($current_dir);
-	$lang_dir = $current_dir."/language/$file_name.pot";
+	
+	$lang_dir = $current_dir."/$file_name.pot";
 	$php_path = 'C:\xampp\php\php.exe';
 	$makePotFile = 'C:\xampp\htdocs\wptools\makepot.php';
 	$project = 'wp-plugin';
+	var_dump($php_path. ' '.$makePotFile.' '.$project.' '.$current_dir.' '.$lang_dir);
 	exec($php_path. ' '.$makePotFile.' '.$project.' '.$current_dir.' '.$lang_dir);
 }
 

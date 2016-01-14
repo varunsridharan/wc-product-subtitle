@@ -1,31 +1,59 @@
 === WooCommerce Product Subtitle ===
-Contributors: varunms
-Author URI: http://varunsridharan.in/
-Plugin URL: https://wordpress.org/plugins/woocommerce-product-subtitle/
-Tags: WooCommerce
-Donate link: 
+Contributors: bravo-computing, varunms
+Author URI: https://wordpress.org/plugins/wc-product-subtitle/
+Plugin URL: https://wordpress.org/plugins/wc-product-subtitle/
+Tags: WooCommerce,subtitle, simple, products,product subtitle,wc subtitle,  
 Requires at least: 3.0
-Tested up to: 4.3
+Tested up to: 4.5
 WC requires at least: 1.0
-WC tested up to: 2.4.6
-Stable tag: 0.1
+WC tested up to: 3.0
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html 
 
-WooCommerce Product Subtitle 
+WooCommerce Product Subtitle plugin allows you to easily add a subtitle to your Products.
 
 == Description ==
-WooCommerce Product Subtitle subtitle allows you to easily add a subtitle to your posts and retrieve it in the loop in the same manner as the post title.
+WooCommerce Product Subtitle allows you to easily add a subtitle to your products. also provides various options to customize the output. 
+
+You can also use the shortcode `[wc-ps]` to display it within the post content or where ever you need.
 
 It adds a simple input field right under the title field for products. It also add a subtitle column to the edit screen.
 
+= WPML Ready =
+
+KIA Subtitle has been tested by WPML and will allow you to translate the subtitle multilingual sites.  
+
+= Shortcode Options =
+
+* Post ID : `[wc-ps id="99"]`
+* Element : `[wc-ps tag="p"]` | '[wc-ps tag="h1"]` | '[wc-ps tag="span"]` |
+* Avaiable Tags : `P, SPAN, H1 - H6`
+
+> Settings Under : WC Settings => Product => WC Product Subtitle
+
+= How do I style the subtitle? =
+You can style the subtitle with the below css class
+Global : `product-subtitle`
+Product Specific : `subtitle-99`
 
 == Screenshots ==
- 
+* Settings Page
+* Single Product Page
+* Product Edit Page
+* Shortcode
+* Product Listing Page
+
+
 == Upgrade Notice ==
 
 == Frequently Asked Questions == 
- 
+
+= How do I style the subtitle? =
+You can style the subtitle with the below css class
+Global : `product-subtitle`
+Product Specific : `subtitle-99`
+
 == Installation ==
 
 = Minimum Requirements =
@@ -56,5 +84,5 @@ The manual installation method involves downloading our plugin and uploading it 
  
 
 == Changelog == 
-= 0.1 =
+= 1.0 =
 * Base Version

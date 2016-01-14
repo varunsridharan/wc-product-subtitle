@@ -18,7 +18,6 @@ class WooCommerce_Product_Subtitle_Admin extends WooCommerce_Product_Subtitle {
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
         add_action( 'admin_init', array( $this, 'admin_init' ));
 		add_filter( 'plugin_row_meta', array($this, 'plugin_row_links' ), 10, 2 );
-        add_filter( 'woocommerce_get_settings_pages',  array($this,'settings_page') ); 
 	}
 
     /**
@@ -28,18 +27,7 @@ class WooCommerce_Product_Subtitle_Admin extends WooCommerce_Product_Subtitle {
        new WooCommerce_Product_Subtitle_Admin_PostTypes;
 	   new WooCommerce_Product_Subtitle_Settings_Intergation;
     }
- 
-    
-	/**
-	 * Add a new integration to WooCommerce.
-	 */
-	public function settings_page( $integrations ) {
-        foreach(glob(WCPS_ADMIN.'woocommerce-settings*.php' ) as $file){
-            $integrations[] = require_once($file);
-        }
-		return $integrations;
-	}
-    
+  
     /**
 	 * Register the stylesheets for the admin area.
 	 */
@@ -86,12 +74,11 @@ class WooCommerce_Product_Subtitle_Admin extends WooCommerce_Product_Subtitle {
 	 */
 	public function plugin_row_links( $plugin_meta, $plugin_file ) {
 		if ( WCPS_FILE == $plugin_file ) {
-            $plugin_meta[] = sprintf('<a href="%s">%s</a>', '#', __('Settings',WCPS_TXT) );
-            $plugin_meta[] = sprintf('<a href="%s">%s</a>', '#', __('F.A.Q',WCPS_TXT) );
-            $plugin_meta[] = sprintf('<a href="%s">%s</a>', '#', __('View On Github',WCPS_TXT) );
-            $plugin_meta[] = sprintf('<a href="%s">%s</a>', '#', __('Report Issue',WCPS_TXT) );
-            $plugin_meta[] = sprintf('&hearts; <a href="%s">%s</a>', '#', __('Donate',WCPS_TXT) );
-            $plugin_meta[] = sprintf('<a href="%s">%s</a>', 'http://varunsridharan.in/plugin-support/', __('Contact Author',WCPS_TXT) );
+			$settings_url = admin_url('admin.php?page=wc-settings&tab=products&section=wcpss')	;
+            $plugin_meta[] = sprintf('<a href="%s">%s</a>', $settings_url, __('Settings',WCPS_TXT) );
+            $plugin_meta[] = sprintf('<a href="%s">%s</a>', 'https://wordpress.org/plugins/wc-product-subtitle/faq/', __('F.A.Q',WCPS_TXT) );
+            $plugin_meta[] = sprintf('<a href="%s">%s</a>', 'https://github.com/technofreaky/wc-product-subtitle', __('View On Github',WCPS_TXT) );
+            $plugin_meta[] = sprintf('<a href="%s">%s</a>', 'https://github.com/technofreaky/wc-product-subtitle/issues', __('Report Issue',WCPS_TXT) );
 		}
 		return $plugin_meta;
 	}	    
