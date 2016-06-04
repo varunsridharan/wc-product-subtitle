@@ -1,0 +1,201 @@
+# Copyright (C) 2016 WooCommerce Product Subtitle
+# This file is distributed under the same license as the WooCommerce Product Subtitle package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Product Subtitle 2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-product-subtitle\n"
+"POT-Creation-Date: 2016-06-04 09:28:13+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: bootstrap.php:51
+msgid "Cloning instances of the class is forbidden."
+msgstr ""
+
+#: bootstrap.php:63
+msgid "Unserializing instances of the class is forbidden."
+msgstr ""
+
+#: includes/admin/class-admin-handler.php:23
+msgid "Subtitle"
+msgstr ""
+
+#: includes/admin/class-admin-init.php:80
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-admin-init.php:94
+msgid "F.A.Q"
+msgstr ""
+
+#: includes/admin/class-admin-init.php:95
+msgid "View On Github"
+msgstr ""
+
+#: includes/admin/class-admin-init.php:96
+msgid "Report Issue"
+msgstr ""
+
+#: includes/admin/settings_framework/class-wp-plugin-options.php:39
+#: includes/functions.php:273
+msgid "Title Position"
+msgstr ""
+
+#: includes/admin/settings_framework/class-wp-plugin-options.php:40
+#: includes/functions.php:274
+msgid " Where to show the subtitle "
+msgstr ""
+
+#: includes/class-subtitle-cart-page.php:6
+#: includes/class-subtitle-shortcode-handler.php:6
+msgid "Cart Page"
+msgstr ""
+
+#: includes/class-subtitle-cart-page.php:15
+#: includes/class-subtitle-checkout-page.php:15
+#: includes/class-subtitle-order-view-page.php:16
+#: includes/class-subtitle-shop-page.php:15
+#: includes/class-subtitle-single-product-page.php:15
+msgid "Disable / Use Shortcode"
+msgstr ""
+
+#: includes/class-subtitle-cart-page.php:16
+#: includes/class-subtitle-checkout-page.php:16
+#: includes/class-subtitle-order-view-page.php:17
+#: includes/class-subtitle-shop-page.php:16
+#: includes/class-subtitle-single-product-page.php:16
+msgid "Product Title"
+msgstr ""
+
+#: includes/class-subtitle-checkout-page.php:6
+msgid "Checkout Page"
+msgstr ""
+
+#: includes/class-subtitle-order-view-page.php:6
+msgid "Order View Page"
+msgstr ""
+
+#: includes/class-subtitle-order-view-page.php:8
+msgid "This works on Order Thank you page & My Account Order View Page"
+msgstr ""
+
+#: includes/class-subtitle-order-view-page.php:18
+msgid "Product Qty"
+msgstr ""
+
+#: includes/class-subtitle-shop-page.php:6
+msgid "Shop Page"
+msgstr ""
+
+#: includes/class-subtitle-shop-page.php:17
+#: includes/class-subtitle-single-product-page.php:17
+msgid "Product Rating"
+msgstr ""
+
+#: includes/class-subtitle-shop-page.php:18
+#: includes/class-subtitle-single-product-page.php:18
+msgid "Product Price"
+msgstr ""
+
+#: includes/class-subtitle-single-product-page.php:6
+msgid "Single Product"
+msgstr ""
+
+#: includes/class-subtitle-single-product-page.php:19
+msgid "Product Excerpt"
+msgstr ""
+
+#: includes/class-subtitle-single-product-page.php:20
+msgid "Product Add to cart"
+msgstr ""
+
+#: includes/class-subtitle-single-product-page.php:21
+msgid "Product Meta"
+msgstr ""
+
+#: includes/functions.php:151
+msgid "General"
+msgstr ""
+
+#: includes/functions.php:154 includes/functions.php:166
+msgid "Save Changes"
+msgstr ""
+
+#: includes/functions.php:219
+msgid "P Tag"
+msgstr ""
+
+#: includes/functions.php:220
+msgid "SPAN Tag"
+msgstr ""
+
+#: includes/functions.php:221
+msgid "SMALL Tag"
+msgstr ""
+
+#: includes/functions.php:223
+msgid "H1 Tag"
+msgstr ""
+
+#: includes/functions.php:224
+msgid "H2 Tag"
+msgstr ""
+
+#: includes/functions.php:225
+msgid "H3 Tag"
+msgstr ""
+
+#: includes/functions.php:226
+msgid "H4 Tag"
+msgstr ""
+
+#: includes/functions.php:227
+msgid "H5 Tag"
+msgstr ""
+
+#: includes/functions.php:228
+msgid "H6 Tag"
+msgstr ""
+
+#: includes/functions.php:247
+msgid "Title Element Type"
+msgstr ""
+
+#: includes/functions.php:248
+msgid "Which Type of html tag you need to have"
+msgstr ""
+
+#: includes/functions.php:259
+msgid "Before"
+msgstr ""
+
+#: includes/functions.php:259
+msgid "After"
+msgstr ""
+
+#: includes/functions.php:261
+msgid "Where to show the subtitle"
+msgstr ""
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Product Subtitle"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/wc-product-subtitle/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "WC Product Subtitle plugin allows you to easily add a subtitle to your Products."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Varun Sridharan"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://varunsridharan.in"
+msgstr ""

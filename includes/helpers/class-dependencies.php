@@ -1,9 +1,15 @@
 <?php
 /**
- * WC Dependency Checker
+ * Dependency Checker
  *
- * Checks if WooCommerce is enabled
+ * Checks if required Dependency plugin is enabled
+ *
+ * @link https://wordpress.org/plugins/wc-product-subtitle/
+ * @package WC Product Subtitle
+ * @subpackage WC Product Subtitle/core
+ * @since 2.0
  */
+
 if ( ! class_exists( 'WooCommerce_Product_Subtitle_Dependencies' ) ){
     class WooCommerce_Product_Subtitle_Dependencies {
 		
@@ -16,17 +22,15 @@ if ( ! class_exists( 'WooCommerce_Product_Subtitle_Dependencies' ) ){
         }
 		
         public static function active_check($pluginToCheck = '') {
-            if ( ! self::$active_plugins ) self::init();
+            if ( ! self::$active_plugins ) 
+				self::init();
             return in_array($pluginToCheck, self::$active_plugins) || array_key_exists($pluginToCheck, self::$active_plugins);
         }
     }
 }
-/**
- * WC Detection
- */
+
 if(! function_exists('WooCommerce_Product_Subtitle_Dependencies')){
     function WooCommerce_Product_Subtitle_Dependencies($pluginToCheck = 'woocommerce/woocommerce.php') {
         return WooCommerce_Product_Subtitle_Dependencies::active_check($pluginToCheck);
     }
 }
-?>

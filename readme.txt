@@ -2,12 +2,12 @@
 Contributors: bravo-computing, varunms
 Author URI: https://wordpress.org/plugins/wc-product-subtitle/
 Plugin URL: https://wordpress.org/plugins/wc-product-subtitle/
-Tags: WooCommerce,subtitle, simple, products,product subtitle,wc subtitle,  
+Tags: WooCommerce, product, product title,product subtitle, wc product, wc product subtitle, subtitle, post subtitle, extra title,wc extra title, wc product name, product code, product, product title,product subtitle, WooCommerce product, WooCommerce product subtitle, subtitle, post subtitle, extra title, WooCommerce product name, product code, WooCommerce extra title
 Requires at least: 3.0
 Tested up to: 4.5
 WC requires at least: 1.0
 WC tested up to: 3.0
-Stable tag: 1.0
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html 
 
@@ -22,15 +22,15 @@ It adds a simple input field right under the title field for products. It also a
 
 = WPML Ready =
 
-KIA Subtitle has been tested by WPML and will allow you to translate the subtitle multilingual sites.  
+WC Product Subtitle has been tested by WPML and will allow you to translate the subtitle multilingual sites.  
 
 = Shortcode Options =
 
 * Post ID : `[wc-ps id="99"]`
 * Element : `[wc-ps tag="p"]` | '[wc-ps tag="h1"]` | '[wc-ps tag="span"]` |
-* Avaiable Tags : `P, SPAN, H1 - H6`
+* Avaiable Tags : `P, SMALL, SPAN, H1, H2, H3, H4, H5, H6`
 
-> Settings Under : WC Settings => Product => WC Product Subtitle
+> Settings Under : WooCommerce => WooCommerce Product Subtitle
 
 = How do I style the subtitle? =
 You can style the subtitle with the below css class
@@ -38,11 +38,12 @@ Global : `product-subtitle`
 Product Specific : `subtitle-99`
 
 == Screenshots ==
-* Settings Page
-* Single Product Page
-* Product Edit Page
-* Shortcode
-* Product Listing Page
+* Settings Menu
+* Cart Page Settings
+* Checkout Page Settings
+* Order Review, My Account Order View & Email Settings
+* Shop Page Settings
+* Single Product Page Settings
 
 
 == Upgrade Notice ==
@@ -51,8 +52,35 @@ Product Specific : `subtitle-99`
 
 = How do I style the subtitle? =
 You can style the subtitle with the below css class
+
 Global : `product-subtitle`
+
 Product Specific : `subtitle-99`
+
+= How To Add Custom Tag ? =
+<strong> Use the below function to register the tag first </strong>
+> add_filter('wc_ps_tags','register_custom_tag');
+> function register_custom_tag($tags){
+>    $tags['tag_slug'] = 'Tag Name';
+>    return $tags;
+> }
+
+<strong> Now use the below action to render your own tag (`wc_ps_subtitle_{tag_slug}`) </strong>
+
+> add_action('wc_ps_subtitle_tag_slug','render_custom_tag');
+> function render_custom_tag($title,$tag,$pid,$defaults) {
+>   echo '<custom_tag>".$title."</custom_tag>";
+> }
+
+<strong> function variable details</strong>
+
+* `$title` : Product's Subtitle
+* `$tag` : Call back Tag
+* `$pid` : Current Product ID
+* `$defaults` : is array of default class & id for the element
+
+
+
 
 == Installation ==
 
@@ -84,5 +112,12 @@ The manual installation method involves downloading our plugin and uploading it 
  
 
 == Changelog == 
+= 2.0 =
+* Total Plugin Redeveloped
+* Added Option To Show In Cart Page
+* Added Option To Show In Checkout Page
+* Added Option To Show In Email Page
+* Added Option To Show In My Account Order View Page
+
 = 1.0 =
 * Base Version

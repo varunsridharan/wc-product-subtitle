@@ -1,9 +1,16 @@
 <?php 
-
+/**
+ * Plugin Main File
+ *
+ * @link https://wordpress.org/plugins/wc-product-subtitle/
+ * @package WC Product Subtitle
+ * @subpackage WC Product Subtitle/core
+ * @since 2.0
+ */
 if ( ! defined( 'WPINC' ) ) { die; }
  
 class WooCommerce_Product_Subtitle {
-	public $version = '1.0';
+	public $version = '2.0';
 	public $plugin_vars = array();
 	
 	protected static $_instance = null; # Required Plugin Class Instance
@@ -31,31 +38,64 @@ class WooCommerce_Product_Subtitle {
         add_action('plugins_loaded', array( $this, 'after_plugins_loaded' ));
         add_filter('load_textdomain_mofile',  array( $this, 'load_plugin_mo_files' ), 10, 2);
     }
-    
+	
+	/**
+	 * Throw error on object clone.
+	 *
+	 * Cloning instances of the class is forbidden.
+	 *
+	 * @since 1.0
+	 * @return void
+	 */
+	public function __clone() {
+		_doing_it_wrong( __FUNCTION__, __( 'Cloning instances of the class is forbidden.', WCPS_TXT), WCPS_V );
+	}	
+
+	/**
+	 * Disable unserializing of the class
+	 *
+	 * Unserializing instances of the class is forbidden.
+	 *
+	 * @since 1.0
+	 * @return void
+	 */
+	public function __wakeup() {
+		_doing_it_wrong( __FUNCTION__, __( 'Unserializing instances of the class is forbidden.',WCPS_TXT), WCPS_V);
+	}
+
     /**
      * Loads Required Plugins For Plugin
      */
     private function load_required_files(){
        $this->load_files(WCPS_INC.'abstract-*.php');
-	   $this->load_files(WCPS_INC.'class-*.php');
+       $this->load_files(WCPS_INC.'class-tag-*.php');
+       $this->load_files(WCPS_INC.'class-subtitle-*.php');
         
-       if($this->is_request('admin')){
+	   $this->load_files(WCPS_ADMIN.'settings_framework/class-wp-*.php');
+        
+       if(wc_ps_is_request('admin')){
            $this->load_files(WCPS_ADMIN.'class-*.php');
        } 
-
     }
     
     /**
      * Inits loaded Class
      */
     private function init_class(){
-        
+		self::$settings = new WooCommerce_Product_Subtitle_Settings_Framework; 
 
-		if($this->is_request('admin')){
+        if(wc_ps_is_request('admin')){
             self::$admin = new WooCommerce_Product_Subtitle_Admin;
         }
+        
+        do_action('wc_ps_init');
     }
-  
+    
+    
+	# Returns Plugin's Functions Instance
+	public function func(){
+		return self::$functions;
+	}
 	
 	# Returns Plugin's Settings Instance
 	public function settings(){
@@ -103,16 +143,15 @@ class WooCommerce_Product_Subtitle {
         $this->define('WCPS_TXT',  'woocommerce-product-subtitle'); #plugin lang Domain
 		$this->define('WCPS_DB', 'wc_ps_');
 		$this->define('WCPS_V',$this->version); # Plugin Version
-		$this->define('WCPS_PATH',plugin_dir_path( __FILE__ )); # Plugin DIR
+		
 		$this->define('WCPS_LANGUAGE_PATH',WCPS_PATH.'languages'); # Plugin Language Folder
-		$this->define('WCPS_INC',WCPS_PATH.'includes/'); # Plugin INC Folder
 		$this->define('WCPS_ADMIN',WCPS_INC.'admin/'); # Plugin Admin Folder
-		$this->define('WCPS_SETTINGS',WCPS_INC.'admin/settings/'); # Plugin Settings Folder
+		$this->define('WCPS_SETTINGS',WCPS_ADMIN.'settings/'); # Plugin Settings Folder
+        
 		$this->define('WCPS_URL',plugins_url('', __FILE__ ).'/');  # Plugin URL
 		$this->define('WCPS_CSS',WCPS_URL.'includes/css/'); # Plugin CSS URL
 		$this->define('WCPS_IMG',WCPS_URL.'includes/img/'); # Plugin IMG URL
 		$this->define('WCPS_JS',WCPS_URL.'includes/js/'); # Plugin JS URL
-        
     }
 	
     /**
@@ -126,24 +165,4 @@ class WooCommerce_Product_Subtitle {
         }
     }
     
-	 
-									 
-	/**
-	 * What type of request is this?
-	 * string $type ajax, frontend or admin
-	 * @return bool
-	 */
-	private function is_request( $type ) {
-		switch ( $type ) {
-			case 'admin' :
-				return is_admin();
-			case 'ajax' :
-				return defined( 'DOING_AJAX' );
-			case 'cron' :
-				return defined( 'DOING_CRON' );
-			case 'frontend' :
-				return ( ! is_admin() || defined( 'DOING_AJAX' ) ) && ! defined( 'DOING_CRON' );
-		}
-	}
 }
-?>
