@@ -44,6 +44,10 @@ Product Specific : `subtitle-99`
 * Order Review, My Account Order View & Email Settings
 * Shop Page Settings
 * Single Product Page Settings
+* Product Edit Page Field
+* FrontEnd Single Product Page
+* Frontend Shop Page
+* Shortcode
 
 
 == Upgrade Notice ==
