@@ -31,7 +31,12 @@ class WooCommerce_Product_Subtitle_Settings_Framework {
         $this->create_callback_function();
 		$this->page_hook = $page_hook;
         
-        if(empty($page_hook)) { add_action( 'admin_menu', array( $this, 'admin_menu' ) ); }
+    
+        if(empty($page_hook)) {
+            add_action( 'admin_menu', array( $this, 'admin_menu' ) ); 
+        } else {
+            wc_ps_add_vars('settings_page',$this->page_hook);
+        }
         add_action( 'admin_init', array( $this, 'admin_init' ) );
     }
     
@@ -41,6 +46,7 @@ class WooCommerce_Product_Subtitle_Settings_Framework {
 											__(WCPS_NAME,WCPS_TXT),
 											__(WCPS_NAME,WCPS_TXT),
 											'manage_woocommerce',WCPS_SLUG.'-settings', array( $this, 'admin_page' ) );
+        wc_ps_add_vars('settings_page',$this->page_hook);
 	}
     
     

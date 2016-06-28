@@ -15,7 +15,7 @@
  * Plugin Name:       WooCommerce Product Subtitle
  * Plugin URI:        https://wordpress.org/plugins/wc-product-subtitle/
  * Description:       WC Product Subtitle plugin allows you to easily add a subtitle to your Products.
- * Version:           2.0
+ * Version:           2.1
  * Author:            Varun Sridharan
  * Author URI:        http://varunsridharan.in
  * License:           GPL-2.0+

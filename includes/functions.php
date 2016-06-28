@@ -9,9 +9,42 @@
  */
 if ( ! defined( 'WPINC' ) ) { die; }
 
-global $wc_ps_db_settins_values;
+global $wc_ps_db_settins_values,$wc_ps_vars;
 $wc_ps_db_settins_values = array();
+$wc_ps_vars = array();
 add_action('wc_ps_init','wc_ps_get_settings_from_db',1);
+ 
+if(!function_exists('wc_ps_vars')){
+    function wc_ps_vars($key,$values = false){
+        global $wc_ps_vars;
+        if(isset($wc_ps_vars[$key])){ 
+            return $wc_ps_vars[$key]; 
+        }
+        return $values;
+    }
+}
+
+if(!function_exists('wc_ps_add_vars')){
+    function wc_ps_add_vars($key,$values){
+        global $wc_ps_vars;
+        if(! isset($wc_ps_vars[$key])){ 
+            $wc_ps_vars[$key] = $values; 
+            return true; 
+        }
+        return false;
+    }
+}
+
+if(!function_exists('wc_ps_remove_vars')){
+    function wc_ps_remove_vars($key){
+        global $wc_ps_vars;
+        if(isset($wc_ps_vars[$key])){ 
+            unset($wc_ps_vars[$key]);
+            return true; 
+        }
+        return false;
+    }
+}
 
 if(!function_exists('wc_ps_option')){
 	function wc_ps_option($key = ''){

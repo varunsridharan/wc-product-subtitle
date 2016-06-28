@@ -10,7 +10,7 @@
 if ( ! defined( 'WPINC' ) ) { die; }
  
 class WooCommerce_Product_Subtitle {
-	public $version = '2.0';
+	public $version = '2.1';
 	public $plugin_vars = array();
 	
 	protected static $_instance = null; # Required Plugin Class Instance
@@ -144,7 +144,7 @@ class WooCommerce_Product_Subtitle {
 		$this->define('WCPS_DB', 'wc_ps_');
 		$this->define('WCPS_V',$this->version); # Plugin Version
 		
-		$this->define('WCPS_LANGUAGE_PATH',WCPS_PATH.'languages'); # Plugin Language Folder
+		$this->define('WCPS_LANGUAGE_PATH',WCPS_PATH.'languages/'); # Plugin Language Folder
 		$this->define('WCPS_ADMIN',WCPS_INC.'admin/'); # Plugin Admin Folder
 		$this->define('WCPS_SETTINGS',WCPS_ADMIN.'settings/'); # Plugin Settings Folder
         

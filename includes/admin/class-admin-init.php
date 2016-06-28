@@ -43,11 +43,13 @@ class WooCommerce_Product_Subtitle_Admin {
 	 * Register the stylesheets for the admin area.
 	 */
 	public function enqueue_styles() { 
+        $pages = wc_ps_get_screen_ids();
+        $pages[] = wc_ps_vars('settings_page');
         $current_screen = wc_ps_current_screen();
         
         wp_register_style(WCPS_SLUG.'_backend_style',WCPS_CSS.'backend.css' , array(), WCPS_V, 'all' );  
         
-        if(in_array($current_screen , wc_ps_get_screen_ids())) {
+        if(in_array($current_screen , $pages)) {
             wp_enqueue_style(WCPS_SLUG.'_backend_style');  
         }
 	}
@@ -57,11 +59,14 @@ class WooCommerce_Product_Subtitle_Admin {
 	 * Register the JavaScript for the admin area.
 	 */
 	public function enqueue_scripts() {
+        $pages = wc_ps_get_screen_ids();
+        $pages[] = wc_ps_vars('settings_page');
+        
         $current_screen = wc_ps_current_screen();
-
+        
         wp_register_script(WCPS_SLUG.'_backend_script', WCPS_JS.'backend.js', array('jquery'), WCPS_V, false );  
         
-        if(in_array($current_screen , wc_ps_get_screen_ids())) {
+        if(in_array($current_screen ,$pages)) {
             wp_enqueue_script(WCPS_SLUG.'_backend_script' ); 
         } 
 
