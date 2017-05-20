@@ -25,7 +25,6 @@ class WooCommerce_Product_Subtitle_Checkout_Page extends WooCommerce_Product_Sub
     
     public function hookup_area(){ 
         $position = $this->get_position();
-		
 		$p = 10; 
 		$key = 'woocommerce_cart_item_name';
 		if(empty($position)){ return;}

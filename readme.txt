@@ -4,10 +4,10 @@ Author URI: https://wordpress.org/plugins/wc-product-subtitle/
 Plugin URL: https://wordpress.org/plugins/wc-product-subtitle/
 Tags: WooCommerce, product, product title,product subtitle, wc product, wc product subtitle, subtitle, post subtitle, extra title,wc extra title, wc product name, product code, product, product title,product subtitle, WooCommerce product, WooCommerce product subtitle, subtitle, post subtitle, extra title, WooCommerce product name, product code, WooCommerce extra title
 Requires at least: 3.0
-Tested up to: 4.6
+Tested up to: 4.5
 WC requires at least: 1.0
 WC tested up to: 3.0
-Stable tag: 2.1
+Stable tag: 2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html 
 
@@ -116,6 +116,14 @@ The manual installation method involves downloading our plugin and uploading it 
  
 
 == Changelog == 
+= 2.3 =
+* Minor Bug Fixed
+* Tested With Latest WooCommerce & WordPress
+
+= 2.2 =
+* Fixed Issues with Email
+* Checked with latest wordpress & woocommerce version.
+
 = 2.1 =
 * Fixed Settings Page Issue.
 * Minor Bug Fix

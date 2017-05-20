@@ -24,8 +24,7 @@ class WooCommerce_Product_Subtitle_Cart_Page extends WooCommerce_Product_Subtitl
     }  
     
     public function hookup_area(){ 
-        $position = $this->get_position();
-		
+        $position = $this->get_position();		
 		$p = 10; 
 		$key = 'woocommerce_cart_item_name';
 		if(empty($position)){ return;}

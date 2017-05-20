@@ -10,7 +10,7 @@
 if ( ! defined( 'WPINC' ) ) { die; }
  
 class WooCommerce_Product_Subtitle {
-	public $version = '2.1';
+	public $version = '2.3';
 	public $plugin_vars = array();
 	
 	protected static $_instance = null; # Required Plugin Class Instance
