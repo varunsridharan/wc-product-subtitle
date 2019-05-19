@@ -33,7 +33,7 @@ class WooCommerce_Product_Subtitle_Single_Product_Page extends WooCommerce_Produ
         $key = 'woocommerce_single_product_summary';
 		$where = $this->get_where();
 		$p = 10; 
-
+        
         if(empty($position)){ return;}
 		if('title' == $position && 'before' == $where){ $p = 4;}
 		if('rating' == $position && 'before' == $where){ $p = 9;}

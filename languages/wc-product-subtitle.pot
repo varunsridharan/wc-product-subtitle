@@ -1,53 +1,35 @@
-# Copyright (C) 2016 WooCommerce Product Subtitle
+# Copyright (C) 2017 WooCommerce Product Subtitle
 # This file is distributed under the same license as the WooCommerce Product Subtitle package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Product Subtitle 2.0\n"
+"Project-Id-Version: WooCommerce Product Subtitle 2.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-product-subtitle\n"
-"POT-Creation-Date: 2016-06-04 09:28:13+00:00\n"
+"POT-Creation-Date: 2017-12-14 09:50:51+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: bootstrap.php:51
-msgid "Cloning instances of the class is forbidden."
-msgstr ""
-
-#: bootstrap.php:63
-msgid "Unserializing instances of the class is forbidden."
-msgstr ""
-
-#: includes/admin/class-admin-handler.php:23
-msgid "Subtitle"
-msgstr ""
-
-#: includes/admin/class-admin-init.php:80
-msgid "Settings"
-msgstr ""
-
-#: includes/admin/class-admin-init.php:94
+#: bootstrap.php:58
 msgid "F.A.Q"
 msgstr ""
 
-#: includes/admin/class-admin-init.php:95
+#: bootstrap.php:59
 msgid "View On Github"
 msgstr ""
 
-#: includes/admin/class-admin-init.php:96
+#: bootstrap.php:60
 msgid "Report Issue"
 msgstr ""
 
-#: includes/admin/settings_framework/class-wp-plugin-options.php:39
-#: includes/functions.php:273
-msgid "Title Position"
+#: bootstrap.php:66
+msgid "Settings"
 msgstr ""
 
-#: includes/admin/settings_framework/class-wp-plugin-options.php:40
-#: includes/functions.php:274
-msgid " Where to show the subtitle "
+#: includes/class-admin-handler.php:23
+msgid "Subtitle"
 msgstr ""
 
 #: includes/class-subtitle-cart-page.php:6
@@ -117,68 +99,72 @@ msgstr ""
 msgid "Product Meta"
 msgstr ""
 
-#: includes/functions.php:151
-msgid "General"
-msgstr ""
-
-#: includes/functions.php:154 includes/functions.php:166
-msgid "Save Changes"
-msgstr ""
-
-#: includes/functions.php:219
+#: includes/functions.php:13
 msgid "P Tag"
 msgstr ""
 
-#: includes/functions.php:220
+#: includes/functions.php:14
 msgid "SPAN Tag"
 msgstr ""
 
-#: includes/functions.php:221
+#: includes/functions.php:15
 msgid "SMALL Tag"
 msgstr ""
 
-#: includes/functions.php:223
+#: includes/functions.php:17
 msgid "H1 Tag"
 msgstr ""
 
-#: includes/functions.php:224
+#: includes/functions.php:18
 msgid "H2 Tag"
 msgstr ""
 
-#: includes/functions.php:225
+#: includes/functions.php:19
 msgid "H3 Tag"
 msgstr ""
 
-#: includes/functions.php:226
+#: includes/functions.php:20
 msgid "H4 Tag"
 msgstr ""
 
-#: includes/functions.php:227
+#: includes/functions.php:21
 msgid "H5 Tag"
 msgstr ""
 
-#: includes/functions.php:228
+#: includes/functions.php:22
 msgid "H6 Tag"
 msgstr ""
 
-#: includes/functions.php:247
+#: includes/functions.php:41
 msgid "Title Element Type"
 msgstr ""
 
-#: includes/functions.php:248
+#: includes/functions.php:42
 msgid "Which Type of html tag you need to have"
 msgstr ""
 
-#: includes/functions.php:259
+#: includes/functions.php:53
 msgid "Before"
 msgstr ""
 
-#: includes/functions.php:259
+#: includes/functions.php:53
 msgid "After"
 msgstr ""
 
-#: includes/functions.php:261
+#: includes/functions.php:55
 msgid "Where to show the subtitle"
+msgstr ""
+
+#: includes/functions.php:67
+msgid "Title Position"
+msgstr ""
+
+#: includes/functions.php:68
+msgid " Where to show the subtitle "
+msgstr ""
+
+#: wc-product-subtitle.php:64
+msgid " Requires WooCommerce To Be Installed. <br/> <i> Plugin Deactivated "
 msgstr ""
 #. Plugin Name of the plugin/theme
 msgid "WooCommerce Product Subtitle"

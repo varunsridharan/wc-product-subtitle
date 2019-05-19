@@ -4,10 +4,10 @@ Author URI: https://wordpress.org/plugins/wc-product-subtitle/
 Plugin URL: https://wordpress.org/plugins/wc-product-subtitle/
 Tags: WooCommerce, product, product title,product subtitle, wc product, wc product subtitle, subtitle, post subtitle, extra title,wc extra title, wc product name, product code, product, product title,product subtitle, WooCommerce product, WooCommerce product subtitle, subtitle, post subtitle, extra title, WooCommerce product name, product code, WooCommerce extra title
 Requires at least: 3.0
-Tested up to: 4.5
+Tested up to: 5.0
 WC requires at least: 1.0
-WC tested up to: 3.0
-Stable tag: 2.3
+WC tested up to: 3.5
+Stable tag: 3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html 
 
@@ -116,6 +116,14 @@ The manual installation method involves downloading our plugin and uploading it 
  
 
 == Changelog == 
+= 3.1 = 
+* Fixed : Reported Issue @ https://wordpress.org/support/topic/fatal-problem-with-site-language-and-permalinks-when-updating-to-version-3-0/
+
+= 3.0 =
+* Total Plugin Redeveloped
+* Migrated To Our Speedy Custom Framework.
+* Added Option for subtitle column in product listing page
+* Fixed Issue (https://github.com/varunsridharan/wc-product-subtitle/issues/6)
 = 2.3 =
 * Minor Bug Fixed
 * Tested With Latest WooCommerce & WordPress
