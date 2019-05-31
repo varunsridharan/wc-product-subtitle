@@ -47,12 +47,13 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Admin' ) ) {
 				) );
 			}
 
-			var_dump( wponion_settings_page_url( '_wc_product_subtitle' ) );
 			wponion_plugin_links( wc_product_subtitle()->file() )
 				->row_link( __( 'FAQ' ), 'https://wordpress.org/plugins/wc-product-subtitle/faq/' )
 				->row_link( __( 'View On Github' ), 'https://github.com/varunsridharan/wc-product-subtitle' )
-				->row_link( __( 'Report An Issue' ), 'https://github.com/varunsridharan/wc-product-subtitle/issues' )
-				->action_link_before( 'settings', __( 'Settings' ), wponion_settings_page_url( '_wc_product_subtitle' ) );
+				->row_link( wpo_icon( 'dashicons dashicons-welcome-add-page' ) . __( 'Report An Issue' ), 'https://github.com/varunsridharan/wc-product-subtitle/issues' )
+				->row_link( wpo_icon( 'dashicons dashicons-heart' ) . __( 'Donate' ), 'https://paypal.me/varunsridharan' )
+				->action_link_before( 'settings', __( 'Settings' ), admin_url( 'admin.php?page=product-subtitle' ) )
+				->action_link_after( 'sysinfo', __( 'System Info' ), admin_url( 'admin.php?page=product-subtitle&container-id=system-info' ) );
 		}
 
 		/**
