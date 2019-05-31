@@ -1,81 +1,100 @@
 <?php
-if ( ! defined( 'WPINC' ) ) { die; }
+/**
+ *
+ * @author Varun Sridharan <varunsridharan23@gmail.com>
+ * @version 1.0
+ * @since 1.0
+ * @link
+ * @copyright 2019 Varun Sridharan
+ * @license GPLV3 Or Greater (https://www.gnu.org/licenses/gpl-3.0.txt)
+ */
 
-if(!class_exists("WooCommerce_Product_Subtitle")){
+use VSP\Framework;
+use WC_Product_Subtitle\Admin\Settings;
 
-    class WooCommerce_Product_Subtitle extends VSP_Framework  {
-        protected static $_instance = null; # Required Plugin Class Instance
+if ( ! defined( 'ABSPATH' ) ) {
+	die;
+}
 
-        public static function get_instance() {
-            if ( null == self::$_instance ) {
-                self::$_instance = new self;
-            }
-            return self::$_instance;
-        }
-        
-        public function __construct() {
-            parent::__construct(array(
-                'plugin_file' => WCPS_FILE,
-                'version' =>  WCPS_V,
-                'db_slug' => 'wc_ps_',
-                'hook_slug' => 'wc_ps_',
-                'plugin_name' => WCPS_NAME,
-                'plugin_slug' => 'wc-product-subtitle',
-                'settings_page' => array(
-                    'pageName' => WCPS_NAME,
-                    'callback_validation' => false,
-                    'show_status_page' => false,
-                    'assets' => array('vsp-select2')
-                ),
-                'addons' => false
-            ));
-            
-        }
-        
-        public function hook_settings_init($type = ''){
-            if($type == 'before'){
-                vsp_load_file(WCPS_INC.'class-settings.php');
-                $this->settings_fields = new WooCommerce_Product_Subtitle_Settings;
-            }
-        }
+if ( ! class_exists( 'WC_Product_Subtitle' ) ) {
+	/**
+	 * Class WC_Product_Subtitle
+	 *
+	 * @author Varun Sridharan <varunsridharan23@gmail.com>
+	 * @since 1.0
+	 */
+	class WC_Product_Subtitle extends Framework {
+		/**
+		 * WC_Product_Subtitle constructor.
+		 *
+		 * @throws \Exception
+		 */
+		public function __construct() {
+			$this->name               = WCPS_NAME;
+			$this->version            = WCPS_VERSION;
+			$this->db_slug            = '_wcps';
+			$this->hook_slug          = 'wc_ps';
+			$this->file               = WCPS_FILE;
+			$this->text_domain        = 'wc-product-subtitle';
+			$options                  = array(
+				'logging'      => false,
+				'addons'       => false,
+				'localizer'    => false,
+				'autoloader'   => array(
+					'namespace' => 'WC_Product_Subtitle',
+					'base_path' => $this->plugin_path( 'includes/' ),
+				),
+				'system_tools' => false,
+			);
+			$options['settings_page'] = array(
+				'option_name'    => '_wc_product_subtitle',
+				//'framework_title' => __( 'Product Subtitles For WooCommerce' ),
+				'framework_desc' => __( 'This handy plugin allows you to easily add a subtitle to your products. also provides various options to customize the output. ' ),
+				'theme'          => 'wp',
+				'is_single_page' => 'submenu',
+				'ajax'           => true,
+				'search'         => false,
+				'menu'           => array(
+					'page_title' => WCPS_NAME,
+					'menu_title' => __( 'Product Subtitle' ),
+					'submenu'    => 'woocommerce',
+					'menu_slug'  => 'product-subtitle',
+				),
+			);
+			$options['reviewme']      = array(
+				'days_after' => 2,
+				'slug'       => 'wc-product-subtitle',
+				'type'       => 'plugin',
+				'site'       => 'wordpress',
+				'rating'     => 5,
+			);
+			parent::__construct( $options );
+		}
 
-        public function hook_load_required_files($type = ''){
-            if($type == 'before'){
-                vsp_load_file(WCPS_INC.'abstract-*.php');
-                vsp_load_file(WCPS_INC.'class-tag-*.php');
-                vsp_load_file(WCPS_INC.'class-subtitle-*.php');
-            }
-        }
-        
-        public function load_textdomain($file = '',$domain = '') {
-            if (WCPS_TXT === $domain)
-                return WCPS_LANGUAGE_PATH.'/'.get_locale().'.mo';
+		/**
+		 * Inits Settings Page.
+		 */
+		public function settings_init_before() {
+			new Settings( $this->slug( 'hook' ) );
+		}
 
-            return $file;
-        }
-        
-        public function hook_plugins_loaded(){
-            load_plugin_textdomain(WCPS_TXT, false, WCPS_LANGUAGE_PATH );
-        }
-        
-        public function on_admin_init(){
-            vsp_load_file(WCPS_INC.'class-admin-*.php');
-        }
-        
-        public function row_links($plugin_meta, $plugin_file){
-            if ( WCPS_FILE == $plugin_file ) {
-                $plugin_meta[] = sprintf('<a href="%s">%s</a>', 'https://wordpress.org/plugins/wc-product-subtitle/faq/', __('F.A.Q',WCPS_TXT) );
-                $plugin_meta[] = sprintf('<a href="%s">%s</a>', 'https://github.com/varunsridharan/wc-product-subtitle', __('View On Github',WCPS_TXT) );
-                $plugin_meta[] = sprintf('<a href="%s">%s</a>', 'https://github.com/varunsridharan/wc-product-subtitle/issues', __('Report Issue',WCPS_TXT) );
-            }
-            return $plugin_meta;
-        }
-        
-        public function action_links($action,$file,$plugin_meta,$status){
-            $settings_url = admin_url('admin.php?page=woocommerce-product-subtitle-settings');
-            $actions[] = sprintf('<a href="%s">%s</a>', $settings_url, __('Settings',WCPS_TXT) );
-            $action = array_merge($actions,$action);
-            return $action;
-        }
-    }
-} 
+		public function init_class() {
+			if ( vsp_is_admin() ) {
+				$this->_instance( '\WC_Product_Subtitle\Admin\Admin' );
+			}
+
+			$this->_instance( '\WC_Product_Subtitle\Cart_Page' );
+			$this->_instance( '\WC_Product_Subtitle\Checkout_Page' );
+			$this->_instance( '\WC_Product_Subtitle\Single_Product_Page' );
+			$this->_instance( '\WC_Product_Subtitle\Shop_Page' );
+			$this->_instance( '\WC_Product_Subtitle\Order_View_Page' );
+			$this->_instance( '\WC_Product_Subtitle\Shortcode' );
+		}
+
+		public function load_files() {
+		}
+
+		public function register_hooks() {
+		}
+	}
+}

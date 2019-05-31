@@ -1,87 +1,134 @@
 <?php
 
-if(!function_exists('wc_ps_option')){
-	function wc_ps_option($key = '',$default = ''){
-        $key = 'wc_ps_'.$key;
-		return vsp_option('wc-product-subtitle',$key,$default);
+if ( ! defined( 'ABSPATH' ) ) {
+	die;
+}
+
+if ( ! function_exists( 'wc_ps_option' ) ) {
+	/**
+	 * @param string $key Option Key.
+	 * @param bool   $default
+	 *
+	 * @return bool|mixed
+	 */
+	function wc_ps_option( $key, $default = false ) {
+		static $options = array();
+		if ( empty( $options ) ) {
+			$options = get_option( '_wc_product_subtitle', true );
+			$options = ( ! is_array( $options ) ) ? array() : $options;
+		}
+		return ( isset( $options[ $key ] ) ) ? $options[ $key ] : $default;
 	}
 }
 
-
-if(!function_exists('wc_ps_tags')){
-    function wc_ps_tags($req_tag = ''){
-        $return = array();
-        $return['p_tag'] =  __('P Tag',WCPS_TXT);
-        $return['span_tag'] = __('SPAN Tag',WCPS_TXT);
-        $return['small_tag'] = __('SMALL Tag',WCPS_TXT); 
-        
-        $return['h1_tag'] = __('H1 Tag',WCPS_TXT);
-        $return['h2_tag'] = __('H2 Tag',WCPS_TXT);
-        $return['h3_tag'] = __('H3 Tag',WCPS_TXT);
-        $return['h4_tag'] = __('H4 Tag',WCPS_TXT);
-        $return['h5_tag'] = __('H5 Tag',WCPS_TXT);
-        $return['h6_tag'] = __('H6 Tag',WCPS_TXT);
-        
-        $return = apply_filters('wc_ps_tags',$return);
-        
-        if(!empty($req_tag)){
-            if(isset($return[$req_tag])){
-                return $return[$req_tag];
-            }
-        }
-        return $return;
-    }
-}
-
-if(!function_exists('wc_ps_tags_settings_arr')){
-    function wc_ps_tags_settings_arr($id = ''){
-        return array(
-			'id' => WCPS_DB.$id, 
-			'type'    => 'select',
-            'options' => wc_ps_tags(),
-			'label' => __('Title Element Type',WCPS_TXT),
-			'desc' => __('Which Type of html tag you need to have',WCPS_TXT), 
-			'attr'    => array('style' => 'width:50%;', 'class' => 'vsp-select2' ),
+if ( ! function_exists( 'wp_product_subtitle_placements' ) ) {
+	/**
+	 * Returns A List of places where subtitle's can be display based on the page.
+	 *
+	 * @param bool $place
+	 *
+	 * @return mixed|void
+	 */
+	function wp_product_subtitle_placements( $place = false ) {
+		$placements = array(
+			''      => __( 'Disable/ Use Shortcode' ),
+			'title' => __( 'Product Title' ),
 		);
-    }
+
+		switch ( $place ) {
+			case 'cart':
+			case 'checkout':
+				// Nothing To Do Here.
+				break;
+			case 'order_view':
+				$placements['qty'] = __( 'Product Qty' );
+				break;
+			case 'shop':
+				$placements['rating'] = __( 'Product Rating' );
+				$placements['price']  = __( 'Product Price' );
+				break;
+			case 'single':
+				$placements['rating']    = __( 'Product Rating' );
+				$placements['price']     = __( 'Product Price' );
+				$placements['excerpt']   = __( 'Product Excerpt' );
+				$placements['addtocart'] = __( 'Product AddToCart' );
+				$placements['meta']      = __( 'Product Meta' );
+				break;
+		}
+		return apply_filters( 'wc_product_subtitle_placements', $placements, $place );
+	}
 }
 
-if(!function_exists('wc_ps_tags_pos_settings_arr')){
-    function wc_ps_tags_pos_settings_arr($id = ''){
-        return array(
-			'id' => WCPS_DB.$id, 
-			'type'    => 'select',
-            'options' => array('before' => __('Before',WCPS_TXT),'after' => __('After',WCPS_TXT)),
-			'label' => __('',WCPS_TXT),
-			'desc' => __('Where to show the subtitle',WCPS_TXT), 
-			'attr'    => array('style' => 'width:50%;', 'class' => 'vsp-select2' ),
+if ( ! function_exists( 'wc_product_subtitle_default_tags' ) ) {
+	/**
+	 * Returns Default Tags.
+	 *
+	 * @return array
+	 */
+	function wc_product_subtitle_default_tags() {
+		return array(
+			'i'      => '&#x3C;i&#x3E;',
+			'p'      => '&#x3C;p&#x3E;',
+			'mark'   => '&#x3C;mark&#x3E;',
+			'span'   => '&#x3C;span&#x3E;',
+			'small'  => '&#x3C;small&#x3E;',
+			'strong' => '&#x3C;strong&#x3E;',
+			'h1'     => '&#x3C;h1&#x3E;',
+			'h2'     => '&#x3C;h2&#x3E;',
+			'h3'     => '&#x3C;h3&#x3E;',
+			'h4'     => '&#x3C;h4&#x3E;',
+			'h5'     => '&#x3C;h5&#x3E;',
+			'h6'     => '&#x3C;h6&#x3E;',
 		);
-    }
+	}
 }
 
-if(!function_exists('wc_ps_tags_area_settings_arr')){
-    function wc_ps_tags_area_settings_arr($id,$options){
-       return array( 
-            'id' => WCPS_DB.$id, 
-            'type'    => 'select',
-            'options' => $options,
-            'label' => __('Title Position',WCPS_TXT),
-            'desc' => __(' Where to show the subtitle ',WCPS_TXT), 
-            'attr'    => array('style' => 'width:50%', 'class' => 'vsp-select2' ),
-        );
-    }
+if ( ! function_exists( 'wc_product_subtitle_tags' ) ) {
+	/**
+	 * Returns Avaiable Tag Options.
+	 *
+	 * @return mixed|void
+	 */
+	function wc_product_subtitle_tags() {
+		return apply_filters( 'wc_product_subtitle_tags', wc_product_subtitle_default_tags() );
+	}
 }
 
-if(!function_exists('get_product_subtitle')){
-    function get_product_subtitle($id){ 
-        $value = get_post_meta($id,WCPS_DB.'subtitle',true);
-        return $value;
-    }
+if ( ! function_exists( 'update_product_subttile' ) ) {
+	/**
+	 * Updates Post Meta In DB.
+	 *
+	 * @param $post_id
+	 * @param $subtitle
+	 *
+	 * @return bool|int
+	 */
+	function update_product_subtitle( $post_id, $subtitle ) {
+		return update_post_meta( $post_id, 'wc_ps_subtitle', $subtitle );
+	}
 }
 
-if(!function_exists('the_product_subtitle')){
-    function the_product_subtitle($id){ 
-        $value = get_product_subtitle($id);
-        echo $value;
-    }
+if ( ! function_exists( 'get_product_subtitle' ) ) {
+	/**
+	 * Gets From DB.
+	 *
+	 * @param $id
+	 *
+	 * @return mixed
+	 */
+	function get_product_subtitle( $id ) {
+		$value = get_post_meta( $id, 'wc_ps_subtitle', true );
+		return $value;
+	}
+}
+
+if ( ! function_exists( 'the_product_subtitle' ) ) {
+	/**
+	 * Echos Subtitle's
+	 *
+	 * @param $id
+	 */
+	function the_product_subtitle( $id ) {
+		echo get_product_subtitle( $id );
+	}
 }

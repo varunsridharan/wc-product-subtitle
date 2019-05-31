@@ -1,0 +1,6 @@
+{
+    "require": {
+        "varunsridharan/vsp-framework": "^0.1.5.7",
+        "wponion/wponion": "^1.0"
+    }
+}
