@@ -57,10 +57,12 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 
 			$this->admin_page( $general->container( 'admin', __( 'Admin Settings' ) ) );
 			$this->cart_checkout_page( $general->container( 'cart-page', __( 'Cart Page' ) ) );
+			$this->mini_cart( $general->container( 'mini-cart', __( 'Mini Cart' ) ) );
 			$this->cart_checkout_page( $general->container( 'checkout-page', __( 'Checkout Page' ) ), true );
 			$this->order_view_page( $general->container( 'order-view-page', __( 'Order View Page' ) ) );
 			$this->shop_page( $general->container( 'shop-page', __( 'Shop Page' ) ) );
 			$this->single_product( $general->container( 'single-product', __( 'Single Product' ) ) );
+			$this->email( $general->container( 'order-email', __( 'Email' ) ) );
 			$this->shortcode( $general->container( 'shortcode', __( 'Shortcode' ) ) );
 
 			$this->builder->container( 'system-info', __( 'System Tool/Info' ), 'dashicons dashicons-info' )
@@ -91,14 +93,21 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 				->off( __( 'No' ) )
 				->switch_width( '3em' )
 				->desc_field( __( 'If Enabled Subtitle Will Be Shown Below The Product Title In Product List Table' ) . ' <br/><br/>' . $img );
+
+			$container->switcher( 'admin_wp_editor', __( 'Subtitle HTML Editor' ) )
+				->switch_style( 'style-14' )
+				->on( __( 'HTML Editor' ) )
+				->off( __( 'Simple Input' ) )
+				->switch_width( '8em' )
+				->desc_field( __( 'If Enabled Then **HTML** Editor Will Be Shown Instead Of **Text Input**' ) );
 			$container->subheading( __( 'F.A.Q' ) );
 			$container->faq()
-				->faq( __( 'How Do I Style Subtitles ?' ), wc_product_subtitle()->plugin_path( 'assets/markdown/how-do-i-style-subtitles.php' ) )
+				->faq( __( 'How Do I Style Subtitles ?' ), wc_product_subtitle()->plugin_path( 'assets/markdown/how-do-i-style-subtitles.md' ) )
 				->faq( __( 'How i can add my own HTML render Tag ?' ), wc_product_subtitle()->plugin_path( 'assets/markdown/how-i-can-add-my-own-html-render-tag.md' ) );
 		}
 
 		/**
-		 * @param \WPO\Builder|\WPO\Container $container
+		 * @param \WPO\Container $container
 		 */
 		protected function order_view_page( $container ) {
 			$container->subheading( __( 'Order View Page Subtitle Configuration' ) );
@@ -122,7 +131,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		}
 
 		/**
-		 * @param \WPO\Builder|\WPO\Container $container
+		 * @param \WPO\Container $container
 		 */
 		protected function shop_page( $container ) {
 			$container->subheading( __( 'Shop Page Subtitle Configuration' ) );
@@ -139,7 +148,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		}
 
 		/**
-		 * @param \WPO\Builder|\WPO\Container $container
+		 * @param \WPO\Container $container
 		 */
 		protected function single_product( $container ) {
 			$container->subheading( __( 'Single Product Page Subtitle Configuration' ) );
@@ -157,8 +166,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		}
 
 		/**
-		 * @param \WPO\Builder|\WPO\Container $container
-		 * @param bool                        $is_checkout
+		 * @param \WPO\Container $container
+		 * @param bool           $is_checkout
 		 */
 		protected function cart_checkout_page( $container, $is_checkout = false ) {
 			$id    = ( false === $is_checkout ) ? 'cart_page' : 'checkout_page';
@@ -179,13 +188,61 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		}
 
 		/**
-		 * @param \WPO\Builder|\WPO\Container $container
+		 * @param \WPO\Container $container
+		 */
+		protected function mini_cart( $container ) {
+			$container->subheading( __( 'Mini Cart Configuration' ) );
+			$fieldset = $container->fieldset( 'mini_cart' );
+			$fieldset->add( clone $this->template['position'] )
+				->options( wp_product_subtitle_placements( 'mini_cart' ) );
+
+			$fieldset->add( clone $this->template['placement'] );
+			$fieldset->add( clone $this->template['element'] );
+		}
+
+		/**
+		 * @param \WPO\Container $container
 		 */
 		protected function shortcode( $container ) {
 			$container->subheading( __( 'Shortcode Subtitle Configuration' ) );
 			$fieldset = $container->fieldset( 'shortcode' );
 			$fieldset->field( clone( $this->template['element'] ) );
 			$fieldset->markdown( wc_product_subtitle()->plugin_path( 'assets/markdown/shortcode.md' ) );
+		}
+
+		/**
+		 * @param \WPO\Container $container
+		 */
+		protected function email( $container ) {
+			$container->subheading( __( 'Email Configuration' ) );
+			$fieldset = $container->fieldset( 'email' );
+			$fieldset->add( clone $this->template['position'] )
+				->options( wp_product_subtitle_placements( 'email' ) );
+			$fieldset->add( clone $this->template['placement'] );
+			$fieldset->add( clone $this->template['element'] );
+
+			$before = wpo_field( 'text', 'before_subtitle', __( 'Before Subtitle' ) )
+				->help( __( 'HTML Tags Are Supported' ) )
+				->horizontal( true )
+				->style( 'width:100%;' );
+			$after  = wpo_field( 'text', 'after_subtitle', __( 'After Subtitle' ) )
+				->help( __( 'HTML Tags Are Supported' ) )
+				->horizontal( true )
+				->style( 'width:100%;' );
+
+			$fieldset->content( __( 'Email Before & After Are Used To Add Custom Line Brakes Before & After The Subtitle To Style It Based On Your Needs' ) );
+
+			$html = $fieldset->accordion( 'html' )
+				->heading( __( 'HTML Email Before & After' ) )
+				->wrap_class( 'col-xs-12 col-md-6' );
+			$html->add( clone $before );
+			$html->add( clone $after );
+
+			$plain = $fieldset->accordion( 'plain' )
+				->heading( __( 'Plain Text Email Before & After' ) )
+				->wrap_class( 'col-xs-12 col-md-6' );
+			$plain->add( clone $before );
+			$plain->add( clone $after );
 		}
 	}
 }

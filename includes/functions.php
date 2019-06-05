@@ -54,6 +54,10 @@ if ( ! function_exists( 'wp_product_subtitle_placements' ) ) {
 				$placements['addtocart'] = __( 'Product AddToCart' );
 				$placements['meta']      = __( 'Product Meta' );
 				break;
+			case 'email':
+				unset( $placements['title'] );
+				$placements['meta'] = __( 'Product Meta' );
+				break;
 		}
 		return apply_filters( 'wc_product_subtitle_placements', $placements, $place );
 	}

@@ -75,9 +75,12 @@ if ( ! class_exists( 'WC_Product_Subtitle' ) ) {
 		 * Inits Settings Page.
 		 */
 		public function settings_init_before() {
-			new Settings( $this->slug( 'hook' ) );
+			$this->_instance( '\WC_Product_Subtitle\Admin\Settings', false, false, $this->slug( 'hook' ) );
 		}
 
+		/**
+		 * Creates Instance For The Required Classes.
+		 */
 		public function init_class() {
 			if ( vsp_is_admin() ) {
 				$this->_instance( '\WC_Product_Subtitle\Admin\Admin' );
@@ -89,6 +92,8 @@ if ( ! class_exists( 'WC_Product_Subtitle' ) ) {
 			$this->_instance( '\WC_Product_Subtitle\Shop_Page' );
 			$this->_instance( '\WC_Product_Subtitle\Order_View_Page' );
 			$this->_instance( '\WC_Product_Subtitle\Shortcode' );
+			$this->_instance( '\WC_Product_Subtitle\Email' );
+			$this->_instance( '\WC_Product_Subtitle\Mini_Cart' );
 		}
 
 		public function load_files() {
