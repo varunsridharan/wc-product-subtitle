@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Product Subtitle For WooCommerce
  * Plugin URI: https://wordpress.org/plugins/wc-product-subtitle
- * Description: Create Custom Subtitle For WooCommerce Products.
+ * Description: Create Custom Product Subtitle For WooCommerce Products.
  * Version: 4.0
  * Author: Varun Sridharan
  * Author URI: http://varunsridharan.in
