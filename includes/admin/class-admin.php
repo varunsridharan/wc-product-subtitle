@@ -32,9 +32,9 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Admin' ) ) {
 		}
 
 		/**
-		 * On WPOnion Loaded.
+		 * Simple Hooker With WPOnion.
 		 */
-		public function wponion_loaded() {
+		public function wponion() {
 			if ( false !== wc_ps_option( 'admin_column' ) ) {
 				wponion_admin_columns( 'product', __( 'Subtitle' ), array( $this, 'render_subtitle' ) );
 			}
@@ -97,31 +97,42 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Admin' ) ) {
 				$post_id     = $post->ID;
 				$value       = get_product_subtitle( $post_id );
 				$placeholder = __( 'Subtitle : ' );
-				$field       = wpo_field( 'text', 'product_subtitle', '' )
-					->placeholder( $placeholder )
-					->name( 'product_subtitle' )
-					->only_field( true )
-					->attribute( 'spellcheck', 'true' )
-					->attribute( 'size', '50' )
-					->attribute( 'autocomplete', 'false' )
-					->attribute( 'id', 'wcps_subtitle' )
-					->render( $value, null );
 
+				if ( wc_ps_option( 'admin_wp_editor' ) ) {
+					/* @var \WPO\Fields\WP_Editor $field */
+					$field = wpo_field( 'wp_editor', 'product_subtitle' );
+					$field = $field->horizontal( true )
+						->title( __( 'Product Subtitle' ) )
+						->settings( array(
+							'media_buttons'    => false,
+							'wpautop'          => false,
+							'quicktags'        => false,
+							'teeny'            => true,
+							'drag_drop_upload' => false,
+							'textarea_rows'    => 2,
+						) )
+						->debug( false )
+						->wrap_id( 'wc_product_subtitle' )
+						->render( $value, null );
+				} else {
+					$field = wpo_field( 'text', 'product_subtitle', '' )
+						->placeholder( $placeholder )
+						->name( 'product_subtitle' )
+						->only_field( true )
+						->attribute( 'spellcheck', 'true' )
+						->attribute( 'size', '50' )
+						->attribute( 'autocomplete', 'false' )
+						->attribute( 'id', 'wcps_subtitle' )
+						->render( $value, null );
+					$field = '<div id = "subtitlediv"> <div id="subtitlewrap"> ' . $field . ' </div> </div> ';
+				}
 				echo <<<HTML
-<div id="subtitlediv"> <div id="subtitlewrap"> $field </div> </div>
+$field
 <style>
+div#wc_product_subtitle.wponion-element {display: inline-block;width: 100%;margin: 10px 0;}
+div#wc_product_subtitle.wponion-element .wponion-field-title > h4{font-size: 1.3em;margin-top: 0;margin-bottom: 15px;}
 #subtitlediv{ margin-top: 10px; display: inline-block; width: 100%; } 
-#wcps_subtitle{
-	padding: 3px 8px;
-	font-size: 1.5em;
-	line-height: 100%;
-	height: 1.6em;
-	width: 100%;
-	display: inline-block;
-	outline: none;
-	margin: 0 0 3px;
-	background-color: #fff;
-}
+#wcps_subtitle{padding: 3px 8px;font-size: 1.5em;line-height: 100%;height: 1.6em;width: 100%;display: inline-block;outline: none;margin: 0 0 3px;background-color: #fff;}
 </style>
 HTML;
 			}
