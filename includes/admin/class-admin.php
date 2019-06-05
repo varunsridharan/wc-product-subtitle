@@ -2,7 +2,6 @@
 
 namespace WC_Product_Subtitle\Admin;
 
-use function Sodium\add;
 use VSP\Base;
 
 if ( ! defined( 'ABSPATH' ) ) {
