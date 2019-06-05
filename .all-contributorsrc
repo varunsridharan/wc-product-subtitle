@@ -1,0 +1,23 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "maciejbis",
+      "name": "Maciej Bis",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/9405726?v=4",
+      "profile": "http://maciejbis.net",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "wc-product-subtitle",
+  "projectOwner": "varunsridharan",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
