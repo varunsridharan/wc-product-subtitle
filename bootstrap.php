@@ -94,6 +94,7 @@ if ( ! class_exists( 'WC_Product_Subtitle' ) ) {
 			$this->_instance( '\WC_Product_Subtitle\Shortcode' );
 			$this->_instance( '\WC_Product_Subtitle\Email' );
 			$this->_instance( '\WC_Product_Subtitle\Mini_Cart' );
+			$this->_instance( '\WC_Product_Subtitle\Integrations' );
 		}
 
 		public function load_files() {
