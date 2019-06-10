@@ -18,15 +18,14 @@ defined( 'WCPS_VERSION' ) || define( 'WCPS_VERSION', '4.0' );
 defined( 'WCPS_FILE' ) || define( 'WCPS_FILE', __FILE__ );
 defined( 'WCPS_NAME' ) || define( 'WCPS_NAME', __( 'Product Subtitle For WooCommerce' ) );
 
-
 require_once __DIR__ . '/vendor/autoload.php';
-
-if ( function_exists( 'vsp_maybe_load' ) ) {
-	vsp_maybe_load( 'wc_product_subtitle_init', __DIR__ . '/vendor/varunsridharan/' );
-}
 
 if ( function_exists( 'wponion_load' ) ) {
 	wponion_load( __DIR__ . '/vendor/wponion/wponion' );
+}
+
+if ( function_exists( 'vsp_maybe_load' ) ) {
+	vsp_maybe_load( 'wc_product_subtitle_init', __DIR__ . '/vendor/varunsridharan/' );
 }
 
 if ( ! function_exists( 'wc_product_subtitle_init' ) ) {
