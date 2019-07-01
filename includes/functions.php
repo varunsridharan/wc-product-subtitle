@@ -11,13 +11,8 @@ if ( ! function_exists( 'wc_ps_option' ) ) {
 	 *
 	 * @return bool|mixed
 	 */
-	function wc_ps_option( $key, $default = false ) {
-		static $options = array();
-		if ( empty( $options ) ) {
-			$options = get_option( '_wc_product_subtitle', true );
-			$options = ( ! is_array( $options ) ) ? array() : $options;
-		}
-		return ( isset( $options[ $key ] ) ) ? $options[ $key ] : $default;
+	function wc_ps_option( $key = false, $default = false ) {
+		return wpo_settings( '_wc_product_subtitle', $key, $default );
 	}
 }
 

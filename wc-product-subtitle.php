@@ -32,7 +32,7 @@ if ( ! function_exists( 'wc_product_subtitle_init' ) ) {
 	/**
 	 * Inits Plugin Instance.
 	 *
-	 * @return bool
+	 * @return bool|\WC_Product_Subtitle
 	 */
 	function wc_product_subtitle_init() {
 		if ( vsp_add_wc_required_notice( WCPS_NAME, '3.0', '>=' ) ) {
@@ -48,7 +48,7 @@ if ( ! function_exists( 'wc_product_subtitle' ) ) {
 	/**
 	 * Returns Product Subtitle Instance.
 	 *
-	 * @return bool|\WC_Product_Subtitle
+	 * @return \WC_Product_Subtitle
 	 */
 	function wc_product_subtitle() {
 		return WC_Product_Subtitle::instance();

@@ -35,7 +35,6 @@ if ( ! class_exists( 'WC_Product_Subtitle' ) ) {
 			$this->db_slug            = '_wcps';
 			$this->hook_slug          = 'wc_ps';
 			$this->file               = WCPS_FILE;
-			$this->text_domain        = 'wc-product-subtitle';
 			$options                  = array(
 				'logging'      => false,
 				'addons'       => false,
@@ -60,13 +59,6 @@ if ( ! class_exists( 'WC_Product_Subtitle' ) ) {
 					'submenu'    => 'woocommerce',
 					'menu_slug'  => 'product-subtitle',
 				),
-			);
-			$options['reviewme']      = array(
-				'days_after' => 2,
-				'slug'       => 'wc-product-subtitle',
-				'type'       => 'plugin',
-				'site'       => 'wordpress',
-				'rating'     => 5,
 			);
 			parent::__construct( $options );
 		}
@@ -95,12 +87,6 @@ if ( ! class_exists( 'WC_Product_Subtitle' ) ) {
 			$this->_instance( '\WC_Product_Subtitle\Email' );
 			$this->_instance( '\WC_Product_Subtitle\Mini_Cart' );
 			$this->_instance( '\WC_Product_Subtitle\Integrations' );
-		}
-
-		public function load_files() {
-		}
-
-		public function register_hooks() {
 		}
 	}
 }
