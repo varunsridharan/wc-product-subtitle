@@ -26,8 +26,8 @@ if ( ! function_exists( 'wp_product_subtitle_placements' ) ) {
 	 */
 	function wp_product_subtitle_placements( $place = false ) {
 		$placements = array(
-			''      => __( 'Disable/ Use Shortcode' ),
-			'title' => __( 'Product Title' ),
+			''      => __( 'Disable/ Use Shortcode', 'wc-product-subtitle' ),
+			'title' => __( 'Product Title', 'wc-product-subtitle' ),
 		);
 
 		switch ( $place ) {
@@ -36,22 +36,22 @@ if ( ! function_exists( 'wp_product_subtitle_placements' ) ) {
 				// Nothing To Do Here.
 				break;
 			case 'order_view':
-				$placements['qty'] = __( 'Product Qty' );
+				$placements['qty'] = __( 'Product Qty', 'wc-product-subtitle' );
 				break;
 			case 'shop':
-				$placements['rating'] = __( 'Product Rating' );
-				$placements['price']  = __( 'Product Price' );
+				$placements['rating'] = __( 'Product Rating', 'wc-product-subtitle' );
+				$placements['price']  = __( 'Product Price', 'wc-product-subtitle' );
 				break;
 			case 'single':
-				$placements['rating']    = __( 'Product Rating' );
-				$placements['price']     = __( 'Product Price' );
-				$placements['excerpt']   = __( 'Product Excerpt' );
-				$placements['addtocart'] = __( 'Product AddToCart' );
-				$placements['meta']      = __( 'Product Meta' );
+				$placements['rating']    = __( 'Product Rating', 'wc-product-subtitle' );
+				$placements['price']     = __( 'Product Price', 'wc-product-subtitle' );
+				$placements['excerpt']   = __( 'Product Excerpt', 'wc-product-subtitle' );
+				$placements['addtocart'] = __( 'Product AddToCart', 'wc-product-subtitle' );
+				$placements['meta']      = __( 'Product Meta', 'wc-product-subtitle' );
 				break;
 			case 'email':
 				unset( $placements['title'] );
-				$placements['meta'] = __( 'Product Meta' );
+				$placements['meta'] = __( 'Product Meta', 'wc-product-subtitle' );
 				break;
 		}
 		return apply_filters( 'wc_product_subtitle_placements', $placements, $place );

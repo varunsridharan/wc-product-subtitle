@@ -48,14 +48,14 @@ if ( ! class_exists( 'WC_Product_Subtitle' ) ) {
 			$options['settings_page'] = array(
 				'option_name'    => '_wc_product_subtitle',
 				//'framework_title' => __( 'Product Subtitles For WooCommerce' ),
-				'framework_desc' => __( 'This handy plugin allows you to easily add a subtitle to your products. also provides various options to customize the output. ' ),
+				'framework_desc' => __( 'This handy plugin allows you to easily add a subtitle to your products. also provides various options to customize the output. ', 'wc-product-subtitle' ),
 				'theme'          => 'wp',
 				'is_single_page' => 'submenu',
 				'ajax'           => true,
 				'search'         => false,
 				'menu'           => array(
 					'page_title' => WCPS_NAME,
-					'menu_title' => __( 'Product Subtitle' ),
+					'menu_title' => __( 'Product Subtitle', 'wc-product-subtitle' ),
 					'submenu'    => 'woocommerce',
 					'menu_slug'  => 'product-subtitle',
 				),

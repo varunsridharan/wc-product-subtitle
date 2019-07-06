@@ -42,7 +42,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Integrations' ) ) {
 
 			$subtitle = get_product_subtitle( $item['product']->get_id() );
 			if ( ! empty( $subtitle ) ) {
-				echo '<div class="product-subtitle"><small>' . __( 'Subtitle :' ) . ' ' . $subtitle . '</small></div>';
+				echo '<div class="product-subtitle"><small>' . __( 'Subtitle :', 'wc-product-subtitle' ) . ' ' . $subtitle . '</small></div>';
 			}
 		}
 	}

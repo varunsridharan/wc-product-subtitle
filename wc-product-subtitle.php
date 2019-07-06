@@ -16,7 +16,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 defined( 'WCPS_VERSION' ) || define( 'WCPS_VERSION', '4.0' );
 defined( 'WCPS_FILE' ) || define( 'WCPS_FILE', __FILE__ );
-defined( 'WCPS_NAME' ) || define( 'WCPS_NAME', __( 'Product Subtitle For WooCommerce' ) );
+defined( 'WCPS_NAME' ) || define( 'WCPS_NAME', __( 'Product Subtitle For WooCommerce', 'wc-product-subtitle' ) );
 
 require_once __DIR__ . '/vendor/autoload.php';
 
