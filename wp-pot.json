@@ -1,0 +1,6 @@
+{
+  "src"     : "./",
+  "dist"    : "./i18n/wc-product-subtitle.pot",
+  "domain"  : "wc-product-subtitle",
+  "exclude" : "assets/,src/,node_modules/,vendor/"
+}

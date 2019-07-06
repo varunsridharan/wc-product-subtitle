@@ -1,6 +1,14 @@
 {
-    "require": {
-        "varunsridharan/vsp-framework": "^0.7",
-        "wponion/wponion": "dev-development"
-    }
+  "require"     : {
+	"varunsridharan/vsp-framework" : "^0.7",
+	"wponion/wponion"              : "dev-development"
+  },
+  "require-dev" : {
+	"varunsridharan/wp-cli-textdomain" : "^1.1"
+  },
+  "scripts"     : {
+	"makepot"        : "makepot ./wp-pot.json",
+	"add-textdomain" : "add-textdomain -i wc-product-subtitle ./",
+	"build"          : [ "@makepot", "@add-textdomain" ]
+  }
 }
