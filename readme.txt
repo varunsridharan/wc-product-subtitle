@@ -37,19 +37,20 @@ Global : `product-subtitle`
 Product Specific : `subtitle-99`
 
 == Screenshots ==
-* Settings Menu
-* Cart Page Settings
-* Checkout Page Settings
-* Order Review, My Account Order View & Email Settings
-* Shop Page Settings
-* Single Product Page Settings
-* Product Edit Page Field
-* FrontEnd Single Product Page
-* Frontend Shop Page
-* Shortcode
-
-
-== Upgrade Notice ==
+1. Settings Menu
+2. General Settings
+3. All Settings
+4. Shortcode Settings
+5. New Product Subtitle
+6. Edit Product Subtitle
+7. Subtitle In WPEditor
+8. Subtitle In Product List Table
+9. Cart Page
+10. Mini Cart
+11. Checkout Page
+12. Order Details Page
+13. Shop Page
+14. Single Product Page
 
 == Frequently Asked Questions == 
 
@@ -59,31 +60,6 @@ You can style the subtitle with the below css class
 Global : `product-subtitle`
 
 Product Specific : `subtitle-99`
-
-= How To Add Custom Tag ? =
-<strong> Use the below function to register the tag first </strong>
-> add_filter('wc_ps_tags','register_custom_tag');
-> function register_custom_tag($tags){
->    $tags['tag_slug'] = 'Tag Name';
->    return $tags;
-> }
-
-<strong> Now use the below action to render your own tag (`wc_ps_subtitle_{tag_slug}`) </strong>
-
-> add_action('wc_ps_subtitle_tag_slug','render_custom_tag');
-> function render_custom_tag($title,$tag,$pid,$defaults) {
->   echo '<custom_tag>".$title."</custom_tag>";
-> }
-
-<strong> function variable details</strong>
-
-* `$title` : Product's Subtitle
-* `$tag` : Call back Tag
-* `$pid` : Current Product ID
-* `$defaults` : is array of default class & id for the element
-
-
-
 
 == Installation ==
 
