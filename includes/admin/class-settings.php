@@ -180,8 +180,9 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 
 			$container->subheading( __( 'Frequently Asked Questions', 'wc-product-subtitle' ) );
 
-			$container->faq()
-				->faq( sprintf( __( 'Subtitle not visible in %s page ?', 'wc-product-subtitle' ), $title ), wc_product_subtitle()->plugin_path( 'assets/markdown/cart-page.md' ) );
+			$faq = $container->faq();
+			// translators: Added Current Section Title
+			$faq->faq( sprintf( __( 'Subtitle not visible in %s page ?', 'wc-product-subtitle' ), $title ), wc_product_subtitle()->plugin_path( 'assets/markdown/cart-page.md' ) );
 		}
 
 		/**
