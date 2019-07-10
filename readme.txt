@@ -1,15 +1,14 @@
 === WooCommerce Product Subtitle ===
 Contributors: bravo-computing, varunms
-Author URI: https://wordpress.org/plugins/wc-product-subtitle/
-Plugin URL: https://wordpress.org/plugins/wc-product-subtitle/
 Tags: WooCommerce, product, product title,product subtitle, wc product, wc product subtitle, subtitle, post subtitle, extra title,wc extra title, wc product name, product code, product, product title,product subtitle, WooCommerce product, WooCommerce product subtitle, subtitle, post subtitle, extra title, WooCommerce product name, product code, WooCommerce extra title
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9L76L92SD8YAQ
 Requires at least: 3.0
 Tested up to: 5.0
-WC requires at least: 1.0
-WC tested up to: 3.5
-Stable tag: 3.1
+WC requires at least: 3.0
+WC tested up to: 3.6.5
+Stable tag: 4.0
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html 
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 WooCommerce Product Subtitle plugin allows you to easily add a subtitle to your Products.
 
@@ -115,8 +114,16 @@ The manual installation method involves downloading our plugin and uploading it 
 2. Activate the plugin through the 'Plugins' menu in WordPress
  
 
-== Changelog == 
-= 3.1 = 
+== Changelog ==
+= 4.0 =
+* Plugin Fully Redeveloped From Ground
+* Added Mini Cart Support
+* Added Eamil Support
+* Added Option To Switch Textfield Into WP Editor
+* Used WPOnion `1.3.3`
+* Used VSP Framework `0.7.3`
+
+= 3.1 =
 * Fixed : Reported Issue @ https://wordpress.org/support/topic/fatal-problem-with-site-language-and-permalinks-when-updating-to-version-3-0/
 
 = 3.0 =

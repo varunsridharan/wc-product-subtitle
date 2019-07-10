@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-07-06T08:05:48+05:30\n"
+"POT-Creation-Date: 2019-07-10T19:35:49+05:30\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: wc-product-subtitle\n"
@@ -273,44 +273,45 @@ msgstr ""
 msgid "Page Subtitle Configuration"
 msgstr ""
 
-#: includes/admin/class-settings.php:184
+#. translators: Added Current Section Title
+#: includes/admin/class-settings.php:185
 msgid "Subtitle not visible in %s page ?"
 msgstr ""
 
-#: includes/admin/class-settings.php:191
+#: includes/admin/class-settings.php:192
 msgid "Mini Cart Configuration"
 msgstr ""
 
-#: includes/admin/class-settings.php:204
+#: includes/admin/class-settings.php:205
 msgid "Shortcode Subtitle Configuration"
 msgstr ""
 
-#: includes/admin/class-settings.php:214
+#: includes/admin/class-settings.php:215
 msgid "Email Configuration"
 msgstr ""
 
-#: includes/admin/class-settings.php:221
+#: includes/admin/class-settings.php:222
 msgid "Before Subtitle"
 msgstr ""
 
-#: includes/admin/class-settings.php:222
-#: includes/admin/class-settings.php:227
+#: includes/admin/class-settings.php:223
+#: includes/admin/class-settings.php:228
 msgid "HTML Tags Are Supported"
 msgstr ""
 
-#: includes/admin/class-settings.php:226
+#: includes/admin/class-settings.php:227
 msgid "After Subtitle"
 msgstr ""
 
-#: includes/admin/class-settings.php:232
+#: includes/admin/class-settings.php:233
 msgid "Email Before & After Are Used To Add Custom Line Brakes Before & After The Subtitle To Style It Based On Your Needs"
 msgstr ""
 
-#: includes/admin/class-settings.php:235
+#: includes/admin/class-settings.php:236
 msgid "HTML Email Before & After"
 msgstr ""
 
-#: includes/admin/class-settings.php:240
+#: includes/admin/class-settings.php:241
 msgid "Plain Text Email Before & After"
 msgstr ""
 

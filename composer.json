@@ -1,4 +1,33 @@
 {
+  "name"        : "varunsridharan/wc-product-subtitle",
+  "description" : "Create Custom Product Subtitle For WooCommerce Products.",
+  "readme"      : "readme.md",
+  "type"        : "wordpress-plugin",
+  "support"     : {
+	"issues" : "https://github.com/varunsridharan/wc-product-subtitle/issues"
+  },
+  "homepage"    : "https://github.com/varunsridharan/wc-product-subtitle",
+  "license"     : "GPL-3.0-or-later",
+  "keywords"    : [
+	"wordpress",
+	"wordpress-plugin",
+	"woocommerce",
+	"woocommerce-plugin",
+	"woocommerce-extension",
+	"woocommerce-products",
+	"woocommerce-product-sku",
+	"woocommerce-sku",
+	"woocommerce-shop",
+	"woocommerce-seo",
+	"wordpress-seo",
+	"product-sku",
+	"products",
+	"product",
+	"sku",
+	"sku-link",
+	"wc-product",
+	"wc-product-sku"
+  ],
   "require"     : {
 	"varunsridharan/vsp-framework" : ">=0.7.1",
 	"wponion/wponion"              : ">=1.3.3"
@@ -9,7 +38,16 @@
   },
   "scripts"     : {
 	"makepot"        : "makepot ./wp-pot.json",
-	"add-textdomain" : "add-textdomain -i wc-product-subtitle ./",
-	"build"          : [ "@makepot", "@add-textdomain" ]
-  }
+	"add-textdomain" : "add-textdomain -i \"wc-product-subtitle\" ./",
+	"wp2githubmd"    : "wp2gitthub-md \"wc-product-subtitle\" \"./readme.txt\" ",
+	"build"          : [ "@add-textdomain", "@makepot", "@wp2githubmd" ]
+  },
+  "authors"     : [
+	{
+	  "name"     : "Varun Sridharan",
+	  "email"    : "varunsridharan23@gmail.com",
+	  "homepage" : "http://varunsridharan.in",
+	  "role"     : "Developer"
+	}
+  ]
 }
