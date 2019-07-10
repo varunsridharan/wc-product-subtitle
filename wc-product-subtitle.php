@@ -28,6 +28,18 @@ if ( function_exists( 'vsp_maybe_load' ) ) {
 	vsp_maybe_load( 'wc_product_subtitle_init', __DIR__ . '/vendor/varunsridharan/' );
 }
 
+register_activation_hook( __FILE__, 'wc_product_subtitle_installer' );
+
+if ( ! function_exists( 'wc_product_subtitle_installer' ) ) {
+	/**
+	 * Triggers Plugin Installer.
+	 */
+	function wc_product_subtitle_installer() {
+		vsp_force_load_vendors();
+		require_once __DIR__ . '/installer/index.php';
+	}
+}
+
 if ( ! function_exists( 'wc_product_subtitle_init' ) ) {
 	/**
 	 * Inits Plugin Instance.
