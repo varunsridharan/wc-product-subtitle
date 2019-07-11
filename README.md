@@ -1,5 +1,5 @@
 # WooCommerce Product Subtitle 
-**Contributors:** bravo-computing, varunms  
+**Contributors:** [bravo-computing](https://profile.wordpress.org/bravo-computing) , [ varunms](https://profile.wordpress.org/ varunms)  
 **Tags:** WooCommerce, product, product title,product subtitle, wc product, wc product subtitle, subtitle, post subtitle, extra title,wc extra title, wc product name, product code, product, product title,product subtitle, WooCommerce product, WooCommerce product subtitle, subtitle, post subtitle, extra title, WooCommerce product name, product code, WooCommerce extra title  
 **Donate link:** https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9L76L92SD8YAQ  
 **Requires at least:** 3.0  
@@ -42,20 +42,48 @@ Product Specific : `subtitle-99`
 
 
 ## Screenshots 
-* Settings Menu
-* Cart Page Settings
-* Checkout Page Settings
-* Order Review, My Account Order View & Email Settings
-* Shop Page Settings
-* Single Product Page Settings
-* Product Edit Page Field
-* FrontEnd Single Product Page
-* Frontend Shop Page
-* Shortcode
+### 1. Settings Menu
+![Settings Menu](https://ps.w.org/wc-product-subtitle/assets/screenshot-1.gif)
 
+### 2. General Settings
+![General Settings](https://ps.w.org/wc-product-subtitle/assets/screenshot-2.jpg)
 
+### 3. All Settings
+![All Settings](https://ps.w.org/wc-product-subtitle/assets/screenshot-3.gif)
 
-## Upgrade Notice 
+### 4. Shortcode Settings
+![Shortcode Settings](https://ps.w.org/wc-product-subtitle/assets/screenshot-4.jpg)
+
+### 5. New Product Subtitle
+![New Product Subtitle](https://ps.w.org/wc-product-subtitle/assets/screenshot-5.jpg)
+
+### 6. Edit Product Subtitle
+![Edit Product Subtitle](https://ps.w.org/wc-product-subtitle/assets/screenshot-6.jpg)
+
+### 7. Subtitle In WPEditor
+![Subtitle In WPEditor](https://ps.w.org/wc-product-subtitle/assets/screenshot-7.jpg)
+
+### 8. Subtitle In Product List Table
+![Subtitle In Product List Table](https://ps.w.org/wc-product-subtitle/assets/screenshot-8.jpg)
+
+### 9. Cart Page
+![Cart Page](https://ps.w.org/wc-product-subtitle/assets/screenshot-9.jpg)
+
+### 10. Mini Cart
+![Mini Cart](https://ps.w.org/wc-product-subtitle/assets/screenshot-10.jpg)
+
+### 11. Checkout Page
+![Checkout Page](https://ps.w.org/wc-product-subtitle/assets/screenshot-11.jpg)
+
+### 12. Order Details Page
+![Order Details Page](https://ps.w.org/wc-product-subtitle/assets/screenshot-12.jpg)
+
+### 13. Shop Page
+![Shop Page](https://ps.w.org/wc-product-subtitle/assets/screenshot-13.jpg)
+
+### 14. Single Product Page
+![Single Product Page](https://ps.w.org/wc-product-subtitle/assets/screenshot-14.jpg)
+
 
 
 ## Frequently Asked Questions 
@@ -67,32 +95,6 @@ You can style the subtitle with the below css class
 Global : `product-subtitle`
 
 Product Specific : `subtitle-99`
-
-
-### How To Add Custom Tag ? 
-<strong> Use the below function to register the tag first </strong>
-> add_filter('wc_ps_tags','register_custom_tag');
-> function register_custom_tag($tags){
->    $tags['tag_slug'] = 'Tag Name';
->    return $tags;
-> }
-
-<strong> Now use the below action to render your own tag (`wc_ps_subtitle_{tag_slug}`) </strong>
-
-> add_action('wc_ps_subtitle_tag_slug','render_custom_tag');
-> function render_custom_tag($title,$tag,$pid,$defaults) {
->   echo '<custom_tag>".$title."</custom_tag>";
-> }
-
-<strong> function variable details</strong>
-
-* `$title` : Product's Subtitle
-* `$tag` : Call back Tag
-* `$pid` : Current Product ID
-* `$defaults` : is array of default class & id for the element
-
-
-
 
 
 ## Installation 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "47da236bf01aaca043f984bb12b5f4c0",
+    "content-hash": "53c806bff3cbb9f9c890a048ea06cc55",
     "packages": [
         {
             "name": "varunsridharan/php-autoloader",
@@ -609,16 +609,16 @@
         },
         {
             "name": "varunsridharan/wp2github-md",
-            "version": "1.2",
+            "version": "1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/varunsridharan/wp2github-md.git",
-                "reference": "cce40e630d92aaa4f9b0d6097be313c13b4cf861"
+                "reference": "a609a30d3a89f09ac8173ee51dc86d6e9b91a3ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/varunsridharan/wp2github-md/zipball/cce40e630d92aaa4f9b0d6097be313c13b4cf861",
-                "reference": "cce40e630d92aaa4f9b0d6097be313c13b4cf861",
+                "url": "https://api.github.com/repos/varunsridharan/wp2github-md/zipball/a609a30d3a89f09ac8173ee51dc86d6e9b91a3ee",
+                "reference": "a609a30d3a89f09ac8173ee51dc86d6e9b91a3ee",
                 "shasum": ""
             },
             "bin": [
@@ -654,7 +654,7 @@
                 "wordpress",
                 "wordpress-readme"
             ],
-            "time": "2019-07-10T10:39:02+00:00"
+            "time": "2019-07-11T05:31:00+00:00"
         },
         {
             "name": "wp-cli/i18n-command",
