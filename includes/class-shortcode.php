@@ -21,11 +21,9 @@ if ( ! class_exists( '\WC_Product_Subtitle\Shortcode' ) ) {
 			/**
 			 * @deprecated Use wc_ps
 			 */
-			if ( ! vsp_is_admin() ) {
-				add_shortcode( 'wc-ps', array( $this, 'render_shortcode' ) );
-				add_shortcode( 'wc_ps', array( $this, 'render_shortcode' ) );
-				add_shortcode( 'product_subtitle', array( $this, 'render_shortcode' ) );
-			}
+			add_shortcode( 'wc-ps', array( $this, 'render_shortcode' ) );
+			add_shortcode( 'wc_ps', array( $this, 'render_shortcode' ) );
+			add_shortcode( 'product_subtitle', array( $this, 'render_shortcode' ) );
 			parent::__construct( 'shortcode' );
 		}
 
