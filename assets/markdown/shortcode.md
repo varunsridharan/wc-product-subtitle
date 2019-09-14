@@ -15,12 +15,12 @@
 
 #### With Custom Product ID
 ```
-[wc_ps id="23"]
+[ wc_ps id="23" ]
 ```
 
 #### With Custom Element Tag
 ```
-[wc_ps tag="span"]
+[ wc_ps tag="span" ]
 ```
 
 **Sample Applies For Both shortcodes `wp_ps` or `product_subtitle`**
