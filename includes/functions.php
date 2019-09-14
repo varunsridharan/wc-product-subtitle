@@ -6,8 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! function_exists( 'wc_ps_option' ) ) {
 	/**
-	 * @param string $key Option Key.
-	 * @param bool   $default
+	 * @param string|bool $key Option Key.
+	 * @param bool        $default
 	 *
 	 * @return bool|mixed
 	 */

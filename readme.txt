@@ -3,10 +3,10 @@ Contributors: bravo-computing, varunms
 Tags: WooCommerce, product, product title,product subtitle, wc product, wc product subtitle, subtitle, post subtitle, extra title,wc extra title, wc product name, product code, product, product title,product subtitle, WooCommerce product, WooCommerce product subtitle, subtitle, post subtitle, extra title, WooCommerce product name, product code, WooCommerce extra title
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9L76L92SD8YAQ
 Requires at least: 3.0
-Tested up to: 5.0
+Tested up to: 5.2.3
 WC requires at least: 3.0
-WC tested up to: 3.6.5
-Stable tag: 4.0
+WC tested up to: 3.7.0
+Stable tag: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,13 @@ The manual installation method involves downloading our plugin and uploading it 
  
 
 == Changelog ==
+= 4.1 =
+* Fixed : Subtitle shown even if its set to disabled for single product page
+* Updated WPOnion To `1.3.6`
+* Updated VSP Framework To `0.7.6`
+* Tested With WordPress `5.2.3`
+* Tested With WooCommerce `3.7.0`
+
 = 4.0 =
 * Plugin Fully Redeveloped From Ground
 * Added Mini Cart Support

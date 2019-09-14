@@ -30,7 +30,10 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Admin' ) ) {
 			add_action( 'save_post', array( $this, 'save_product_subtitle' ), 10, 3 );
 
 			if ( false !== wc_ps_option( 'admin_column' ) ) {
-				wponion_admin_columns( 'product', __( 'Subtitle', 'wc-product-subtitle' ), array( $this, 'render_subtitle' ) );
+				wponion_admin_columns( 'product', __( 'Subtitle', 'wc-product-subtitle' ), array(
+					$this,
+					'render_subtitle',
+				) );
 			}
 
 			if ( false !== wc_ps_option( 'admin_below_product_title' ) ) {
@@ -106,8 +109,10 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Admin' ) ) {
 							'textarea_rows'    => 2,
 						) )
 						->debug( false )
-						->wrap_id( 'wc_product_subtitle' )
-						->render( $value, null );
+						->wrap_id( 'wc_product_subtitle' );
+					$field = $field->render( $value, null );
+					wponion_load_core_assets();
+					wp_add_inline_script( 'wponion-core', "window.wponion.hooks.addAction( 'wponion_init', 'wcps', function() { window.wponion_init_field( 'wp_editor', jQuery( 'div#wc_product_subtitle' ) ); } );" );
 				} else {
 					$field = wpo_field( 'text', 'product_subtitle', '' )
 						->placeholder( $placeholder )
@@ -128,6 +133,9 @@ div#wc_product_subtitle.wponion-element .wponion-field-title > h4{font-size: 1.3
 #subtitlediv{ margin-top: 10px; display: inline-block; width: 100%; } 
 #wcps_subtitle{padding: 3px 8px;font-size: 1.5em;line-height: 100%;height: 1.6em;width: 100%;display: inline-block;outline: none;margin: 0 0 3px;background-color: #fff;}
 </style>
+<script>
+	
+</script>
 HTML;
 			}
 		}
