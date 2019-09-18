@@ -18,7 +18,11 @@ vendor/composer/installed.json
 .all-contributorsrc
 .editorconfig
 .gitattributes
+.gitignore
+.git
+.github
 CHANGELOG.md
+readme.md
 LICENSE
 composer.json
 composer.lock
@@ -29,3 +33,6 @@ gulpfile.js
 package.json
 package-lock.json
 wp-pot.json
+.wordpress-org
+.wporgassetsignore
+.wporgignore

@@ -1,19 +1,19 @@
-=== WooCommerce Product Subtitle ===
+=== Product Subtitle For WooCommerce ===
 Contributors: bravo-computing, varunms
-Tags: WooCommerce, product, product title,product subtitle, wc product, wc product subtitle, subtitle, post subtitle, extra title,wc extra title, wc product name, product code, product, product title,product subtitle, WooCommerce product, WooCommerce product subtitle, subtitle, post subtitle, extra title, WooCommerce product name, product code, WooCommerce extra title
+Tags: WooCommerce, product, product title,product subtitle, wc product, product subtitle for wc, subtitle, post subtitle, extra title,wc extra title, wc product name, product code, product, product title,product subtitle, WooCommerce product, subtitle, post subtitle, extra title, WooCommerce product name, product code, WooCommerce extra title
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9L76L92SD8YAQ
 Requires at least: 3.0
 Tested up to: 5.2.3
 WC requires at least: 3.0
 WC tested up to: 3.7.0
-Stable tag: 4.1
+Stable tag: 4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce Product Subtitle plugin allows you to easily add a subtitle to your Products.
+Product Subtitle For WooCommerce plugin allows you to easily add a subtitle to your Products.
 
 == Description ==
-WooCommerce Product Subtitle allows you to easily add a subtitle to your products. also provides various options to customize the output. 
+Product Subtitle For WooCommerce allows you to easily add a subtitle to your products. also provides various options to customize the output. 
 
 You can also use the shortcode `[wc-ps]` to display it within the post content or where ever you need.
 
@@ -21,7 +21,7 @@ It adds a simple input field right under the title field for products. It also a
 
 = WPML Ready =
 
-WC Product Subtitle has been tested by WPML and will allow you to translate the subtitle multilingual sites.  
+Product Subtitle For WooCommerce has been tested by WPML and will allow you to translate the subtitle multilingual sites.
 
 = Shortcode Options =
 
@@ -29,7 +29,7 @@ WC Product Subtitle has been tested by WPML and will allow you to translate the 
 * Element : `[wc-ps tag="p"]` | '[wc-ps tag="h1"]` | '[wc-ps tag="span"]` |
 * Avaiable Tags : `P, SMALL, SPAN, H1, H2, H3, H4, H5, H6`
 
-> Settings Under : WooCommerce => WooCommerce Product Subtitle
+> Settings Under : WooCommerce => Product Subtitle For WooCommerce
 
 = How do I style the subtitle? =
 You can style the subtitle with the below css class
@@ -71,9 +71,9 @@ Product Specific : `subtitle-99`
 
 = Automatic installation =
 
-Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't need to leave your web browser. To do an automatic install of WooCommerce Product Subtitle, log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.
+Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't need to leave your web browser. To do an automatic install of Product Subtitle For WooCommerce, log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.
 
-In the search field type "WooCommerce Product Subtitle"  and click Search Plugins. Once you've found our plugin you can view details about it such as the the point release, rating and description. Most importantly of course, you can install it by simply clicking "Install Now"
+In the search field type "Product Subtitle For WooCommerce"  and click Search Plugins. Once you've found our plugin you can view details about it such as the the point release, rating and description. Most importantly of course, you can install it by simply clicking "Install Now"
 
 = Manual installation =
 
@@ -81,7 +81,7 @@ The manual installation method involves downloading our plugin and uploading it 
 
 1. Installing alternatives:
  * via Admin Dashboard:
- * Go to 'Plugins > Add New', search for "WooCommerce Product Subtitle", click "install"
+ * Go to 'Plugins > Add New', search for "Product Subtitle For WooCommerce", click "install"
  * OR via direct ZIP upload:
  * Upload the ZIP package via 'Plugins > Add New > Upload' in your WP Admin
  * OR via FTP upload:
@@ -91,6 +91,9 @@ The manual installation method involves downloading our plugin and uploading it 
  
 
 == Changelog ==
+= 4.2 =
+* Updated VSP Framework To `0.7.7` which fixes a major vulnerability
+
 = 4.1 =
 * Fixed : Subtitle shown even if its set to disabled for single product page
 * Updated WPOnion To `1.3.6`

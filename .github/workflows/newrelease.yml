@@ -20,6 +20,6 @@ jobs:
         with:
           WORDPRESS_PASSWORD: ${{ secrets.WP_PASSWORD }}
           WORDPRESS_USERNAME: ${{ secrets.WP_USERNAME }}
-          SLUG: wc-product-subtitle
+          SLUG: ${{ secrets.WP_SLUG }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
