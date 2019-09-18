@@ -15,6 +15,8 @@ vendor/*/*/package.json
 vendor/*/*/wp-pot.json
 vendor/composer/LICENSE
 vendor/composer/installed.json
+CODE_OF_CONDUCT.md
+README.md
 .all-contributorsrc
 .editorconfig
 .gitattributes
