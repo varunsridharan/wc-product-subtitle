@@ -55,7 +55,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$this->set_template();
 			$general = $this->builder->container( 'general', __( 'General', 'wc-product-subtitle' ) );
 
-			$this->admin_page( $general->container( 'admin', __( 'Admin Settings', 'wc-product-subtitle' ) ) );
+			$this->general( $general->container( 'admin', __( 'General Settings', 'wc-product-subtitle' ) ) );
 			$this->cart_checkout_page( $general->container( 'cart_page', __( 'Cart Page', 'wc-product-subtitle' ) ) );
 			$this->mini_cart( $general->container( 'mini-cart', __( 'Mini Cart', 'wc-product-subtitle' ) ) );
 			$this->cart_checkout_page( $general->container( 'checkout_page', __( 'Checkout Page', 'wc-product-subtitle' ) ), true );
@@ -73,7 +73,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		/**
 		 * @param \WPO\Container $container
 		 */
-		protected function admin_page( $container ) {
+		protected function general( $container ) {
 			$img = wpo_image( wc_product_subtitle()->plugin_url( 'assets/img/wcps-example.jpg' ), wc_product_subtitle()->plugin_url( 'assets/img/wcps-example-big.jpg' ) )->tooltip( __( 'Click To View Full Image', 'wc-product-subtitle' ), array(
 				'arrow'     => true,
 				'placement' => 'bottom',
@@ -100,6 +100,25 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 				->off( __( 'Simple Input', 'wc-product-subtitle' ) )
 				->switch_width( '8em' )
 				->desc_field( __( 'If Enabled Then `HTML` Editor Will Be Shown Instead Of `Text Input`', 'wc-product-subtitle' ) );
+
+			$iswcpdf_active    = wp_is_plugin_active( 'woocommerce-pdf-invoices-packing-slips/woocommerce-pdf-invoices-packingslips.php' );
+			$iswcpdf_installed = wp_is_plugin_installed( 'woocommerce-pdf-invoices-packing-slips/woocommerce-pdf-invoices-packingslips.php' );
+			$wrap_label        = false;
+			if ( false === $iswcpdf_active ) {
+				$title      = ( false === $iswcpdf_installed ) ? __( 'Plugin Not Installed', 'wc-product-subtitle' ) : __( 'Plugin Not Active', 'wc-product-subtitle' );
+				$type       = ( false === $iswcpdf_installed ) ? 'danger' : 'warning';
+				$wrap_label = array(
+					'content'   => $title,
+					'placement' => 'top-left',
+					'type'      => $type,
+				);
+			}
+
+			$container->subheading( __( 'Integrations', 'wc-product-subtitle' ) );
+			$container->switcher( 'wcpdfinvoiceandpackingslip', __( 'WC PDF Invoices & Packing Slip', 'wc-product-subtitle' ) )
+				->badge( $wrap_label )
+				->desc_field( __( 'Enable this field to show subtitles in [WooCommerce PDF Invoice & Packing Slip](https://wordpress.org/plugins/woocommerce-pdf-invoices-packing-slips/) Plugin', 'wc-product-subtitle' ) );
+
 			$container->subheading( __( 'F.A.Q', 'wc-product-subtitle' ) );
 			$container->faq()
 				->faq( __( 'How Do I Style Subtitles ?', 'wc-product-subtitle' ), wc_product_subtitle()->plugin_path( 'assets/markdown/how-do-i-style-subtitles.md' ) );

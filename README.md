@@ -6,7 +6,7 @@
 **Tested up to:** 5.2.3  
 **WC requires at least:** 3.0  
 **WC tested up to:** 3.7.0  
-**Stable tag:** 4.2  
+**Stable tag:** 4.2.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -131,6 +131,11 @@ The manual installation method involves downloading our plugin and uploading it 
 
 
 ## Changelog 
+
+### 4.2.1 
+* Added : Option to remove subtitle from WooCommerce PDF Invoices / Packing Slips.
+* Updated WPOnion To `1.3.7`
+
 
 ### 4.2 
 * Updated VSP Framework To `0.7.7` which fixes a major vulnerability
