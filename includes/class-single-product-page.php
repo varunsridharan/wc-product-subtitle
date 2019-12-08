@@ -24,8 +24,6 @@ if ( ! class_exists( '\WC_Product_Subtitle\Single_Product_Page' ) ) {
 					$p = ( $this->is_before() ) ? 4 : 6;
 					break;
 				case 'rating':
-					$p = ( $this->is_before() ) ? 9 : 11;
-					break;
 				case 'price':
 					$p = ( $this->is_before() ) ? 9 : 11;
 					break;

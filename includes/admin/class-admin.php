@@ -79,7 +79,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Admin' ) ) {
 				return;
 			}
 			if ( isset( $_POST['product_subtitle'] ) ) {
-				update_product_subtitle( $post_id, wp_kses( $_POST['product_subtitle'], array() ) );
+				update_product_subtitle( $post_id, wp_kses_post( $_POST['product_subtitle'] ) );
 			}
 		}
 

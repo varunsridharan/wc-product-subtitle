@@ -72,6 +72,7 @@ if ( ! function_exists( 'wc_product_subtitle_default_tags' ) ) {
 			'span'   => '&#x3C;span&#x3E;',
 			'small'  => '&#x3C;small&#x3E;',
 			'strong' => '&#x3C;strong&#x3E;',
+			'div'    => '&#x3C;div&#x3E;',
 			'h1'     => '&#x3C;h1&#x3E;',
 			'h2'     => '&#x3C;h2&#x3E;',
 			'h3'     => '&#x3C;h3&#x3E;',

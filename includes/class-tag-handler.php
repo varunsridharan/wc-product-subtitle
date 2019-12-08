@@ -39,6 +39,10 @@ if ( ! class_exists( '\WC_Product_Subtitle\Tag_Handler' ) ) {
 		public function get_subtitle( $title, $tag, $pid ) {
 			$defaults = $this->get_element_defaults( $pid );
 
+			if ( wc_ps_option( 'admin_wp_editor' ) && 'p' === $tag ) {
+				$tag = 'div';
+			}
+
 			if ( in_array( $tag, array_keys( wc_product_subtitle_default_tags() ), true ) ) {
 				$return = $this->get_subtitle_in_element( $tag, $title, $pid );
 			} else {
