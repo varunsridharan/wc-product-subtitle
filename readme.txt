@@ -3,10 +3,10 @@ Contributors: bravo-computing, varunms
 Tags: WooCommerce, product, product title,product subtitle, wc product, product subtitle for wc, subtitle, post subtitle, extra title,wc extra title, wc product name, product code, product, product title,product subtitle, WooCommerce product, subtitle, post subtitle, extra title, WooCommerce product name, product code, WooCommerce extra title
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9L76L92SD8YAQ
 Requires at least: 3.0
-Tested up to: 5.2.3
+Tested up to: 5.3
 WC requires at least: 3.0
-WC tested up to: 3.7.0
-Stable tag: 4.2.1
+WC tested up to: 3.8.2
+Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,14 @@ The manual installation method involves downloading our plugin and uploading it 
  
 
 == Changelog ==
+
+= 4.3 =
+* Fixed : HTML Subtitle Display Issue
+* Updated VSP Framework To `0.7.9`
+* Updated WPOnion To `1.4.0`
+* Tested : With Latest WP
+* Tested : With Latest WC
+
 = 4.2.1 =
 * Added : Option to remove subtitle from WooCommerce PDF Invoices / Packing Slips.
 * Updated WPOnion To `1.3.7`
