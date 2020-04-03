@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Product Subtitle For WooCommerce plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Product Subtitle For WooCommerce 4.4\n"
+"Project-Id-Version: Product Subtitle For WooCommerce 4.4.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-product-subtitle\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-04-03T05:56:19+00:00\n"
+"POT-Creation-Date: 2020-04-03T12:10:32+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: wc-product-subtitle\n"
@@ -35,48 +35,48 @@ msgstr ""
 msgid "http://varunsridharan.in"
 msgstr ""
 
-#: bootstrap.php:51
+#: bootstrap.php:50
 msgid "This handy plugin allows you to easily add a subtitle to your products. also provides various options to customize the output. "
 msgstr ""
 
-#: bootstrap.php:58
-#: includes/admin/class-admin.php:102
+#: bootstrap.php:57
+#: includes/admin/class-admin.php:101
 msgid "Product Subtitle"
 msgstr ""
 
-#: includes/admin/class-admin.php:33
+#: includes/admin/class-admin.php:32
 msgid "Subtitle"
 msgstr ""
 
-#: includes/admin/class-admin.php:41
+#: includes/admin/class-admin.php:40
 msgid "Name"
 msgstr ""
 
-#: includes/admin/class-admin.php:48
+#: includes/admin/class-admin.php:47
 msgid "FAQ"
 msgstr ""
 
-#: includes/admin/class-admin.php:49
+#: includes/admin/class-admin.php:48
 msgid "View On Github"
 msgstr ""
 
-#: includes/admin/class-admin.php:50
+#: includes/admin/class-admin.php:49
 msgid "Report An Issue"
 msgstr ""
 
-#: includes/admin/class-admin.php:51
+#: includes/admin/class-admin.php:50
 msgid "Donate"
 msgstr ""
 
-#: includes/admin/class-admin.php:52
+#: includes/admin/class-admin.php:51
 msgid "Settings"
 msgstr ""
 
-#: includes/admin/class-admin.php:53
+#: includes/admin/class-admin.php:52
 msgid "System Info"
 msgstr ""
 
-#: includes/admin/class-admin.php:96
+#: includes/admin/class-admin.php:95
 msgid "Subtitle : "
 msgstr ""
 
@@ -338,7 +338,7 @@ msgstr ""
 msgid "Plain Text Email Before & After"
 msgstr ""
 
-#: includes/class-integrations.php:50
+#: includes/class-integrations.php:48
 msgid "Subtitle :"
 msgstr ""
 
