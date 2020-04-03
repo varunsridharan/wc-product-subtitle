@@ -1,6 +1,9 @@
 <?php
 
 namespace WC_Product_Subtitle;
+
+use WP_Post;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
@@ -42,7 +45,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Shortcode' ) ) {
 
 			global $post;
 			$this->options['tag'] = str_replace( '_tag', '', $atts['tag'] );
-			if ( empty( $atts['id'] ) && $post instanceof \WP_Post ) {
+			if ( empty( $atts['id'] ) && $post instanceof WP_Post ) {
 				$atts['id'] = isset( $post->ID ) ? $post->ID : $atts['id'];
 			}
 			return $this->render_subtitle( $atts['id'] );

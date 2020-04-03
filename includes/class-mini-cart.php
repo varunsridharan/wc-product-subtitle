@@ -18,6 +18,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Mini_Cart' ) ) {
 			parent::__construct( 'mini_cart' );
 
 			if ( ! empty( $this->get_position() ) ) {
+				/* @uses init_mini_cart */
 				add_action( 'woocommerce_before_mini_cart', array( &$this, 'init_mini_cart' ) );
 			}
 		}
@@ -27,6 +28,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Mini_Cart' ) ) {
 		 */
 		public function init_mini_cart() {
 			if ( ! empty( $this->get_position() ) ) {
+				/* @uses mini_cart_subtitle */
 				add_filter( 'woocommerce_cart_item_name', array( &$this, 'mini_cart_subtitle' ), 10, 2 );
 			}
 		}

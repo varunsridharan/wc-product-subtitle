@@ -1,6 +1,8 @@
 <?php
 
 namespace WC_Product_Subtitle;
+use VSP\Base;
+
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
@@ -13,7 +15,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Display_Handler' ) ) {
 	 * @author Varun Sridharan <varunsridharan23@gmail.com>
 	 * @since 1.0
 	 */
-	abstract class Display_Handler extends \VSP\Base {
+	abstract class Display_Handler extends Base {
 		/**
 		 * Stores Options.
 		 *

@@ -117,8 +117,7 @@ if ( ! function_exists( 'get_product_subtitle' ) ) {
 	 * @return mixed
 	 */
 	function get_product_subtitle( $id ) {
-		$value = get_post_meta( $id, 'wc_ps_subtitle', true );
-		return $value;
+		return get_post_meta( $id, 'wc_ps_subtitle', true );
 	}
 }
 

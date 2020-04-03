@@ -18,6 +18,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Checkout_Page' ) ) {
 			parent::__construct( 'checkout_page' );
 
 			if ( ! empty( $this->get_position() ) ) {
+				/* @uses checkout_subtitle */
 				add_filter( 'woocommerce_cart_item_name', array( $this, 'checkout_subtitle' ), 10, 3 );
 			}
 		}
@@ -37,8 +38,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Checkout_Page' ) ) {
 			}
 
 			$subtitle = $this->render_subtitle( $cart_item['product_id'] );
-			$return   = ( $this->is_before() ) ? $subtitle . ' ' . $title : $title . ' ' . $subtitle;
-			return $return;
+			return ( $this->is_before() ) ? $subtitle . ' ' . $title : $title . ' ' . $subtitle;
 		}
 	}
 }

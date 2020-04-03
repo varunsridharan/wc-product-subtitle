@@ -18,6 +18,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Cart_Page' ) ) {
 			parent::__construct( 'cart_page' );
 
 			if ( ! empty( $this->get_position() ) ) {
+				/* @uses cart_subtitle */
 				add_filter( 'woocommerce_cart_item_name', array( $this, 'cart_subtitle' ), 10, 2 );
 			}
 		}

@@ -21,10 +21,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Integrations' ) ) {
 		 * Class Constructor.
 		 */
 		public function __construct() {
-			/**
-			 * @uses subtitle_wcpdf
-			 */
 			if ( false !== wc_ps_option( 'wcpdfinvoiceandpackingslip' ) ) {
+				/* @uses subtitle_wcpdf */
 				add_action( 'wpo_wcpdf_after_item_meta', array( &$this, 'subtitle_wcpdf' ), 10, 3 );
 			}
 		}

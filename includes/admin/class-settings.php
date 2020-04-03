@@ -34,13 +34,14 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 				'off'          => __( 'After', 'wc-product-subtitle' ),
 				// translators: Added Code Tag
 				'desc_field'   => sprintf( __( 'If %1$sBefore%2$s Selected Then Title Will Be Displayed Before The Selected Position', 'wc-product-subtitle' ), '<code>', '</code>' ),
-			) )->dependency( 'position', 'not-empty' );
-			$this->template['position']  = wpo_field( 'select', 'position', __( 'Position', 'wc-product-subtitle' ), array(
+			) );
+			$this->template['placement']->dependency( 'position', 'not-empty' );
+			$this->template['position'] = wpo_field( 'select', 'position', __( 'Position', 'wc-product-subtitle' ), array(
 				'style'      => 'width:15%',
 				'desc_field' => __( 'Where to show the subtitle', 'wc-product-subtitle' ),
 				'select2'    => true,
 			) );
-			$this->template['element']   = wpo_field( 'select', 'element', __( 'Element Tag', 'wc-product-subtitle' ), array(
+			$this->template['element']  = wpo_field( 'select', 'element', __( 'Element Tag', 'wc-product-subtitle' ), array(
 				'style'      => 'width:10%',
 				'options'    => wc_product_subtitle_tags(),
 				'desc_field' => __( 'Which Type of html tag you need to have', 'wc-product-subtitle' ),

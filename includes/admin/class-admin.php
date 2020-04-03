@@ -22,11 +22,10 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Admin' ) ) {
 		 * On Class Init.
 		 */
 		public function __construct() {
-			if ( version_compare( $GLOBALS['wp_version'], '4.1-alpha', '<' ) ) {
-				add_action( 'edit_form_after_title', array( &$this, 'add_subtitle_field' ) );
-			} else {
-				add_action( 'edit_form_before_permalink', array( &$this, 'add_subtitle_field' ) );
-			}
+			$hook = ( version_compare( $GLOBALS['wp_version'], '4.1-alpha', '<' ) ) ? 'edit_form_after_title' : 'edit_form_before_permalink';
+			/* @uses add_subtitle_field */
+			add_action( $hook, array( &$this, 'add_subtitle_field' ) );
+			/* @uses save_product_subtitle */
 			add_action( 'save_post', array( $this, 'save_product_subtitle' ), 10, 3 );
 
 			if ( false !== wc_ps_option( 'admin_column' ) ) {

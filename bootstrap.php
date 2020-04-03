@@ -10,7 +10,6 @@
  */
 
 use VSP\Framework;
-use WC_Product_Subtitle\Admin\Settings;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die;

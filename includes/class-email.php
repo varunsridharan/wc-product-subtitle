@@ -18,11 +18,9 @@ if ( ! class_exists( '\WC_Product_Subtitle\Email' ) ) {
 			parent::__construct( 'email' );
 
 			if ( ! empty( $this->get_position() ) ) {
-				if ( $this->is_before() ) {
-					add_action( 'woocommerce_order_item_meta_start', array( &$this, 'email_subtitle' ), 10, 2 );
-				} else {
-					add_action( 'woocommerce_order_item_meta_end', array( &$this, 'email_subtitle' ), 10, 2 );
-				}
+				$hook = ( $this->is_before() ) ? 'woocommerce_order_item_meta_start' : 'woocommerce_order_item_meta_end';
+				/* @uses email_subtitle */
+				add_action( $hook, array( &$this, 'email_subtitle' ), 10, 2 );
 			}
 		}
 

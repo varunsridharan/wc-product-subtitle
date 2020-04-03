@@ -44,6 +44,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Shop_Page' ) ) {
 				 *
 				 * @hooked woocommerce_template_loop_rating - 5
 				 * @hooked woocommerce_template_loop_price - 10
+				 * @uses the_subtitle
 				 */
 				add_action( $key, array( $this, 'the_subtitle' ), $p );
 			}

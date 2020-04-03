@@ -6,7 +6,7 @@ Requires at least: 3.0
 Tested up to: 5.3
 WC requires at least: 3.0
 WC tested up to: 3.8.2
-Stable tag: 4.3
+Stable tag: 4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,7 +26,7 @@ Product Subtitle For WooCommerce has been tested by WPML and will allow you to t
 = Shortcode Options =
 
 * Post ID : `[wc-ps id="99"]`
-* Element : `[wc-ps tag="p"]` | '[wc-ps tag="h1"]` | '[wc-ps tag="span"]` |
+* Element : `[wc-ps tag="p"]` | `[wc-ps tag="h1"]` | `[wc-ps tag="span"]`
 * Avaiable Tags : `P, SMALL, SPAN, H1, H2, H3, H4, H5, H6`
 
 > Settings Under : WooCommerce => Product Subtitle For WooCommerce
@@ -91,6 +91,12 @@ The manual installation method involves downloading our plugin and uploading it 
  
 
 == Changelog ==
+
+= 4.4 =
+* Updated VSP Framework To `0.8.0`
+* Updated WPOnion To `1.4.5`
+* Tested : With Latest WP
+* Tested : With Latest WC
 
 = 4.3 =
 * Fixed : HTML Subtitle Display Issue

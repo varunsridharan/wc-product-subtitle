@@ -23,6 +23,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Order_View_Page' ) ) {
 
 			if ( ! empty( $this->get_position() ) ) {
 				$key = ( 'title' === $this->get_position() ) ? 'woocommerce_order_item_name' : 'woocommerce_order_item_quantity_html';
+				/* @uses order_page_subtitle */
 				add_filter( $key, array( $this, 'order_page_subtitle' ), 10, 2 );
 			}
 		}

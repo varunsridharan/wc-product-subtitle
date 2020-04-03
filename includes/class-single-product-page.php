@@ -48,6 +48,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Single_Product_Page' ) ) {
 				 * @hooked woocommerce_template_single_meta - 40
 				 * @hooked woocommerce_template_single_sharing - 50
 				 * @hooked WC_Structured_Data::generate_product_data() - 60
+				 * @uses the_subtitle
 				 */
 				add_action( 'woocommerce_single_product_summary', array( $this, 'the_subtitle' ), $p );
 			}
