@@ -55,7 +55,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		 */
 		public function fields() {
 			$this->set_template();
-			$general = $this->builder->container( 'general', __( 'General', 'wc-product-subtitle' ) );
+			$general = $this->builder->container( 'general', __( 'General', 'wc-product-subtitle' ), 'wpoic-gears' );
 
 			$this->general( $general->container( 'admin', __( 'General Settings', 'wc-product-subtitle' ) ) );
 			$this->cart_checkout_page( $general->container( 'cart_page', __( 'Cart Page', 'wc-product-subtitle' ) ) );
@@ -67,7 +67,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$this->email( $general->container( 'order-email', __( 'Email', 'wc-product-subtitle' ) ) );
 			$this->shortcode( $general->container( 'shortcode', __( 'Shortcode', 'wc-product-subtitle' ) ) );
 
-			$this->builder->container( 'system-info', __( 'System Tool/Info', 'wc-product-subtitle' ), 'dashicons dashicons-info' )
+			$this->builder->container( 'system-info', __( 'System Info', 'wc-product-subtitle' ), 'wpoic-info' )
 				->callback( 'wponion_sysinfo' )
 				->set_var( 'developer', 'varunsridharan23@gmail.com' );
 		}

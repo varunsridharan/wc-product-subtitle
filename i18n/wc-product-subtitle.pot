@@ -2,20 +2,20 @@
 # This file is distributed under the same license as the Product Subtitle For WooCommerce plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Product Subtitle For WooCommerce 4.4.1\n"
+"Project-Id-Version: Product Subtitle For WooCommerce 4.4.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-product-subtitle\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-04-03T12:10:32+00:00\n"
+"POT-Creation-Date: 2020-04-16T14:00:08+05:30\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: wc-product-subtitle\n"
 
 #. Plugin Name of the plugin
-#: wc-product-subtitle.php:21
+#: wc-product-subtitle.php:23
 msgid "Product Subtitle For WooCommerce"
 msgstr ""
 
@@ -35,12 +35,12 @@ msgstr ""
 msgid "http://varunsridharan.in"
 msgstr ""
 
-#: bootstrap.php:50
+#: bootstrap.php:43
 msgid "This handy plugin allows you to easily add a subtitle to your products. also provides various options to customize the output. "
 msgstr ""
 
-#: bootstrap.php:57
-#: includes/admin/class-admin.php:101
+#: bootstrap.php:50
+#: includes/admin/class-admin.php:103
 msgid "Product Subtitle"
 msgstr ""
 
@@ -73,10 +73,11 @@ msgid "Settings"
 msgstr ""
 
 #: includes/admin/class-admin.php:52
+#: includes/admin/class-settings.php:70
 msgid "System Info"
 msgstr ""
 
-#: includes/admin/class-admin.php:95
+#: includes/admin/class-admin.php:97
 msgid "Subtitle : "
 msgstr ""
 
@@ -113,228 +114,224 @@ msgstr ""
 msgid "Which Type of html tag you need to have"
 msgstr ""
 
-#: includes/admin/class-settings.php:57
+#: includes/admin/class-settings.php:58
 msgid "General"
 msgstr ""
 
-#: includes/admin/class-settings.php:59
+#: includes/admin/class-settings.php:60
 msgid "General Settings"
 msgstr ""
 
-#: includes/admin/class-settings.php:60
+#: includes/admin/class-settings.php:61
 msgid "Cart Page"
 msgstr ""
 
-#: includes/admin/class-settings.php:61
+#: includes/admin/class-settings.php:62
 msgid "Mini Cart"
 msgstr ""
 
-#: includes/admin/class-settings.php:62
+#: includes/admin/class-settings.php:63
 msgid "Checkout Page"
 msgstr ""
 
-#: includes/admin/class-settings.php:63
+#: includes/admin/class-settings.php:64
 msgid "Order View Page"
 msgstr ""
 
-#: includes/admin/class-settings.php:64
+#: includes/admin/class-settings.php:65
 msgid "Shop Page"
 msgstr ""
 
-#: includes/admin/class-settings.php:65
+#: includes/admin/class-settings.php:66
 msgid "Single Product"
 msgstr ""
 
-#: includes/admin/class-settings.php:66
+#: includes/admin/class-settings.php:67
 msgid "Email"
 msgstr ""
 
-#: includes/admin/class-settings.php:67
+#: includes/admin/class-settings.php:68
 msgid "Shortcode"
 msgstr ""
 
-#: includes/admin/class-settings.php:69
-msgid "System Tool/Info"
-msgstr ""
-
-#: includes/admin/class-settings.php:78
+#: includes/admin/class-settings.php:81
 msgid "Click To View Full Image"
 msgstr ""
 
-#: includes/admin/class-settings.php:84
+#: includes/admin/class-settings.php:87
 msgid "Admin Settings"
 msgstr ""
 
-#: includes/admin/class-settings.php:85
+#: includes/admin/class-settings.php:88
 msgid "Subtitle Column"
 msgstr ""
 
-#: includes/admin/class-settings.php:87
+#: includes/admin/class-settings.php:90
 msgid "Enable"
 msgstr ""
 
-#: includes/admin/class-settings.php:88
+#: includes/admin/class-settings.php:91
 msgid "Disable"
 msgstr ""
 
-#: includes/admin/class-settings.php:90
+#: includes/admin/class-settings.php:93
 msgid "If enabled a custom product subtitle column will be added in product listing table"
 msgstr ""
 
-#: includes/admin/class-settings.php:91
+#: includes/admin/class-settings.php:94
 msgid "Below Product Title"
 msgstr ""
 
-#: includes/admin/class-settings.php:93
+#: includes/admin/class-settings.php:96
 msgid "Yes"
 msgstr ""
 
-#: includes/admin/class-settings.php:94
+#: includes/admin/class-settings.php:97
 msgid "No"
 msgstr ""
 
-#: includes/admin/class-settings.php:96
+#: includes/admin/class-settings.php:99
 msgid "If Enabled Subtitle Will Be Shown Below The Product Title In Product List Table"
 msgstr ""
 
-#: includes/admin/class-settings.php:98
+#: includes/admin/class-settings.php:101
 msgid "Subtitle HTML Editor"
 msgstr ""
 
-#: includes/admin/class-settings.php:100
+#: includes/admin/class-settings.php:103
 msgid "HTML Editor"
 msgstr ""
 
-#: includes/admin/class-settings.php:101
+#: includes/admin/class-settings.php:104
 msgid "Simple Input"
 msgstr ""
 
-#: includes/admin/class-settings.php:103
+#: includes/admin/class-settings.php:106
 msgid "If Enabled Then `HTML` Editor Will Be Shown Instead Of `Text Input`"
 msgstr ""
 
-#: includes/admin/class-settings.php:109
+#: includes/admin/class-settings.php:112
 msgid "Plugin Not Installed"
 msgstr ""
 
-#: includes/admin/class-settings.php:109
+#: includes/admin/class-settings.php:112
 msgid "Plugin Not Active"
 msgstr ""
 
-#: includes/admin/class-settings.php:118
+#: includes/admin/class-settings.php:121
 msgid "Integrations"
 msgstr ""
 
-#: includes/admin/class-settings.php:119
+#: includes/admin/class-settings.php:122
 msgid "WC PDF Invoices & Packing Slip"
 msgstr ""
 
-#: includes/admin/class-settings.php:121
+#: includes/admin/class-settings.php:124
 msgid "Enable this field to show subtitles in [WooCommerce PDF Invoice & Packing Slip](https://wordpress.org/plugins/woocommerce-pdf-invoices-packing-slips/) Plugin"
 msgstr ""
 
-#: includes/admin/class-settings.php:123
+#: includes/admin/class-settings.php:126
 msgid "F.A.Q"
 msgstr ""
 
-#: includes/admin/class-settings.php:125
+#: includes/admin/class-settings.php:128
 msgid "How Do I Style Subtitles ?"
 msgstr ""
 
-#: includes/admin/class-settings.php:132
+#: includes/admin/class-settings.php:137
 msgid "Order View Page Subtitle Configuration"
 msgstr ""
 
-#: includes/admin/class-settings.php:135
+#: includes/admin/class-settings.php:140
 msgid "This Configration Will Be Used In The Following Pages"
 msgstr ""
 
-#: includes/admin/class-settings.php:136
+#: includes/admin/class-settings.php:141
 msgid "1. Order Thank You Page"
 msgstr ""
 
-#: includes/admin/class-settings.php:137
+#: includes/admin/class-settings.php:142
 msgid "2. MyAccount Order View Page"
 msgstr ""
 
-#: includes/admin/class-settings.php:147
-#: includes/admin/class-settings.php:164
-#: includes/admin/class-settings.php:181
-#: includes/admin/class-settings.php:201
+#: includes/admin/class-settings.php:152
+#: includes/admin/class-settings.php:171
+#: includes/admin/class-settings.php:190
+#: includes/admin/class-settings.php:212
 msgid "Frequently Asked Questions"
 msgstr ""
 
-#: includes/admin/class-settings.php:149
+#: includes/admin/class-settings.php:154
 msgid "Subtitle not visible in Thank You Page & MyAccount Order View Page ?"
 msgstr ""
 
-#: includes/admin/class-settings.php:156
+#: includes/admin/class-settings.php:163
 msgid "Shop Page Subtitle Configuration"
 msgstr ""
 
-#: includes/admin/class-settings.php:166
+#: includes/admin/class-settings.php:173
 msgid "Subtitle not visible in shop page"
 msgstr ""
 
-#: includes/admin/class-settings.php:173
+#: includes/admin/class-settings.php:182
 msgid "Single Product Page Subtitle Configuration"
 msgstr ""
 
-#: includes/admin/class-settings.php:184
+#: includes/admin/class-settings.php:193
 msgid "Subtitle not visible in single product page"
 msgstr ""
 
-#: includes/admin/class-settings.php:193
+#: includes/admin/class-settings.php:204
 msgid "Cart"
 msgstr ""
 
-#: includes/admin/class-settings.php:193
+#: includes/admin/class-settings.php:204
 msgid "Checkout"
 msgstr ""
 
-#: includes/admin/class-settings.php:195
+#: includes/admin/class-settings.php:206
 msgid "Page Subtitle Configuration"
 msgstr ""
 
 #. translators: Added Current Section Title
-#: includes/admin/class-settings.php:205
+#: includes/admin/class-settings.php:216
 msgid "Subtitle not visible in %s page ?"
 msgstr ""
 
-#: includes/admin/class-settings.php:212
+#: includes/admin/class-settings.php:225
 msgid "Mini Cart Configuration"
 msgstr ""
 
-#: includes/admin/class-settings.php:225
+#: includes/admin/class-settings.php:240
 msgid "Shortcode Subtitle Configuration"
 msgstr ""
 
-#: includes/admin/class-settings.php:235
+#: includes/admin/class-settings.php:252
 msgid "Email Configuration"
 msgstr ""
 
-#: includes/admin/class-settings.php:242
+#: includes/admin/class-settings.php:259
 msgid "Before Subtitle"
 msgstr ""
 
-#: includes/admin/class-settings.php:243
-#: includes/admin/class-settings.php:248
+#: includes/admin/class-settings.php:260
+#: includes/admin/class-settings.php:265
 msgid "HTML Tags Are Supported"
 msgstr ""
 
-#: includes/admin/class-settings.php:247
+#: includes/admin/class-settings.php:264
 msgid "After Subtitle"
 msgstr ""
 
-#: includes/admin/class-settings.php:253
+#: includes/admin/class-settings.php:270
 msgid "Email Before & After Are Used To Add Custom Line Brakes Before & After The Subtitle To Style It Based On Your Needs"
 msgstr ""
 
-#: includes/admin/class-settings.php:256
+#: includes/admin/class-settings.php:273
 msgid "HTML Email Before & After"
 msgstr ""
 
-#: includes/admin/class-settings.php:261
+#: includes/admin/class-settings.php:278
 msgid "Plain Text Email Before & After"
 msgstr ""
 
@@ -342,37 +339,37 @@ msgstr ""
 msgid "Subtitle :"
 msgstr ""
 
-#: includes/functions.php:29
+#: includes/functions.php:31
 msgid "Disable/ Use Shortcode"
 msgstr ""
 
-#: includes/functions.php:30
+#: includes/functions.php:32
 msgid "Product Title"
 msgstr ""
 
-#: includes/functions.php:39
+#: includes/functions.php:41
 msgid "Product Qty"
 msgstr ""
 
-#: includes/functions.php:42
-#: includes/functions.php:46
+#: includes/functions.php:44
+#: includes/functions.php:48
 msgid "Product Rating"
 msgstr ""
 
-#: includes/functions.php:43
-#: includes/functions.php:47
+#: includes/functions.php:45
+#: includes/functions.php:49
 msgid "Product Price"
 msgstr ""
 
-#: includes/functions.php:48
+#: includes/functions.php:50
 msgid "Product Excerpt"
 msgstr ""
 
-#: includes/functions.php:49
+#: includes/functions.php:51
 msgid "Product AddToCart"
 msgstr ""
 
-#: includes/functions.php:50
-#: includes/functions.php:54
+#: includes/functions.php:52
+#: includes/functions.php:56
 msgid "Product Meta"
 msgstr ""

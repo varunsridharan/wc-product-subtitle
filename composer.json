@@ -43,7 +43,7 @@
 	"add-textdomain" : "add-textdomain -i \"wc-product-subtitle\" ./",
 	"wp2githubmd"    : "wp2gitthub-md \"wc-product-subtitle\" \"./readme.txt\" ",
 	"classmaps"      : "classmap-generator \"includes/\" ./classmaps.php",
-	"build"          : [ "@add-textdomain", "@makepot", "@wp2githubmd" ]
+	"build"          : [ "@classmaps", "@add-textdomain", "@makepot", "@wp2githubmd" ]
   },
   "authors"     : [
 	{
