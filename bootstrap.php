@@ -1,19 +1,10 @@
 <?php
-/**
- *
- * @author Varun Sridharan <varunsridharan23@gmail.com>
- * @version 1.0
- * @since 1.0
- * @link
- * @copyright 2019 Varun Sridharan
- * @license GPLV3 Or Greater (https://www.gnu.org/licenses/gpl-3.0.txt)
- */
-
-use VSP\Framework;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
+
+use VSP\Framework;
 
 if ( ! class_exists( 'WC_Product_Subtitle' ) ) {
 	/**
@@ -41,12 +32,14 @@ if ( ! class_exists( 'WC_Product_Subtitle' ) ) {
 				'autoloader'   => array(
 					'namespace' => 'WC_Product_Subtitle',
 					'base_path' => $this->plugin_path( 'includes/' ),
+					'options'   => array(
+						'classmap' => $this->plugin_path( 'classmaps.php' ),
+					),
 				),
 				'system_tools' => false,
 			);
 			$options['settings_page'] = array(
 				'option_name'    => '_wc_product_subtitle',
-				//'framework_title' => __( 'Product Subtitles For WooCommerce' ),
 				'framework_desc' => __( 'This handy plugin allows you to easily add a subtitle to your products. also provides various options to customize the output. ', 'wc-product-subtitle' ),
 				'theme'          => 'wp',
 				'is_single_page' => 'submenu',

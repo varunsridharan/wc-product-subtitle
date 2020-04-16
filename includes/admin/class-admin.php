@@ -70,6 +70,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Admin' ) ) {
 		}
 
 		/**
+		 * Stores Subtitle In Product EDIT Page.
+		 *
 		 * @param $post_id
 		 * @param $post
 		 */

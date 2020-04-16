@@ -34,6 +34,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Mini_Cart' ) ) {
 		}
 
 		/**
+		 * Renders Mini Cart Subtitle.
+		 *
 		 * @param string     $title
 		 * @param bool|array $item
 		 *

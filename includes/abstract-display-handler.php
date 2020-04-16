@@ -1,6 +1,7 @@
 <?php
 
 namespace WC_Product_Subtitle;
+
 use VSP\Base;
 
 if ( ! defined( 'WPINC' ) ) {
@@ -25,6 +26,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Display_Handler' ) ) {
 		protected $options = array();
 
 		/**
+		 * Stores Tag Handler Instance.
+		 *
 		 * @var bool|\WC_Product_Subtitle\Tag_Handler
 		 * @access
 		 */
@@ -41,6 +44,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Display_Handler' ) ) {
 		}
 
 		/**
+		 * Fetches & Returns Subtitle Position.
+		 *
 		 * @return bool|mixed
 		 */
 		public function get_position() {
@@ -48,6 +53,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Display_Handler' ) ) {
 		}
 
 		/**
+		 * Checks if subtitle should be placed before.
+		 *
 		 * @return bool|mixed
 		 */
 		public function is_before() {
@@ -55,6 +62,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Display_Handler' ) ) {
 		}
 
 		/**
+		 * Fetches & Returns Subtitle Position Element.
+		 *
 		 * @return bool|mixed
 		 */
 		public function get_element() {
@@ -62,6 +71,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Display_Handler' ) ) {
 		}
 
 		/**
+		 * Echo The Subtitle.
+		 *
 		 * @param string $pid
 		 */
 		public function the_subtitle( $pid = '' ) {
@@ -69,6 +80,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Display_Handler' ) ) {
 		}
 
 		/**
+		 * Renders Subtitle.
+		 *
 		 * @param string $pid
 		 *
 		 * @return false|string

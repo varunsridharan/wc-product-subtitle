@@ -29,6 +29,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Order_View_Page' ) ) {
 		}
 
 		/**
+		 * Renders Order Page Subtitle.
+		 *
 		 * @param string $title
 		 * @param array  $cart_item
 		 *

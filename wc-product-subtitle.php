@@ -16,6 +16,8 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+use Varunsridharan\WordPress\Plugin_Version_Management;
+
 defined( 'WCPS_VERSION' ) || define( 'WCPS_VERSION', '4.4.1' );
 defined( 'WCPS_FILE' ) || define( 'WCPS_FILE', __FILE__ );
 defined( 'WCPS_NAME' ) || define( 'WCPS_NAME', __( 'Product Subtitle For WooCommerce', 'wc-product-subtitle' ) );
@@ -39,6 +41,15 @@ if ( ! function_exists( 'wc_product_subtitle_installer' ) ) {
 	function wc_product_subtitle_installer() {
 		vsp_force_load_vendors();
 		require_once __DIR__ . '/installer/index.php';
+
+		$instance = new Plugin_Version_Management( array(
+			'slug'    => 'wc-product-subtitle',
+			'version' => WCPS_VERSION,
+			'logs'    => false,
+		), array(
+			'4.0' => array( '\WC_Product_Subtitle\Installer\Installer', 'run_v4' ),
+		) );
+		$instance->run();
 	}
 }
 

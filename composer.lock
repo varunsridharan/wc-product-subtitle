@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53c806bff3cbb9f9c890a048ea06cc55",
+    "content-hash": "d88ba2a7abe97a3e79524fb13ca8fea6",
     "packages": [
         {
             "name": "thewpleague/wp-query-builder",
@@ -82,16 +82,16 @@
         },
         {
             "name": "varunsridharan/sweetalert2-php",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/varunsridharan/sweetalert2-php.git",
-                "reference": "d6f7eb37bd28d22bfb56176a51a558e5d71cd954"
+                "reference": "123ba880d4c25b6840ed8015a7bacc2666b67184"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/varunsridharan/sweetalert2-php/zipball/d6f7eb37bd28d22bfb56176a51a558e5d71cd954",
-                "reference": "d6f7eb37bd28d22bfb56176a51a558e5d71cd954",
+                "url": "https://api.github.com/repos/varunsridharan/sweetalert2-php/zipball/123ba880d4c25b6840ed8015a7bacc2666b67184",
+                "reference": "123ba880d4c25b6840ed8015a7bacc2666b67184",
                 "shasum": ""
             },
             "type": "library",
@@ -131,20 +131,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-03-16T13:02:30+00:00"
+            "time": "2020-04-06T04:19:14+00:00"
         },
         {
             "name": "varunsridharan/vsp-framework",
-            "version": "0.8.0",
+            "version": "0.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/varunsridharan/vsp-framework.git",
-                "reference": "f6bf8d32e281369209f056c5c435dc394a3b0a90"
+                "reference": "529dd237b7d644de5f6afe4a5030f4988e1bdd23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/varunsridharan/vsp-framework/zipball/f6bf8d32e281369209f056c5c435dc394a3b0a90",
-                "reference": "f6bf8d32e281369209f056c5c435dc394a3b0a90",
+                "url": "https://api.github.com/repos/varunsridharan/vsp-framework/zipball/529dd237b7d644de5f6afe4a5030f4988e1bdd23",
+                "reference": "529dd237b7d644de5f6afe4a5030f4988e1bdd23",
                 "shasum": ""
             },
             "require": {
@@ -155,10 +155,12 @@
                 "varunsridharan/wp-plugin-version-management": ">=1.0",
                 "varunsridharan/wp-post": ">=1.0",
                 "varunsridharan/wp-transient-api": ">=1.0",
-                "varunsridharan/wpallimport_rapidaddon": "*"
+                "varunsridharan/wpallimport_rapidaddon": "*",
+                "wponion/wponion": "*"
             },
             "require-dev": {
-                "varunsridharan/php-classmap-generator": "*"
+                "varunsridharan/php-classmap-generator": "*",
+                "varunsridharan/wp-cli-textdomain": "^1.1"
             },
             "type": "library",
             "autoload": {
@@ -180,17 +182,7 @@
             ],
             "description": "Simple & Lightweight WP Plugin Framework",
             "homepage": "https://github.com/varunsridharan/vsp-framework",
-            "funding": [
-                {
-                    "url": "https://paypal.me/varunsridharan23",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/varunsridharan",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-03-17T02:45:42+00:00"
+            "time": "2020-04-16T01:10:30+00:00"
         },
         {
             "name": "varunsridharan/wp-ajaxer",
@@ -590,7 +582,7 @@
         },
         {
             "name": "varunsridharan/wpallimport_rapidaddon",
-            "version": "545.545",
+            "version": "557.557",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vsp-libs/wp-all-import-rapid-addon.git",
@@ -619,16 +611,16 @@
         },
         {
             "name": "wponion/wponion",
-            "version": "1.4.5",
+            "version": "1.4.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wponion/wponion.git",
-                "reference": "85332ea342fff00cb7bd87f5f5764de0be1b602b"
+                "reference": "1cfc6330747768ffee4ec285189726ea88af1e01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wponion/wponion/zipball/85332ea342fff00cb7bd87f5f5764de0be1b602b",
-                "reference": "85332ea342fff00cb7bd87f5f5764de0be1b602b",
+                "url": "https://api.github.com/repos/wponion/wponion/zipball/1cfc6330747768ffee4ec285189726ea88af1e01",
+                "reference": "1cfc6330747768ffee4ec285189726ea88af1e01",
                 "shasum": ""
             },
             "require": {
@@ -687,21 +679,7 @@
                 "wponion",
                 "wponion-framework"
             ],
-            "funding": [
-                {
-                    "url": "https://paypal.me/varunsridharan23",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/varunsridharan",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/varunsridharan",
-                    "type": "patreon"
-                }
-            ],
-            "time": "2020-04-03T01:13:18+00:00"
+            "time": "2020-04-15T01:34:37+00:00"
         }
     ],
     "packages-dev": [
@@ -830,16 +808,16 @@
         },
         {
             "name": "mck89/peast",
-            "version": "v1.10.2",
+            "version": "v1.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mck89/peast.git",
-                "reference": "1c3984ba9fc3cb93848748f141f5ddac0a65c5e1"
+                "reference": "6d1100f39f684c9e004f808b27f6c824b083d8d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mck89/peast/zipball/1c3984ba9fc3cb93848748f141f5ddac0a65c5e1",
-                "reference": "1c3984ba9fc3cb93848748f141f5ddac0a65c5e1",
+                "url": "https://api.github.com/repos/mck89/peast/zipball/6d1100f39f684c9e004f808b27f6c824b083d8d8",
+                "reference": "6d1100f39f684c9e004f808b27f6c824b083d8d8",
                 "shasum": ""
             },
             "require": {
@@ -851,7 +829,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.10.2-dev"
+                    "dev-master": "1.10.3-dev"
                 }
             },
             "autoload": {
@@ -871,7 +849,7 @@
                 }
             ],
             "description": "Peast is PHP library that generates AST for JavaScript code",
-            "time": "2020-03-15T16:03:55+00:00"
+            "time": "2020-04-03T09:06:20+00:00"
         },
         {
             "name": "mustache/mustache",
@@ -918,6 +896,56 @@
                 "templating"
             ],
             "time": "2019-11-23T21:40:31+00:00"
+        },
+        {
+            "name": "mustangostang/spyc",
+            "version": "0.6.3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:mustangostang/spyc.git",
+                "reference": "4627c838b16550b666d15aeae1e5289dd5b77da0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mustangostang/spyc/zipball/4627c838b16550b666d15aeae1e5289dd5b77da0",
+                "reference": "4627c838b16550b666d15aeae1e5289dd5b77da0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.3.*@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.5.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Spyc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mustangostang",
+                    "email": "vlad.andersen@gmail.com"
+                }
+            ],
+            "description": "A simple YAML loader/dumper class for PHP",
+            "homepage": "https://github.com/mustangostang/spyc/",
+            "keywords": [
+                "spyc",
+                "yaml",
+                "yml"
+            ],
+            "time": "2019-09-10T13:16:29+00:00"
         },
         {
             "name": "rmccue/requests",
@@ -1030,6 +1058,42 @@
                 }
             ],
             "time": "2020-03-27T16:56:45+00:00"
+        },
+        {
+            "name": "varunsridharan/php-classmap-generator",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/varunsridharan/php-classmap-generator.git",
+                "reference": "35d2fc55eb56d83bc9ec5fcb00353328d2eea6aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/varunsridharan/php-classmap-generator/zipball/35d2fc55eb56d83bc9ec5fcb00353328d2eea6aa",
+                "reference": "35d2fc55eb56d83bc9ec5fcb00353328d2eea6aa",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/finder": "*"
+            },
+            "bin": [
+                "bin/classmap-generator.bat"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Varun",
+                    "email": "varunsridharan23@gmail.com",
+                    "homepage": "https://varunsridharan.in",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Lightweight PHP Classmap Generator",
+            "time": "2019-10-25T04:48:09+00:00"
         },
         {
             "name": "varunsridharan/wp-cli-textdomain",

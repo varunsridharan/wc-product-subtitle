@@ -6,6 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! function_exists( 'wc_ps_option' ) ) {
 	/**
+	 * Retrives Options From DB.
+	 *
 	 * @param string|bool $key Option Key.
 	 * @param bool        $default
 	 *

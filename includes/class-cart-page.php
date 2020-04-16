@@ -24,6 +24,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Cart_Page' ) ) {
 		}
 
 		/**
+		 * Renders Cart Subtitle.
+		 *
 		 * @param $title
 		 * @param $cart_item
 		 *

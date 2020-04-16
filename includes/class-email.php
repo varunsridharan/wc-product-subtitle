@@ -25,10 +25,12 @@ if ( ! class_exists( '\WC_Product_Subtitle\Email' ) ) {
 		}
 
 		/**
+		 * Renders Email Subtitle.
+		 *
 		 * @param bool|int                       $order_id
 		 * @param boolean|\WC_Order_Item_Product $item
 		 * @param boolean|\WC_Order              $order
-		 * @param bool|boolean                   $plain_text
+		 * @param bool                           $plain_text
 		 */
 		public function email_subtitle( $order_id = false, $item = false, $order = false, $plain_text = false ) {
 			$option = ( true === $plain_text ) ? 'plain' : 'html';

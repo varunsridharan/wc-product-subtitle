@@ -91,6 +91,12 @@ The manual installation method involves downloading our plugin and uploading it 
  
 
 == Changelog ==
+= 4.5 =
+* Updated VSP Framework To `0.8.4`
+* Updated WPOnion To `1.4.5.2`
+
+= 4.4.1 =
+* Fixed : Minor release bug.
 
 = 4.4 =
 * Updated VSP Framework To `0.8.0`

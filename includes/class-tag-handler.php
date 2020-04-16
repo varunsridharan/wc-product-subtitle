@@ -30,6 +30,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Tag_Handler' ) ) {
 		}
 
 		/**
+		 * Fetches Subtitle.
+		 *
 		 * @param $title
 		 * @param $tag
 		 * @param $pid
@@ -56,6 +58,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Tag_Handler' ) ) {
 		}
 
 		/**
+		 * Echo The Subtitle.
+		 *
 		 * @param $title
 		 * @param $tag
 		 * @param $pid
@@ -67,6 +71,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Tag_Handler' ) ) {
 		}
 
 		/**
+		 * Returns Subtitle Element's Default Attributes.
+		 *
 		 * @param $post_id
 		 *
 		 * @return array
@@ -79,6 +85,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Tag_Handler' ) ) {
 		}
 
 		/**
+		 * Generates Element & Inserts Subtitle.
+		 *
 		 * @param string $ntag
 		 * @param string $value
 		 * @param bool   $id

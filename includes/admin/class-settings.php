@@ -50,6 +50,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		}
 
 		/**
+		 * Generates Basic Settings Fields.
 		 * Inits Settings.
 		 */
 		public function fields() {
@@ -72,6 +73,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		}
 
 		/**
+		 * General Settings Fields.
+		 *
 		 * @param \WPO\Container $container
 		 */
 		protected function general( $container ) {
@@ -126,6 +129,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		}
 
 		/**
+		 * order_view_page fields.
+		 *
 		 * @param \WPO\Container $container
 		 */
 		protected function order_view_page( $container ) {
@@ -150,6 +155,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		}
 
 		/**
+		 * shop page fields.
+		 *
 		 * @param \WPO\Container $container
 		 */
 		protected function shop_page( $container ) {
@@ -167,6 +174,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		}
 
 		/**
+		 * single product fields.
+		 *
 		 * @param \WPO\Container $container
 		 */
 		protected function single_product( $container ) {
@@ -185,6 +194,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		}
 
 		/**
+		 * cart / checkout page fields.
+		 *
 		 * @param \WPO\Container $container
 		 * @param bool           $is_checkout
 		 */
@@ -206,6 +217,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		}
 
 		/**
+		 * mini cart fields.
+		 *
 		 * @param \WPO\Container $container
 		 */
 		protected function mini_cart( $container ) {
@@ -219,6 +232,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		}
 
 		/**
+		 * shortcode fields.
+		 *
 		 * @param \WPO\Container $container
 		 */
 		protected function shortcode( $container ) {
@@ -229,6 +244,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		}
 
 		/**
+		 * Email fields.
+		 *
 		 * @param \WPO\Container $container
 		 */
 		protected function email( $container ) {
