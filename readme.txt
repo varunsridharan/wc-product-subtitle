@@ -6,7 +6,7 @@ Requires at least: 3.0
 Tested up to: 5.3
 WC requires at least: 3.0
 WC tested up to: 3.8.2
-Stable tag: 4.4.2
+Stable tag: 4.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,10 @@ The manual installation method involves downloading our plugin and uploading it 
  
 
 == Changelog ==
+= 4.4.2 =
+* Updated VSP Framework To `0.8.5`
+* Updated WPOnion To `1.4.5.3`
+
 = 4.4.2 =
 * Updated VSP Framework To `0.8.4`
 * Updated WPOnion To `1.4.5.2`

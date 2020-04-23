@@ -53,7 +53,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		 */
 		public function fields() {
 			$this->set_template();
-			$general = $this->builder->container( 'general', __( 'General', 'wc-product-subtitle' ), 'wpoic-gears' );
+			$general = $this->builder->container( 'general', __( 'General', 'wc-product-subtitle' ), 'wpoic-settings' );
 
 			$this->general( $general->container( 'admin', __( 'General Settings', 'wc-product-subtitle' ) ) );
 			$this->cart_checkout_page( $general->container( 'cart_page', __( 'Cart Page', 'wc-product-subtitle' ) ) );
@@ -65,12 +65,12 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$this->email( $general->container( 'order-email', __( 'Email', 'wc-product-subtitle' ) ) );
 			$this->shortcode( $general->container( 'shortcode', __( 'Shortcode', 'wc-product-subtitle' ) ) );
 
-			$this->builder->container( 'docs', __( 'Documentation' ), 'wpoic-book' )
+			$this->builder->container( 'docs', __( 'Documentation', 'wc-product-subtitle' ), 'wpoic-book' )
 				->container_class( 'wpo-text-success' )
 				->href( 'https://wordpress.org/plugins/wc-product-subtitle/' )
 				->attribute( 'target', '_blank' );
 
-			$this->builder->container( 'sysinfo', __( 'System Info' ), ' wpoic-info ' )
+			$this->builder->container( 'sysinfo', __( 'System Info', 'wc-product-subtitle' ), ' wpoic-info ' )
 				->callback( 'wponion_sysinfo' )
 				->set_var( 'developer', 'varunsridharan23@gmail.com' );
 		}
