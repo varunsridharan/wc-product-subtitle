@@ -2,11 +2,9 @@
 
 namespace WC_Product_Subtitle;
 
-use WP_Post;
+defined( 'ABSPATH' ) || exit;
 
-if ( ! defined( 'ABSPATH' ) ) {
-	die;
-}
+use WP_Post;
 
 if ( ! class_exists( '\WC_Product_Subtitle\Shortcode' ) ) {
 	/**

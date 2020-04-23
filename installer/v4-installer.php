@@ -2,9 +2,7 @@
 
 namespace WC_Product_Subtitle\Installer;
 
-if ( ! defined( 'ABSPATH' ) ) {
-	die;
-}
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( '\WC_Product_Subtitle\Installer\Version_4' ) ) {
 	/**

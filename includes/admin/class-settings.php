@@ -2,11 +2,9 @@
 
 namespace WC_Product_Subtitle\Admin;
 
-use VSP\Core\Abstracts\Plugin_Settings;
+defined( 'ABSPATH' ) || exit;
 
-if ( ! defined( 'ABSPATH' ) ) {
-	die;
-}
+use VSP\Core\Abstracts\Plugin_Settings;
 
 if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 	/**
@@ -67,7 +65,12 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$this->email( $general->container( 'order-email', __( 'Email', 'wc-product-subtitle' ) ) );
 			$this->shortcode( $general->container( 'shortcode', __( 'Shortcode', 'wc-product-subtitle' ) ) );
 
-			$this->builder->container( 'system-info', __( 'System Info', 'wc-product-subtitle' ), 'wpoic-info' )
+			$this->builder->container( 'docs', __( 'Documentation' ), 'wpoic-book' )
+				->container_class( 'wpo-text-success' )
+				->href( 'https://wordpress.org/plugins/wc-product-subtitle/' )
+				->attribute( 'target', '_blank' );
+
+			$this->builder->container( 'sysinfo', __( 'System Info' ), ' wpoic-info ' )
 				->callback( 'wponion_sysinfo' )
 				->set_var( 'developer', 'varunsridharan23@gmail.com' );
 		}

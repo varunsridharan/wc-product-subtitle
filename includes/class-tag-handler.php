@@ -1,9 +1,8 @@
 <?php
 
 namespace WC_Product_Subtitle;
-if ( ! defined( 'WPINC' ) ) {
-	die;
-}
+
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( '\WC_Product_Subtitle\Tag_Handler' ) ) {
 	/**

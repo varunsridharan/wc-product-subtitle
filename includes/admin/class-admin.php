@@ -2,12 +2,9 @@
 
 namespace WC_Product_Subtitle\Admin;
 
+defined( 'ABSPATH' ) || exit;
+
 use VSP\Base;
-
-if ( ! defined( 'ABSPATH' ) ) {
-	die;
-}
-
 
 if ( ! class_exists( '\WC_Product_Subtitle\Admin\Admin' ) ) {
 	/**

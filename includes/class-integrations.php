@@ -2,11 +2,9 @@
 
 namespace WC_Product_Subtitle;
 
-use VSP\Base;
+defined( 'ABSPATH' ) || exit;
 
-if ( ! defined( 'ABSPATH' ) ) {
-	die;
-}
+use VSP\Base;
 
 if ( ! class_exists( '\WC_Product_Subtitle\Integrations' ) ) {
 	/**

@@ -2,9 +2,7 @@
 
 namespace WC_Product_Subtitle;
 
-if ( ! defined( 'ABSPATH' ) ) {
-	die;
-}
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( '\WC_Product_Subtitle\Order_View_Page' ) ) {
 	/**

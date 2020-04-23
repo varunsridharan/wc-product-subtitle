@@ -2,6 +2,8 @@
 
 namespace WC_Product_Subtitle;
 
+defined( 'ABSPATH' ) || exit;
+
 if ( ! class_exists( '\WC_Product_Subtitle\Checkout_Page' ) ) {
 	/**
 	 * Class Checkout_Page
