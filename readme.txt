@@ -93,6 +93,7 @@ The manual installation method involves downloading our plugin and uploading it 
 
 == Changelog ==
 = 4.5 =
+* Fixed : <a href="https://github.com/varunsridharan/wc-product-subtitle/issues/30">2 Subtitle Shown when `order-view` or `email` is configured in our plugin</a>
 * Added Option to show subtitle in admin order screen
 * improved Performance
 * Updated VSP Framework To `1.8.9.1`
