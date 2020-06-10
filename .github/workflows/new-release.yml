@@ -21,3 +21,9 @@ jobs:
           WORDPRESS_PASSWORD: ${{ secrets.WP_PASSWORD }}
           WORDPRESS_USERNAME: ${{ secrets.WP_USERNAME }}
           SLUG: ${{ secrets.WP_SLUG }}
+      - name: Upload ZIP To Release in Github
+        uses: Roang-zero1/github-upload-release-artifacts-action@master
+        with:
+          args: dist/
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

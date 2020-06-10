@@ -1,10 +1,11 @@
 <?php
-// Last Updated: Wed 10-Jun-2020 | 01:21:12:pm
-// Total Class: 16
+// Last Updated: Wed 10-Jun-2020 | 01:50:07:pm
+// Total Class: 17
 
 return array (
   'WC_Product_Subtitle\\Display_Handler' => 'abstract-display-handler.php',
   'WC_Product_Subtitle\\Admin\\Admin' => 'admin/class-admin.php',
+  'WC_Product_Subtitle\\Admin\\FAQ' => 'admin/class-faq.php',
   'WC_Product_Subtitle\\Admin\\Order_Render' => 'admin/class-order-render.php',
   'WC_Product_Subtitle\\Admin\\Settings' => 'admin/class-settings.php',
   'WC_Product_Subtitle\\Admin\\Product\\Field' => 'admin/product/class-field.php',

@@ -2,11 +2,11 @@
 Contributors: bravo-computing, varunms
 Tags: WooCommerce, product, product title,product subtitle, wc product, product subtitle for wc, subtitle, post subtitle, extra title,wc extra title, wc product name, product code, product, product title,product subtitle, WooCommerce product, subtitle, post subtitle, extra title, WooCommerce product name, product code, WooCommerce extra title
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9L76L92SD8YAQ
-Requires at least: 3.0
-Tested up to: 5.3
+Requires at least: 5.0
+Tested up to: 5.4
 WC requires at least: 3.0
-WC tested up to: 3.8.2
-Stable tag: 4.4.3
+WC tested up to: 4.2
+Stable tag: 4.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,7 @@ Product Specific : `subtitle-99`
 12. Order Details Page
 13. Shop Page
 14. Single Product Page
+15. Admin Order Page
 
 == Frequently Asked Questions == 
 
@@ -91,6 +92,14 @@ The manual installation method involves downloading our plugin and uploading it 
  
 
 == Changelog ==
+= 4.5 =
+* Added Option to show subtitle in admin order screen
+* improved Performance
+* Updated VSP Framework To `1.8.9.1`
+* Updated WPOnion To `1.5.1`
+* Tested : With Latest WP `5.4.1`
+* Tested : With Latest WC `4.2.0`
+
 = 4.4.3 =
 * Updated VSP Framework To `0.8.5`
 * Updated WPOnion To `1.4.5.3`
