@@ -133,8 +133,10 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 				->desc_field( __( 'Enable this field to show subtitles in [WooCommerce PDF Invoice & Packing Slip](https://wordpress.org/plugins/woocommerce-pdf-invoices-packing-slips/) Plugin', 'wc-product-subtitle' ) );
 
 			$container->subheading( __( 'F.A.Q', 'wc-product-subtitle' ) );
-			$container->faq()
-				->faq( __( 'How Do I Style Subtitles ?', 'wc-product-subtitle' ), wc_product_subtitle()->plugin_path( 'assets/markdown/how-do-i-style-subtitles.md' ) );
+			$container->faq()->faq( __( 'How Do I Style Subtitles ?', 'wc-product-subtitle' ), array(
+				FAQ::instance(),
+				'hdiss',
+			) );
 		}
 
 		/**
@@ -151,14 +153,17 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 ' )->markdown( true );
 
 			$fieldset = $container->set_group( 'order_view_page' );
-			$fieldset->field( clone( $this->template['position'] ) )
+			$fieldset->add_field( clone( $this->template['position'] ) )
 				->options( wp_product_subtitle_placements( 'order_view' ) );
-			$fieldset->field( clone( $this->template['placement'] ) );
-			$fieldset->field( clone( $this->template['element'] ) );
+			$fieldset->add_field( clone( $this->template['placement'] ) );
+			$fieldset->add_field( clone( $this->template['element'] ) );
 
 			$container->subheading( __( 'Frequently Asked Questions', 'wc-product-subtitle' ) );
 			$container->faq()
-				->faq( __( 'Subtitle not visible in Thank You Page & MyAccount Order View Page ?', 'wc-product-subtitle' ), wc_product_subtitle()->plugin_path( 'assets/markdown/subtitle-not-visible-in-thankyou-page-myaccount-order-view-page.md' ) );
+				->faq( __( 'Subtitle not visible in Thank You Page & MyAccount Order View Page ?', 'wc-product-subtitle' ), array(
+					FAQ::instance(),
+					'order_view_page',
+				) );
 		}
 
 		/**
@@ -170,14 +175,16 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$container->subheading( __( 'Shop Page Subtitle Configuration', 'wc-product-subtitle' ) );
 
 			$fieldset = $container->set_group( 'shop_page' );
-			$fieldset->field( clone( $this->template['position'] ) )
+			$fieldset->add_field( clone( $this->template['position'] ) )
 				->options( wp_product_subtitle_placements( 'shop' ) );
-			$fieldset->field( clone( $this->template['placement'] ) );
-			$fieldset->field( clone( $this->template['element'] ) );
+			$fieldset->add_field( clone( $this->template['placement'] ) );
+			$fieldset->add_field( clone( $this->template['element'] ) );
 
 			$container->subheading( __( 'Frequently Asked Questions', 'wc-product-subtitle' ) );
-			$container->faq()
-				->faq( __( 'Subtitle not visible in shop page', 'wc-product-subtitle' ), wc_product_subtitle()->plugin_path( 'assets/markdown/subtitle-not-visible-in-shop-page.md' ) );
+			$container->faq()->faq( __( 'Subtitle not visible in shop page', 'wc-product-subtitle' ), array(
+				FAQ::instance(),
+				'shop_page',
+			) );
 		}
 
 		/**
@@ -189,15 +196,17 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$container->subheading( __( 'Single Product Page Subtitle Configuration', 'wc-product-subtitle' ) );
 
 			$fieldset = $container->set_group( 'single_product' );
-			$fieldset->field( clone( $this->template['position'] ) )
+			$fieldset->add_field( clone( $this->template['position'] ) )
 				->options( wp_product_subtitle_placements( 'single' ) );
-			$fieldset->field( clone( $this->template['placement'] ) );
-			$fieldset->field( clone( $this->template['element'] ) );
+			$fieldset->add_field( clone( $this->template['placement'] ) );
+			$fieldset->add_field( clone( $this->template['element'] ) );
 
 			$container->subheading( __( 'Frequently Asked Questions', 'wc-product-subtitle' ) );
 
-			$container->faq()
-				->faq( __( 'Subtitle not visible in single product page', 'wc-product-subtitle' ), wc_product_subtitle()->plugin_path( 'assets/markdown/subtitle-not-visible-in-single-product-page.md' ) );
+			$container->faq()->faq( __( 'Subtitle not visible in single product page', 'wc-product-subtitle' ), array(
+				FAQ::instance(),
+				'single_product',
+			) );
 		}
 
 		/**
@@ -211,16 +220,19 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$title     = ( false === $is_checkout ) ? __( 'Cart', 'wc-product-subtitle' ) : __( 'Checkout', 'wc-product-subtitle' );
 
 			$container->subheading( $title . ' ' . __( 'Page Subtitle Configuration', 'wc-product-subtitle' ) );
-			$container->field( clone( $this->template['position'] ) )
+			$container->add_field( clone( $this->template['position'] ) )
 				->options( wp_product_subtitle_placements( 'cart' ) );
-			$container->field( clone( $this->template['placement'] ) );
-			$container->field( clone( $this->template['element'] ) );
+			$container->add_field( clone( $this->template['placement'] ) );
+			$container->add_field( clone( $this->template['element'] ) );
 
 			$container->subheading( __( 'Frequently Asked Questions', 'wc-product-subtitle' ) );
 
 			$faq = $container->faq();
 			// translators: Added Current Section Title
-			$faq->faq( sprintf( __( 'Subtitle not visible in %s page ?', 'wc-product-subtitle' ), $title ), wc_product_subtitle()->plugin_path( 'assets/markdown/cart-page.md' ) );
+			$faq->faq( sprintf( __( 'Subtitle not visible in %s page ?', 'wc-product-subtitle' ), $title ), array(
+				FAQ::instance(),
+				'cart_checkout',
+			) );
 		}
 
 		/**
@@ -246,10 +258,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		protected function shortcode( $container ) {
 			$container->subheading( __( 'Shortcode Subtitle Configuration', 'wc-product-subtitle' ) );
 			$fieldset = $container->set_group( 'shortcode' );
-			$fieldset->field( clone( $this->template['element'] ) );
-			$fieldset->content()
-				->content_path( wc_product_subtitle()->plugin_path( 'assets/markdown/shortcode.md' ) )
-				->markdown( true );
+			$fieldset->add_field( clone( $this->template['element'] ) );
+			$fieldset->content()->content( array( FAQ::instance(), 'shortcode' ) )->markdown( true );
 		}
 
 		/**

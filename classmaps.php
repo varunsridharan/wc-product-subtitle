@@ -1,14 +1,14 @@
 <?php
-/**
- * Last Updated: Thu 23-Apr-2020 / 12:17:51:pm
- * Total Class:  13
- * Namespace: 
- */
+// Last Updated: Wed 10-Jun-2020 | 01:21:12:pm
+// Total Class: 16
 
 return array (
   'WC_Product_Subtitle\\Display_Handler' => 'abstract-display-handler.php',
   'WC_Product_Subtitle\\Admin\\Admin' => 'admin/class-admin.php',
+  'WC_Product_Subtitle\\Admin\\Order_Render' => 'admin/class-order-render.php',
   'WC_Product_Subtitle\\Admin\\Settings' => 'admin/class-settings.php',
+  'WC_Product_Subtitle\\Admin\\Product\\Field' => 'admin/product/class-field.php',
+  'WC_Product_Subtitle\\Admin\\Product\\Render' => 'admin/product/class-render.php',
   'WC_Product_Subtitle\\Cart_Page' => 'class-cart-page.php',
   'WC_Product_Subtitle\\Checkout_Page' => 'class-checkout-page.php',
   'WC_Product_Subtitle\\Email' => 'class-email.php',
