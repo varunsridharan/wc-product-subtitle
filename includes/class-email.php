@@ -18,10 +18,14 @@ class Email extends Display_Handler {
 		parent::__construct( 'email' );
 
 		if ( ! empty( $this->get_position() ) ) {
-			$hook = ( $this->is_before() ) ? 'woocommerce_order_item_meta_start' : 'woocommerce_order_item_meta_end';
-			/* @uses email_subtitle */
-			add_action( $hook, array( &$this, 'email_subtitle' ), 10, 2 );
+			add_action( 'woocommerce_email_before_order_table', array( $this, 'init_hook' ) );
 		}
+	}
+
+	public function init_hook() {
+		$hook = ( $this->is_before() ) ? 'woocommerce_order_item_meta_start' : 'woocommerce_order_item_meta_end';
+		/* @uses email_subtitle */
+		add_action( $hook, array( &$this, 'email_subtitle' ), 10, 2 );
 	}
 
 	/**

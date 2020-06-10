@@ -66,16 +66,14 @@ final class WC_Product_Subtitle extends Framework {
 			$this->_instance( '\WC_Product_Subtitle\Admin\Admin' );
 		}
 
-		if ( ! vsp_is_admin() ) {
-			$this->_instance( '\WC_Product_Subtitle\Cart_Page' );
-			$this->_instance( '\WC_Product_Subtitle\Checkout_Page' );
-			$this->_instance( '\WC_Product_Subtitle\Single_Product_Page' );
-			$this->_instance( '\WC_Product_Subtitle\Shop_Page' );
-			$this->_instance( '\WC_Product_Subtitle\Order_View_Page' );
-			$this->_instance( '\WC_Product_Subtitle\Shortcode' );
-			$this->_instance( '\WC_Product_Subtitle\Email' );
-			$this->_instance( '\WC_Product_Subtitle\Mini_Cart' );
-			$this->_instance( '\WC_Product_Subtitle\Integrations' );
-		}
+		$this->_instance( '\WC_Product_Subtitle\Cart_Page' );
+		$this->_instance( '\WC_Product_Subtitle\Checkout_Page' );
+		$this->_instance( '\WC_Product_Subtitle\Single_Product_Page' );
+		$this->_instance( '\WC_Product_Subtitle\Shop_Page' );
+		$this->_instance( '\WC_Product_Subtitle\Order_View_Page' );
+		$this->_instance( '\WC_Product_Subtitle\Shortcode' );
+		$this->_instance( '\WC_Product_Subtitle\Email' );
+		$this->_instance( '\WC_Product_Subtitle\Mini_Cart' );
+		$this->_instance( '\WC_Product_Subtitle\Integrations' );
 	}
 }
