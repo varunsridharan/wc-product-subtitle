@@ -29,10 +29,8 @@ if ( ! class_exists( '\WC_Product_Subtitle\Mini_Cart' ) ) {
 		 * Inits Mini Cart.
 		 */
 		public function init_mini_cart() {
-			if ( ! empty( $this->get_position() ) ) {
-				/* @uses mini_cart_subtitle */
-				add_filter( 'woocommerce_cart_item_name', array( &$this, 'mini_cart_subtitle' ), 10, 2 );
-			}
+			/* @uses mini_cart_subtitle */
+			add_filter( 'woocommerce_cart_item_name', array( &$this, 'mini_cart_subtitle' ), 10, 2 );
 		}
 
 		/**
