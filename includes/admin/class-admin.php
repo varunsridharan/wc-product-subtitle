@@ -22,6 +22,10 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Admin' ) ) {
 			$this->_instance( '\WC_Product_Subtitle\Admin\Product\Field' );
 			$this->_instance( '\WC_Product_Subtitle\Admin\Product\Render' );
 
+			if ( wc_ps_option( 'admin_order' ) ) {
+				$this->_instance( '\WC_Product_Subtitle\Admin\Order_Render' );
+			}
+
 			wponion_plugin_links( $this->plugin()->file() )
 				->action_link_before( 'settings', __( '⚙️ Settings' ), admin_url( 'admin.php?page=product-subtitle' ) )
 				->action_link_after( 'sysinfo', __( 'ℹ️ System Info' ), admin_url( 'admin.php?page=product-subtitle&container-id=system-info' ) )

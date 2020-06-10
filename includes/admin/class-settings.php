@@ -94,6 +94,12 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 				->off( __( 'Disable', 'wc-product-subtitle' ) )
 				->switch_width( '5em' )
 				->desc_field( __( 'If enabled a custom product subtitle column will be added in product listing table', 'wc-product-subtitle' ) );
+			$container->switcher( 'admin_order', __( 'Admin Order View', 'wc-product-subtitle' ) )
+				->switch_style( 'style-14' )
+				->on( __( 'Enable', 'wc-product-subtitle' ) )
+				->off( __( 'Disable', 'wc-product-subtitle' ) )
+				->switch_width( '5em' )
+				->desc_field( __( 'If enabled a custom product subtitle column will be added in single order product listing table in admin', 'wc-product-subtitle' ) );
 			$container->switcher( 'admin_below_product_title', __( 'Below Product Title', 'wc-product-subtitle' ) )
 				->switch_style( 'style-14' )
 				->on( __( 'Yes', 'wc-product-subtitle' ) )
@@ -138,13 +144,11 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		 */
 		protected function order_view_page( $container ) {
 			$container->subheading( __( 'Order View Page Subtitle Configuration', 'wc-product-subtitle' ) );
-
 			$container->content( '
 ' . __( 'This Configration Will Be Used In The Following Pages', 'wc-product-subtitle' ) . '
 ' . __( '1. Order Thank You Page', 'wc-product-subtitle' ) . '
 ' . __( '2. MyAccount Order View Page', 'wc-product-subtitle' ) . '
-' )
-				->markdown( true );
+' )->markdown( true );
 
 			$fieldset = $container->set_group( 'order_view_page' );
 			$fieldset->field( clone( $this->template['position'] ) )
@@ -254,8 +258,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		protected function email( $container ) {
 			$container->subheading( __( 'Email Configuration', 'wc-product-subtitle' ) );
 			$fieldset = $container->set_group( 'email' );
-			$fieldset->add( clone $this->template['position'] )
-				->options( wp_product_subtitle_placements( 'email' ) );
+			$fieldset->add( clone $this->template['position'] )->options( wp_product_subtitle_placements( 'email' ) );
 			$fieldset->add( clone $this->template['placement'] );
 			$fieldset->add( clone $this->template['element'] );
 
@@ -272,8 +275,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 
 			$fieldset->content( __( 'Email Before & After Are Used To Add Custom Line Brakes Before & After The Subtitle To Style It Based On Your Needs', 'wc-product-subtitle' ) );
 
-			$html = $fieldset->accordion( 'html' )
-				->heading( __( 'HTML Email Before & After', 'wc-product-subtitle' ) );
+			$html = $fieldset->accordion( 'html' )->heading( __( 'HTML Email Before & After', 'wc-product-subtitle' ) );
 			$html->add( clone $before );
 			$html->add( clone $after );
 
