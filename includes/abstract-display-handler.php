@@ -16,9 +16,9 @@ abstract class Display_Handler extends Base {
 	/**
 	 * Stores Tag Handler Instance.
 	 *
-	 * @var bool|\WC_Product_Subtitle\Tag_Handler
+	 * @var \WC_Product_Subtitle\Tag_Handler
 	 */
-	protected $tag_handler = false;
+	protected $tag_handler;
 
 	/**
 	 * Display_Handler constructor.
