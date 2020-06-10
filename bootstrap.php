@@ -18,20 +18,20 @@ if ( ! class_exists( 'WC_Product_Subtitle' ) ) {
 		 * @throws \Exception
 		 */
 		public function __construct() {
-			$this->name               = WCPS_NAME;
-			$this->version            = WCPS_VERSION;
-			$this->db_slug            = '_wcps';
-			$this->hook_slug          = 'wc_ps';
-			$this->file               = WCPS_FILE;
 			$options                  = array(
+				'name'         => WCPS_NAME,
+				'version'      => WCPS_VERSION,
+				'db_slug'      => '_wcps',
+				'hook_slug'    => 'wc_ps',
+				'file'         => WCPS_FILE,
 				'logging'      => false,
 				'addons'       => false,
 				'localizer'    => false,
 				'autoloader'   => array(
 					'namespace' => 'WC_Product_Subtitle',
-					'base_path' => $this->plugin_path( 'includes/' ),
+					'base_path' => $this->plugin_path( 'includes/', WCPS_FILE ),
 					'options'   => array(
-						'classmap' => $this->plugin_path( 'classmaps.php' ),
+						'classmap' => $this->plugin_path( 'classmaps.php', WCPS_FILE ),
 					),
 				),
 				'system_tools' => false,
@@ -68,15 +68,17 @@ if ( ! class_exists( 'WC_Product_Subtitle' ) ) {
 				$this->_instance( '\WC_Product_Subtitle\Admin\Admin' );
 			}
 
-			$this->_instance( '\WC_Product_Subtitle\Cart_Page' );
-			$this->_instance( '\WC_Product_Subtitle\Checkout_Page' );
-			$this->_instance( '\WC_Product_Subtitle\Single_Product_Page' );
-			$this->_instance( '\WC_Product_Subtitle\Shop_Page' );
-			$this->_instance( '\WC_Product_Subtitle\Order_View_Page' );
-			$this->_instance( '\WC_Product_Subtitle\Shortcode' );
-			$this->_instance( '\WC_Product_Subtitle\Email' );
-			$this->_instance( '\WC_Product_Subtitle\Mini_Cart' );
-			$this->_instance( '\WC_Product_Subtitle\Integrations' );
+			if ( ! vsp_is_admin() ) {
+				$this->_instance( '\WC_Product_Subtitle\Cart_Page' );
+				$this->_instance( '\WC_Product_Subtitle\Checkout_Page' );
+				$this->_instance( '\WC_Product_Subtitle\Single_Product_Page' );
+				$this->_instance( '\WC_Product_Subtitle\Shop_Page' );
+				$this->_instance( '\WC_Product_Subtitle\Order_View_Page' );
+				$this->_instance( '\WC_Product_Subtitle\Shortcode' );
+				$this->_instance( '\WC_Product_Subtitle\Email' );
+				$this->_instance( '\WC_Product_Subtitle\Mini_Cart' );
+				$this->_instance( '\WC_Product_Subtitle\Integrations' );
+			}
 		}
 	}
 }

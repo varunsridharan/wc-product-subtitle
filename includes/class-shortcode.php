@@ -42,7 +42,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Shortcode' ) ) {
 			), $atts, 'wc_ps' );
 
 			global $post;
-			$this->options['tag'] = str_replace( '_tag', '', $atts['tag'] );
+			$this->set_option( 'tag', str_replace( '_tag', '', $atts['tag'] ) );
 			if ( empty( $atts['id'] ) && $post instanceof WP_Post ) {
 				$atts['id'] = isset( $post->ID ) ? $post->ID : $atts['id'];
 			}

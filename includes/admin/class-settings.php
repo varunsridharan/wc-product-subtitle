@@ -247,7 +247,9 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$container->subheading( __( 'Shortcode Subtitle Configuration', 'wc-product-subtitle' ) );
 			$fieldset = $container->set_group( 'shortcode' );
 			$fieldset->field( clone( $this->template['element'] ) );
-			$fieldset->markdown( wc_product_subtitle()->plugin_path( 'assets/markdown/shortcode.md' ) );
+			$fieldset->content()
+				->content_path( wc_product_subtitle()->plugin_path( 'assets/markdown/shortcode.md' ) )
+				->markdown( true );
 		}
 
 		/**
