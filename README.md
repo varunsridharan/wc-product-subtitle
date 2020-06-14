@@ -6,7 +6,7 @@
 **Tested up to:** 5.4  
 **WC requires at least:** 3.0  
 **WC tested up to:** 4.2  
-**Stable tag:** 4.5  
+**Stable tag:** 4.5.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -85,7 +85,7 @@ Product Specific : `subtitle-99`
 ![Single Product Page](https://ps.w.org/wc-product-subtitle/assets/screenshot-14.jpg)
 
 ### 15. Admin Order Page
-[missing image]
+![Admin Order Page](https://ps.w.org/wc-product-subtitle/assets/screenshot-15.jpg)
 
 
 
@@ -134,6 +134,11 @@ The manual installation method involves downloading our plugin and uploading it 
 
 
 ## Changelog 
+
+### 4.5.1 
+* Fixed : https://github.com/wponion/wponion/issues/252
+* Updated WPOnion To `1.5.2`
+
 
 ### 4.5 
 * Fixed : <a href="https://github.com/varunsridharan/wc-product-subtitle/issues/30">2 Subtitle Shown when `order-view` or `email` is configured in our plugin</a>
