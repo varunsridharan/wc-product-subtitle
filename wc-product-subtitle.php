@@ -3,20 +3,20 @@
  * Plugin Name: Product Subtitle For WooCommerce
  * Plugin URI: https://wordpress.org/plugins/wc-product-subtitle
  * Description: Create Custom Product Subtitle For WooCommerce Products.
- * Version: 4.5.1
+ * Version: 4.5.2
  * Author: Varun Sridharan
  * Author URI: http://varunsridharan.in
  * Text Domain: wc-product-subtitle
  * Domain Path: /i18n
  * WC requires at least: 3.0
- * WC tested up to: 4.2
+ * WC tested up to: 5.1.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
 use Varunsridharan\WordPress\Plugin_Version_Management;
 
-defined( 'WCPS_VERSION' ) || define( 'WCPS_VERSION', '4.5.1' );
+defined( 'WCPS_VERSION' ) || define( 'WCPS_VERSION', '4.5.2' );
 defined( 'WCPS_FILE' ) || define( 'WCPS_FILE', __FILE__ );
 defined( 'WCPS_NAME' ) || define( 'WCPS_NAME', __( 'Product Subtitle For WooCommerce', 'wc-product-subtitle' ) );
 
