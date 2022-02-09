@@ -3,10 +3,10 @@
 **Tags:** WooCommerce, product, product title,product subtitle, wc product, product subtitle for wc, subtitle, post subtitle, extra title,wc extra title, wc product name, product code, product, product title,product subtitle, WooCommerce product, subtitle, post subtitle, extra title, WooCommerce product name, product code, WooCommerce extra title  
 **Donate link:** https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9L76L92SD8YAQ  
 **Requires at least:** 5.0  
-**Tested up to:** 5.7  
+**Tested up to:** 5.9  
 **WC requires at least:** 3.0  
-**WC tested up to:** 5.1.0  
-**Stable tag:** 4.5.2  
+**WC tested up to:** 6.1.1  
+**Stable tag:** 4.5.3  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -134,6 +134,12 @@ The manual installation method involves downloading our plugin and uploading it 
 
 
 ## Changelog 
+
+### 4.5.3 
+* Fixed All Security Issues Reported By WordPress.org Team
+* Tested : With Latest WP `5.9`
+* Tested : With Latest WC `6.1.1`
+
 
 ### 4.5.2 
 * Updated WPOnion To `1.5.3.7`
