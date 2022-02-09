@@ -246,7 +246,7 @@
 </span></span><span id="117" class="l"><span class="php-comment">     * @return mixed
 </span></span><span id="118" class="l"><span class="php-comment">     */</span>
 </span><span id="119" class="l">    <span class="php-keyword1">function</span> get_product_subtitle( <span class="php-var">$id</span> ) {
-</span><span id="120" class="l">        <span class="php-keyword1">return</span> get_post_meta( <span class="php-var">$id</span>, <span class="php-quote">'wc_ps_subtitle'</span>, <span class="php-keyword1">true</span> );
+</span><span id="120" class="l">        <span class="php-keyword1">return</span> wp_kses( get_post_meta( <span class="php-var">$id</span>, <span class="php-quote">'wc_ps_subtitle'</span>, <span class="php-keyword1">true</span> ), <span class="php-quote">'post'</span> );
 </span><span id="121" class="l">    }
 </span><span id="122" class="l">}
 </span><span id="123" class="l">
