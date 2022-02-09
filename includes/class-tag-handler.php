@@ -75,8 +75,8 @@ class Tag_Handler {
 	 */
 	public function get_element_defaults( $post_id ) {
 		return array(
-			'id'    => apply_filters( 'wc_product_subtitle_id_' . $this->display_id, 'product-subtitle-' . $post_id, $this->display_id, $post_id ),
-			'class' => apply_filters( 'wc_product_subtitle_class_' . $this->display_id, 'product-subtitle subtitle-' . $post_id, $this->display_id, $post_id ),
+			'id'    => esc_attr( apply_filters( 'wc_product_subtitle_id_' . $this->display_id, 'product-subtitle-' . $post_id, $this->display_id, $post_id ) ),
+			'class' => esc_attr( apply_filters( 'wc_product_subtitle_class_' . $this->display_id, 'product-subtitle subtitle-' . $post_id, $this->display_id, $post_id ) ),
 		);
 	}
 

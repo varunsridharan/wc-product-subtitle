@@ -45,7 +45,7 @@ class Email extends Display_Handler {
 
 		$subtitle = $option['before_subtitle'] . $this->render_subtitle( $item->get_product_id() ) . $option['after_subtitle'];
 		if ( $plain_text ) {
-			echo strip_tags( $subtitle );
+			echo wp_strip_all_tags( $subtitle );
 		} else {
 			echo $subtitle;
 		}
