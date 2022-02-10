@@ -85,16 +85,15 @@
 
 			<h3>Functions</h3>
 			<ul>
-				<li><a href="function-get_product_subtitle.html">get_product_subtitle</a></li>
-				<li><a href="function-the_product_subtitle.html">the_product_subtitle</a></li>
-				<li><a href="function-update_product_subtitle.html">update_product_subtitle</a></li>
 				<li><a href="function-wc_product_subtitle.html">wc_product_subtitle</a></li>
-				<li><a href="function-wc_product_subtitle_default_tags.html">wc_product_subtitle_default_tags</a></li>
 				<li><a href="function-wc_product_subtitle_init.html">wc_product_subtitle_init</a></li>
 				<li><a href="function-wc_product_subtitle_installer.html">wc_product_subtitle_installer</a></li>
-				<li><a href="function-wc_product_subtitle_tags.html">wc_product_subtitle_tags</a></li>
 				<li><a href="function-wc_ps_option.html">wc_ps_option</a></li>
-				<li><a href="function-wp_product_subtitle_placements.html">wp_product_subtitle_placements</a></li>
+				<li><a href="function-wcps_get_subtitle.html">wcps_get_subtitle</a></li>
+				<li><a href="function-wcps_subtitle_default_tags.html">wcps_subtitle_default_tags</a></li>
+				<li><a href="function-wcps_subtitle_placement_areas.html">wcps_subtitle_placement_areas</a></li>
+				<li><a href="function-wcps_subtitle_tags.html">wcps_subtitle_tags</a></li>
+				<li><a href="function-wcps_update_subtitle.html">wcps_update_subtitle</a></li>
 			</ul>
 		</div>
 	</div>
@@ -170,7 +169,7 @@
 </span><span id="41" class="l">            ) );
 </span><span id="42" class="l">            <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'element'</span>]  = wpo_field( <span class="php-quote">'select'</span>, <span class="php-quote">'element'</span>, __( <span class="php-quote">'Element Tag'</span>, <span class="php-quote">'wc-product-subtitle'</span> ), <span class="php-keyword1">array</span>(
 </span><span id="43" class="l">                <span class="php-quote">'style'</span>      =&gt; <span class="php-quote">'width:10%'</span>,
-</span><span id="44" class="l">                <span class="php-quote">'options'</span>    =&gt; wc_product_subtitle_tags(),
+</span><span id="44" class="l">                <span class="php-quote">'options'</span>    =&gt; wcps_subtitle_tags(),
 </span><span id="45" class="l">                <span class="php-quote">'desc_field'</span> =&gt; __( <span class="php-quote">'Which Type of html tag you need to have'</span>, <span class="php-quote">'wc-product-subtitle'</span> ),
 </span><span id="46" class="l">                <span class="php-quote">'select2'</span>    =&gt; <span class="php-keyword1">true</span>,
 </span><span id="47" class="l">            ) );
@@ -283,7 +282,7 @@
 </span><span id="154" class="l">
 </span><span id="155" class="l">            <span class="php-var">$fieldset</span> = <span class="php-var">$container</span>-&gt;set_group( <span class="php-quote">'order_view_page'</span> );
 </span><span id="156" class="l">            <span class="php-var">$fieldset</span>-&gt;add_field( <span class="php-keyword1">clone</span>( <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'position'</span>] ) )
-</span><span id="157" class="l">                -&gt;options( wp_product_subtitle_placements( <span class="php-quote">'order_view'</span> ) );
+</span><span id="157" class="l">                -&gt;options( wcps_subtitle_placement_areas( <span class="php-quote">'order_view'</span> ) );
 </span><span id="158" class="l">            <span class="php-var">$fieldset</span>-&gt;add_field( <span class="php-keyword1">clone</span>( <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'placement'</span>] ) );
 </span><span id="159" class="l">            <span class="php-var">$fieldset</span>-&gt;add_field( <span class="php-keyword1">clone</span>( <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'element'</span>] ) );
 </span><span id="160" class="l">
@@ -305,7 +304,7 @@
 </span><span id="176" class="l">
 </span><span id="177" class="l">            <span class="php-var">$fieldset</span> = <span class="php-var">$container</span>-&gt;set_group( <span class="php-quote">'shop_page'</span> );
 </span><span id="178" class="l">            <span class="php-var">$fieldset</span>-&gt;add_field( <span class="php-keyword1">clone</span>( <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'position'</span>] ) )
-</span><span id="179" class="l">                -&gt;options( wp_product_subtitle_placements( <span class="php-quote">'shop'</span> ) );
+</span><span id="179" class="l">                -&gt;options( wcps_subtitle_placement_areas( <span class="php-quote">'shop'</span> ) );
 </span><span id="180" class="l">            <span class="php-var">$fieldset</span>-&gt;add_field( <span class="php-keyword1">clone</span>( <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'placement'</span>] ) );
 </span><span id="181" class="l">            <span class="php-var">$fieldset</span>-&gt;add_field( <span class="php-keyword1">clone</span>( <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'element'</span>] ) );
 </span><span id="182" class="l">
@@ -326,7 +325,7 @@
 </span><span id="197" class="l">
 </span><span id="198" class="l">            <span class="php-var">$fieldset</span> = <span class="php-var">$container</span>-&gt;set_group( <span class="php-quote">'single_product'</span> );
 </span><span id="199" class="l">            <span class="php-var">$fieldset</span>-&gt;add_field( <span class="php-keyword1">clone</span>( <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'position'</span>] ) )
-</span><span id="200" class="l">                -&gt;options( wp_product_subtitle_placements( <span class="php-quote">'single'</span> ) );
+</span><span id="200" class="l">                -&gt;options( wcps_subtitle_placement_areas( <span class="php-quote">'single'</span> ) );
 </span><span id="201" class="l">            <span class="php-var">$fieldset</span>-&gt;add_field( <span class="php-keyword1">clone</span>( <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'placement'</span>] ) );
 </span><span id="202" class="l">            <span class="php-var">$fieldset</span>-&gt;add_field( <span class="php-keyword1">clone</span>( <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'element'</span>] ) );
 </span><span id="203" class="l">
@@ -350,7 +349,7 @@
 </span><span id="221" class="l">
 </span><span id="222" class="l">            <span class="php-var">$container</span>-&gt;subheading( <span class="php-var">$title</span> . <span class="php-quote">' '</span> . __( <span class="php-quote">'Page Subtitle Configuration'</span>, <span class="php-quote">'wc-product-subtitle'</span> ) );
 </span><span id="223" class="l">            <span class="php-var">$container</span>-&gt;add_field( <span class="php-keyword1">clone</span>( <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'position'</span>] ) )
-</span><span id="224" class="l">                -&gt;options( wp_product_subtitle_placements( <span class="php-quote">'cart'</span> ) );
+</span><span id="224" class="l">                -&gt;options( wcps_subtitle_placement_areas( <span class="php-quote">'cart'</span> ) );
 </span><span id="225" class="l">            <span class="php-var">$container</span>-&gt;add_field( <span class="php-keyword1">clone</span>( <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'placement'</span>] ) );
 </span><span id="226" class="l">            <span class="php-var">$container</span>-&gt;add_field( <span class="php-keyword1">clone</span>( <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'element'</span>] ) );
 </span><span id="227" class="l">
@@ -373,7 +372,7 @@
 </span><span id="244" class="l">            <span class="php-var">$container</span>-&gt;subheading( __( <span class="php-quote">'Mini Cart Configuration'</span>, <span class="php-quote">'wc-product-subtitle'</span> ) );
 </span><span id="245" class="l">            <span class="php-var">$fieldset</span> = <span class="php-var">$container</span>-&gt;set_group( <span class="php-quote">'mini_cart'</span> );
 </span><span id="246" class="l">            <span class="php-var">$fieldset</span>-&gt;add( <span class="php-keyword1">clone</span> <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'position'</span>] )
-</span><span id="247" class="l">                -&gt;options( wp_product_subtitle_placements( <span class="php-quote">'mini_cart'</span> ) );
+</span><span id="247" class="l">                -&gt;options( wcps_subtitle_placement_areas( <span class="php-quote">'mini_cart'</span> ) );
 </span><span id="248" class="l">
 </span><span id="249" class="l">            <span class="php-var">$fieldset</span>-&gt;add( <span class="php-keyword1">clone</span> <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'placement'</span>] );
 </span><span id="250" class="l">            <span class="php-var">$fieldset</span>-&gt;add( <span class="php-keyword1">clone</span> <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'element'</span>] );
@@ -399,7 +398,7 @@
 </span><span id="270" class="l">        <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> email( <span class="php-var">$container</span> ) {
 </span><span id="271" class="l">            <span class="php-var">$container</span>-&gt;subheading( __( <span class="php-quote">'Email Configuration'</span>, <span class="php-quote">'wc-product-subtitle'</span> ) );
 </span><span id="272" class="l">            <span class="php-var">$fieldset</span> = <span class="php-var">$container</span>-&gt;set_group( <span class="php-quote">'email'</span> );
-</span><span id="273" class="l">            <span class="php-var">$fieldset</span>-&gt;add( <span class="php-keyword1">clone</span> <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'position'</span>] )-&gt;options( wp_product_subtitle_placements( <span class="php-quote">'email'</span> ) );
+</span><span id="273" class="l">            <span class="php-var">$fieldset</span>-&gt;add( <span class="php-keyword1">clone</span> <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'position'</span>] )-&gt;options( wcps_subtitle_placement_areas( <span class="php-quote">'email'</span> ) );
 </span><span id="274" class="l">            <span class="php-var">$fieldset</span>-&gt;add( <span class="php-keyword1">clone</span> <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'placement'</span>] );
 </span><span id="275" class="l">            <span class="php-var">$fieldset</span>-&gt;add( <span class="php-keyword1">clone</span> <span class="php-var">$this</span>-&gt;template[<span class="php-quote">'element'</span>] );
 </span><span id="276" class="l">
@@ -435,6 +434,6 @@
 </div>
 </div>
 <script src="resources/combined.js?58699d70ee1015ed63e509c64f4dd9d3b29ddbbe"></script>
-<script src="elementlist.js?6177b0539c0155637ef0e5084ebe013d573ee083"></script>
+<script src="elementlist.js?e97b77be71257030a8c796f4afd4f2e22cfae185"></script>
 </body>
 </html>

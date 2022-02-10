@@ -85,16 +85,15 @@
 
 			<h3>Functions</h3>
 			<ul>
-				<li><a href="function-get_product_subtitle.html">get_product_subtitle</a></li>
-				<li><a href="function-the_product_subtitle.html">the_product_subtitle</a></li>
-				<li><a href="function-update_product_subtitle.html">update_product_subtitle</a></li>
 				<li><a href="function-wc_product_subtitle.html">wc_product_subtitle</a></li>
-				<li><a href="function-wc_product_subtitle_default_tags.html">wc_product_subtitle_default_tags</a></li>
 				<li><a href="function-wc_product_subtitle_init.html">wc_product_subtitle_init</a></li>
 				<li><a href="function-wc_product_subtitle_installer.html">wc_product_subtitle_installer</a></li>
-				<li><a href="function-wc_product_subtitle_tags.html">wc_product_subtitle_tags</a></li>
 				<li><a href="function-wc_ps_option.html">wc_ps_option</a></li>
-				<li><a href="function-wp_product_subtitle_placements.html">wp_product_subtitle_placements</a></li>
+				<li><a href="function-wcps_get_subtitle.html">wcps_get_subtitle</a></li>
+				<li><a href="function-wcps_subtitle_default_tags.html">wcps_subtitle_default_tags</a></li>
+				<li><a href="function-wcps_subtitle_placement_areas.html">wcps_subtitle_placement_areas</a></li>
+				<li><a href="function-wcps_subtitle_tags.html">wcps_subtitle_tags</a></li>
+				<li><a href="function-wcps_update_subtitle.html">wcps_update_subtitle</a></li>
 			</ul>
 		</div>
 	</div>
@@ -166,7 +165,7 @@
 </span><span id="37" class="l">            <span class="php-keyword1">return</span>;
 </span><span id="38" class="l">        }
 </span><span id="39" class="l">        <span class="php-keyword1">if</span> ( <span class="php-keyword1">isset</span>( <span class="php-var">$_POST</span>[<span class="php-quote">'product_subtitle'</span>] ) ) {
-</span><span id="40" class="l">            update_product_subtitle( <span class="php-var">$post_id</span>, wp_kses_post( <span class="php-var">$_POST</span>[<span class="php-quote">'product_subtitle'</span>] ) );
+</span><span id="40" class="l">            wcps_update_subtitle( <span class="php-var">$post_id</span>, wp_kses_post( <span class="php-var">$_POST</span>[<span class="php-quote">'product_subtitle'</span>] ) );
 </span><span id="41" class="l">        }
 </span><span id="42" class="l">    }
 </span><span id="43" class="l">
@@ -178,7 +177,7 @@
 </span><span id="49" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> add_subtitle_field( <span class="php-var">$post</span> ) {
 </span><span id="50" class="l">        <span class="php-keyword1">if</span> ( <span class="php-quote">'product'</span> === <span class="php-var">$post</span>-&gt;post_type ) {
 </span><span id="51" class="l">            <span class="php-keyword1">global</span> <span class="php-var">$post</span>;
-</span><span id="52" class="l">            <span class="php-var">$value</span> = get_product_subtitle( <span class="php-var">$post</span>-&gt;ID );
+</span><span id="52" class="l">            <span class="php-var">$value</span> = wcps_get_subtitle( <span class="php-var">$post</span>-&gt;ID );
 </span><span id="53" class="l">
 </span><span id="54" class="l">            <span class="php-keyword1">if</span> ( wc_ps_option( <span class="php-quote">'admin_wp_editor'</span> ) ) {
 </span><span id="55" class="l">                <span class="php-comment">/* @var \WPO\Fields\WP_Editor $field */</span>
@@ -230,6 +229,6 @@
 </div>
 </div>
 <script src="resources/combined.js?58699d70ee1015ed63e509c64f4dd9d3b29ddbbe"></script>
-<script src="elementlist.js?6177b0539c0155637ef0e5084ebe013d573ee083"></script>
+<script src="elementlist.js?e97b77be71257030a8c796f4afd4f2e22cfae185"></script>
 </body>
 </html>
