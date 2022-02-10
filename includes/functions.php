@@ -94,7 +94,7 @@ if ( ! function_exists( 'wcps_subtitle_tags' ) ) {
 	}
 }
 
-if ( ! function_exists( 'update_product_subttile' ) ) {
+if ( ! function_exists( 'wcps_update_subtitle' ) ) {
 	/**
 	 * Updates Post Meta In DB.
 	 *
@@ -103,7 +103,7 @@ if ( ! function_exists( 'update_product_subttile' ) ) {
 	 *
 	 * @return bool|int
 	 */
-	function update_product_subtitle( $post_id, $subtitle ) {
+	function wcps_update_subtitle( $post_id, $subtitle ) {
 		return update_post_meta( $post_id, 'wc_ps_subtitle', $subtitle );
 	}
 }

@@ -37,7 +37,7 @@ class Field extends Base {
 			return;
 		}
 		if ( isset( $_POST['product_subtitle'] ) ) {
-			update_product_subtitle( $post_id, wp_kses_post( $_POST['product_subtitle'] ) );
+			wcps_update_subtitle( $post_id, wp_kses_post( $_POST['product_subtitle'] ) );
 		}
 	}
 
