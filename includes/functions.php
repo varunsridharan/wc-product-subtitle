@@ -58,13 +58,13 @@ if ( ! function_exists( 'wcps_subtitle_placement_areas' ) ) {
 	}
 }
 
-if ( ! function_exists( 'wc_product_subtitle_default_tags' ) ) {
+if ( ! function_exists( 'wcps_subtitle_default_tags' ) ) {
 	/**
 	 * Returns Default Tags.
 	 *
 	 * @return array
 	 */
-	function wc_product_subtitle_default_tags() {
+	function wcps_subtitle_default_tags() {
 		return array(
 			'i'      => '&#x3C;i&#x3E;',
 			'p'      => '&#x3C;p&#x3E;',
@@ -90,7 +90,7 @@ if ( ! function_exists( 'wc_product_subtitle_tags' ) ) {
 	 * @return mixed|void
 	 */
 	function wc_product_subtitle_tags() {
-		return apply_filters( 'wc_product_subtitle_tags', wc_product_subtitle_default_tags() );
+		return apply_filters( 'wc_product_subtitle_tags', wcps_subtitle_default_tags() );
 	}
 }
 

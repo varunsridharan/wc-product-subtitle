@@ -41,7 +41,7 @@ class Tag_Handler {
 			$tag = 'div';
 		}
 
-		if ( in_array( $tag, array_keys( wc_product_subtitle_default_tags() ), true ) ) {
+		if ( in_array( $tag, array_keys( wcps_subtitle_default_tags() ), true ) ) {
 			$return = $this->get_subtitle_in_element( $tag, $title, $pid );
 		} else {
 			ob_start();
