@@ -16,7 +16,7 @@ if ( ! function_exists( 'wc_ps_option' ) ) {
 	}
 }
 
-if ( ! function_exists( 'wp_product_subtitle_placements' ) ) {
+if ( ! function_exists( 'wcps_subtitle_placement_areas' ) ) {
 	/**
 	 * Returns A List of places where subtitle's can be display based on the page.
 	 *
@@ -24,7 +24,7 @@ if ( ! function_exists( 'wp_product_subtitle_placements' ) ) {
 	 *
 	 * @return mixed|void
 	 */
-	function wp_product_subtitle_placements( $place = false ) {
+	function wcps_subtitle_placement_areas( $place = false ) {
 		$placements = array(
 			''      => __( 'Disable/ Use Shortcode', 'wc-product-subtitle' ),
 			'title' => __( 'Product Title', 'wc-product-subtitle' ),

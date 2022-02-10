@@ -154,7 +154,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 
 			$fieldset = $container->set_group( 'order_view_page' );
 			$fieldset->add_field( clone( $this->template['position'] ) )
-				->options( wp_product_subtitle_placements( 'order_view' ) );
+				->options( wcps_subtitle_placement_areas( 'order_view' ) );
 			$fieldset->add_field( clone( $this->template['placement'] ) );
 			$fieldset->add_field( clone( $this->template['element'] ) );
 
@@ -176,7 +176,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 
 			$fieldset = $container->set_group( 'shop_page' );
 			$fieldset->add_field( clone( $this->template['position'] ) )
-				->options( wp_product_subtitle_placements( 'shop' ) );
+				->options( wcps_subtitle_placement_areas( 'shop' ) );
 			$fieldset->add_field( clone( $this->template['placement'] ) );
 			$fieldset->add_field( clone( $this->template['element'] ) );
 
@@ -197,7 +197,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 
 			$fieldset = $container->set_group( 'single_product' );
 			$fieldset->add_field( clone( $this->template['position'] ) )
-				->options( wp_product_subtitle_placements( 'single' ) );
+				->options( wcps_subtitle_placement_areas( 'single' ) );
 			$fieldset->add_field( clone( $this->template['placement'] ) );
 			$fieldset->add_field( clone( $this->template['element'] ) );
 
@@ -221,7 +221,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 
 			$container->subheading( $title . ' ' . __( 'Page Subtitle Configuration', 'wc-product-subtitle' ) );
 			$container->add_field( clone( $this->template['position'] ) )
-				->options( wp_product_subtitle_placements( 'cart' ) );
+				->options( wcps_subtitle_placement_areas( 'cart' ) );
 			$container->add_field( clone( $this->template['placement'] ) );
 			$container->add_field( clone( $this->template['element'] ) );
 
@@ -244,7 +244,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$container->subheading( __( 'Mini Cart Configuration', 'wc-product-subtitle' ) );
 			$fieldset = $container->set_group( 'mini_cart' );
 			$fieldset->add( clone $this->template['position'] )
-				->options( wp_product_subtitle_placements( 'mini_cart' ) );
+				->options( wcps_subtitle_placement_areas( 'mini_cart' ) );
 
 			$fieldset->add( clone $this->template['placement'] );
 			$fieldset->add( clone $this->template['element'] );
@@ -270,7 +270,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 		protected function email( $container ) {
 			$container->subheading( __( 'Email Configuration', 'wc-product-subtitle' ) );
 			$fieldset = $container->set_group( 'email' );
-			$fieldset->add( clone $this->template['position'] )->options( wp_product_subtitle_placements( 'email' ) );
+			$fieldset->add( clone $this->template['position'] )->options( wcps_subtitle_placement_areas( 'email' ) );
 			$fieldset->add( clone $this->template['placement'] );
 			$fieldset->add( clone $this->template['element'] );
 
