@@ -39,7 +39,7 @@ final class Integrations extends Base {
 			$item['product'] = wc_get_product( $item['product']->get_parent_id() );
 		}
 
-		$subtitle = get_product_subtitle( $item['product']->get_id() );
+		$subtitle = wcps_get_subtitle( $item['product']->get_id() );
 		if ( ! empty( $subtitle ) ) {
 			echo '<div class="product-subtitle"><small>' . __( 'Subtitle :', 'wc-product-subtitle' ) . ' ' . $subtitle . '</small></div>';
 		}

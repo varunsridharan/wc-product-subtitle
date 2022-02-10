@@ -78,6 +78,6 @@ abstract class Display_Handler extends Base {
 		if ( empty( $pid ) && isset( $post->ID ) ) {
 			$pid = $post->ID;
 		}
-		return $this->tag_handler->print_subtitle( get_product_subtitle( $pid ), $this->get_element(), $pid );
+		return $this->tag_handler->print_subtitle( wcps_get_subtitle( $pid ), $this->get_element(), $pid );
 	}
 }

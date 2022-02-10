@@ -108,7 +108,7 @@ if ( ! function_exists( 'wcps_update_subtitle' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_product_subtitle' ) ) {
+if ( ! function_exists( 'wcps_get_subtitle' ) ) {
 	/**
 	 * Gets From DB.
 	 *
@@ -116,18 +116,7 @@ if ( ! function_exists( 'get_product_subtitle' ) ) {
 	 *
 	 * @return mixed
 	 */
-	function get_product_subtitle( $id ) {
+	function wcps_get_subtitle( $id ) {
 		return wp_kses( get_post_meta( $id, 'wc_ps_subtitle', true ), 'post' );
-	}
-}
-
-if ( ! function_exists( 'the_product_subtitle' ) ) {
-	/**
-	 * Echos Subtitle's
-	 *
-	 * @param $id
-	 */
-	function the_product_subtitle( $id ) {
-		echo get_product_subtitle( $id );
 	}
 }

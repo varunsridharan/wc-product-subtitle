@@ -49,7 +49,7 @@ class Field extends Base {
 	public function add_subtitle_field( $post ) {
 		if ( 'product' === $post->post_type ) {
 			global $post;
-			$value = get_product_subtitle( $post->ID );
+			$value = wcps_get_subtitle( $post->ID );
 
 			if ( wc_ps_option( 'admin_wp_editor' ) ) {
 				/* @var \WPO\Fields\WP_Editor $field */
