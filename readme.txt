@@ -6,7 +6,7 @@ Requires at least: 5.0
 Tested up to: 5.9
 WC requires at least: 3.0
 WC tested up to: 6.1.1
-Stable tag: 4.5.3
+Stable tag: 4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,6 +92,14 @@ The manual installation method involves downloading our plugin and uploading it 
  
 
 == Changelog ==
+= 4.6 =
+* Renamed `wp_product_subtitle_placements` to `wcps_subtitle_placement_areas`
+* Renamed `wc_product_subtitle_default_tags` to `wcps_subtitle_default_tags`
+* Renamed `wc_product_subtitle_tags` to `wcps_subtitle_tags`
+* Renamed `update_product_subttile` to `wcps_update_subtitle`
+* Renamed `get_product_subtitle` to `wcps_get_subtitle`
+* Removed `the_product_subtitle`
+
 = 4.5.3 =
 * Fixed All Security Issues Reported By WordPress.org Team
 * Tested : With Latest WP `5.9`
