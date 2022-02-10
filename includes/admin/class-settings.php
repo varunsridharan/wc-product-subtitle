@@ -41,7 +41,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			) );
 			$this->template['element']  = wpo_field( 'select', 'element', __( 'Element Tag', 'wc-product-subtitle' ), array(
 				'style'      => 'width:10%',
-				'options'    => wc_product_subtitle_tags(),
+				'options'    => wcps_subtitle_tags(),
 				'desc_field' => __( 'Which Type of html tag you need to have', 'wc-product-subtitle' ),
 				'select2'    => true,
 			) );
