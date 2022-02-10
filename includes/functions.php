@@ -83,13 +83,13 @@ if ( ! function_exists( 'wcps_subtitle_default_tags' ) ) {
 	}
 }
 
-if ( ! function_exists( 'wc_product_subtitle_tags' ) ) {
+if ( ! function_exists( 'wcps_subtitle_tags' ) ) {
 	/**
 	 * Returns Avaiable Tag Options.
 	 *
 	 * @return mixed|void
 	 */
-	function wc_product_subtitle_tags() {
+	function wcps_subtitle_tags() {
 		return apply_filters( 'wc_product_subtitle_tags', wcps_subtitle_default_tags() );
 	}
 }
