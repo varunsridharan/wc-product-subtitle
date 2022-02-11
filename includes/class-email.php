@@ -45,9 +45,9 @@ class Email extends Display_Handler {
 
 		$subtitle = $option['before_subtitle'] . $this->render_subtitle( $item->get_product_id() ) . $option['after_subtitle'];
 		if ( $plain_text ) {
-			echo wp_strip_all_tags( $subtitle );
+			echo esc_html( $subtitle );
 		} else {
-			echo $subtitle;
+			echo wp_kses_post( $subtitle );
 		}
 	}
 }

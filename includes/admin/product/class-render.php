@@ -43,10 +43,10 @@ class Render extends Base {
 	public function render_subtitle( $post_id, $column ) {
 		switch ( $column ) {
 			case 'subtitle':
-				echo wcps_get_subtitle( $post_id );
+				echo wp_kses_post( wcps_get_subtitle( $post_id ) );
 				break;
 			case 'name':
-				echo '<br/><span style="margin-top:4px;display: inline-block;"><i>' . wcps_get_subtitle( $post_id ) . '</i></span>';
+				echo '<br/><span style="margin-top:4px;display: inline-block;"><i>' . wp_kses_post( wcps_get_subtitle( $post_id ) ) . '</i></span>';
 				break;
 		}
 	}

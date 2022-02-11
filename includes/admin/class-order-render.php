@@ -32,7 +32,7 @@ class Order_Render extends Base {
 		$product_id = WC_Compatibility::get_product_id( $product );
 		if ( ! empty( $product_id ) ) {
 			$title    = __( 'Subtitle:', 'wc-product-subtitle' );
-			$subtitle = wcps_get_subtitle( $product_id );
+			$subtitle = wp_kses_post( wcps_get_subtitle( $product_id ) );
 			if ( ! empty( $subtitle ) ) {
 				echo "<div class=\"wc-product-subtitle\" style='color:#888; font-style: italic;font-size: .92em !important;'> <strong>${title}</strong> ${subtitle} </div>";
 			}

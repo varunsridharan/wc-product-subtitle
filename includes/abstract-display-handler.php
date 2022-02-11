@@ -63,7 +63,7 @@ abstract class Display_Handler extends Base {
 	 * @param string $pid
 	 */
 	public function the_subtitle( $pid = '' ) {
-		echo $this->render_subtitle( $pid );
+		echo wp_kses_post( $this->render_subtitle( $pid ) );
 	}
 
 	/**

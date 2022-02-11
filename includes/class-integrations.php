@@ -41,7 +41,7 @@ final class Integrations extends Base {
 
 		$subtitle = wcps_get_subtitle( $item['product']->get_id() );
 		if ( ! empty( $subtitle ) ) {
-			echo '<div class="product-subtitle"><small>' . __( 'Subtitle :', 'wc-product-subtitle' ) . ' ' . $subtitle . '</small></div>';
+			echo '<div class="product-subtitle"><small>' . __( 'Subtitle :', 'wc-product-subtitle' ) . ' ' . wp_kses_post( $subtitle ) . '</small></div>';
 		}
 	}
 }
