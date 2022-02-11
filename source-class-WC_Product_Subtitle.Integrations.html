@@ -169,7 +169,7 @@
 </span><span id="41" class="l">
 </span><span id="42" class="l">        <span class="php-var">$subtitle</span> = wcps_get_subtitle( <span class="php-var">$item</span>[<span class="php-quote">'product'</span>]-&gt;get_id() );
 </span><span id="43" class="l">        <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">empty</span>( <span class="php-var">$subtitle</span> ) ) {
-</span><span id="44" class="l">            <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;div class=&quot;product-subtitle&quot;&gt;&lt;small&gt;'</span> . __( <span class="php-quote">'Subtitle :'</span>, <span class="php-quote">'wc-product-subtitle'</span> ) . <span class="php-quote">' '</span> . <span class="php-var">$subtitle</span> . <span class="php-quote">'&lt;/small&gt;&lt;/div&gt;'</span>;
+</span><span id="44" class="l">            <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;div class=&quot;product-subtitle&quot;&gt;&lt;small&gt;'</span> . __( <span class="php-quote">'Subtitle :'</span>, <span class="php-quote">'wc-product-subtitle'</span> ) . <span class="php-quote">' '</span> . wp_kses_post( <span class="php-var">$subtitle</span> ) . <span class="php-quote">'&lt;/small&gt;&lt;/div&gt;'</span>;
 </span><span id="45" class="l">        }
 </span><span id="46" class="l">    }
 </span><span id="47" class="l">}

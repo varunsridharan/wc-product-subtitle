@@ -160,7 +160,7 @@
 </span><span id="32" class="l">        <span class="php-var">$product_id</span> = WC_Compatibility::get_product_id( <span class="php-var">$product</span> );
 </span><span id="33" class="l">        <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">empty</span>( <span class="php-var">$product_id</span> ) ) {
 </span><span id="34" class="l">            <span class="php-var">$title</span>    = __( <span class="php-quote">'Subtitle:'</span>, <span class="php-quote">'wc-product-subtitle'</span> );
-</span><span id="35" class="l">            <span class="php-var">$subtitle</span> = wcps_get_subtitle( <span class="php-var">$product_id</span> );
+</span><span id="35" class="l">            <span class="php-var">$subtitle</span> = wp_kses_post( wcps_get_subtitle( <span class="php-var">$product_id</span> ) );
 </span><span id="36" class="l">            <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">empty</span>( <span class="php-var">$subtitle</span> ) ) {
 </span><span id="37" class="l">                <span class="php-keyword1">echo</span> <span class="php-quote">&quot;&lt;div class=\&quot;wc-product-subtitle\&quot; style='color:#888; font-style: italic;font-size: .92em !important;'&gt; &lt;strong&gt;</span><span class="php-var">$</span><span class="php-quote">{title}&lt;/strong&gt; </span><span class="php-var">$</span><span class="php-quote">{subtitle} &lt;/div&gt;&quot;</span>;
 </span><span id="38" class="l">            }
