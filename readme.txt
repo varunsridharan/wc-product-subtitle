@@ -6,7 +6,7 @@ Requires at least: 5.0
 Tested up to: 5.9
 WC requires at least: 3.0
 WC tested up to: 6.1.1
-Stable tag: 4.6
+Stable tag: 4.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,6 +92,9 @@ The manual installation method involves downloading our plugin and uploading it 
  
 
 == Changelog ==
+= 4.6.1 =
+* Improved Content Escaping
+
 = 4.6 =
 * Renamed `wp_product_subtitle_placements` to `wcps_subtitle_placement_areas`
 * Renamed `wc_product_subtitle_default_tags` to `wcps_subtitle_default_tags`
