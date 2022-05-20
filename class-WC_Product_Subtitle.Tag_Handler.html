@@ -129,7 +129,7 @@
 
 				<b>Author:</b>
 				Varun Sridharan <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x76;&#97;&#114;&#x75;&#110;&#115;&#x72;&#105;&#x64;&#x68;&#97;&#x72;&#x61;&#110;&#x32;3&#64;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#109;">&#x76;&#97;&#114;&#x75;&#110;&#115;&#x72;&#105;&#x64;&#x68;&#97;&#x72;&#x61;&#110;&#x32;3&#64;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#109;</a><br>
-			<b>Located at</b> <a href="source-class-WC_Product_Subtitle.Tag_Handler.html#7-99" title="Go to source code">includes/class-tag-handler.php</a>
+			<b>Located at</b> <a href="source-class-WC_Product_Subtitle.Tag_Handler.html#7-113" title="Go to source code">includes/class-tag-handler.php</a>
 		<br>
 	</div>
 
@@ -184,7 +184,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_subtitle">#</a>
-		<code><a href="source-class-WC_Product_Subtitle.Tag_Handler.html#28-54" title="Go to source code">get_subtitle</a>( <span> <var>$title</var></span>, <span> <var>$tag</var></span>, <span> <var>$pid</var></span> )</code>
+		<code><a href="source-class-WC_Product_Subtitle.Tag_Handler.html#28-54" title="Go to source code">get_subtitle</a>( <span> <var>$title</var></span>, <span> <var>$tag</var></span>, <span> <var>$product_id</var></span>, <span> <var>$is_linkback</var></span> )</code>
 
 		<div class="description short">
 			<p>Fetches Subtitle.</p>
@@ -200,7 +200,9 @@
 					<dd></dd>
 					<dt><var>$tag</var></dt>
 					<dd></dd>
-					<dt><var>$pid</var></dt>
+					<dt><var>$product_id</var></dt>
+					<dd></dd>
+					<dt><var>$is_linkback</var></dt>
 					<dd></dd>
 				</dl></div>
 
@@ -227,7 +229,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_print_subtitle">#</a>
-		<code><a href="source-class-WC_Product_Subtitle.Tag_Handler.html#56-67" title="Go to source code">print_subtitle</a>( <span> <var>$title</var></span>, <span> <var>$tag</var></span>, <span> <var>$pid</var></span> )</code>
+		<code><a href="source-class-WC_Product_Subtitle.Tag_Handler.html#56-68" title="Go to source code">print_subtitle</a>( <span>string <var>$title</var></span>, <span>mixed <var>$tag</var></span>, <span>integer <var>$product_id</var></span>, <span>boolean <var>$is_linkback</var></span> )</code>
 
 		<div class="description short">
 			<p>Echo The Subtitle.</p>
@@ -243,7 +245,9 @@
 					<dd></dd>
 					<dt><var>$tag</var></dt>
 					<dd></dd>
-					<dt><var>$pid</var></dt>
+					<dt><var>$product_id</var></dt>
+					<dd></dd>
+					<dt><var>$is_linkback</var></dt>
 					<dd></dd>
 				</dl></div>
 
@@ -270,7 +274,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_element_defaults">#</a>
-		<code><a href="source-class-WC_Product_Subtitle.Tag_Handler.html#69-81" title="Go to source code">get_element_defaults</a>( <span> <var>$post_id</var></span> )</code>
+		<code><a href="source-class-WC_Product_Subtitle.Tag_Handler.html#70-82" title="Go to source code">get_element_defaults</a>( <span> <var>$post_id</var></span> )</code>
 
 		<div class="description short">
 			<p>Returns Subtitle Element's Default Attributes.</p>
@@ -309,7 +313,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_subtitle_in_element">#</a>
-		<code><a href="source-class-WC_Product_Subtitle.Tag_Handler.html#83-98" title="Go to source code">get_subtitle_in_element</a>( <span>string <var>$ntag</var> = <span class="php-quote">''</span></span>, <span>string <var>$value</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$id</var> = <span class="php-keyword1">false</span> </span> )</code>
+		<code><a href="source-class-WC_Product_Subtitle.Tag_Handler.html#84-112" title="Go to source code">get_subtitle_in_element</a>( <span>string <var>$ntag</var> = <span class="php-quote">''</span></span>, <span>string <var>$value</var> = <span class="php-quote">''</span></span>, <span>boolean <var>$id</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$linkback</var> = <span class="php-keyword1">false</span> </span> )</code>
 
 		<div class="description short">
 			<p>Generates Element &amp; Inserts Subtitle.</p>
@@ -326,6 +330,8 @@
 					<dt><var>$value</var></dt>
 					<dd></dd>
 					<dt><var>$id</var></dt>
+					<dd></dd>
+					<dt><var>$linkback</var></dt>
 					<dd></dd>
 				</dl></div>
 
