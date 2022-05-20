@@ -49,6 +49,15 @@ abstract class Display_Handler extends Base {
 	}
 
 	/**
+	 * Checks if subtitle should be placed before.
+	 *
+	 * @return bool|mixed
+	 */
+	public function is_product_linked() {
+		return $this->option( 'product_link', false );
+	}
+
+	/**
 	 * Fetches & Returns Subtitle Position Element.
 	 *
 	 * @return bool|mixed
@@ -78,6 +87,6 @@ abstract class Display_Handler extends Base {
 		if ( empty( $pid ) && isset( $post->ID ) ) {
 			$pid = $post->ID;
 		}
-		return $this->tag_handler->print_subtitle( wcps_get_subtitle( $pid ), $this->get_element(), $pid );
+		return $this->tag_handler->print_subtitle( wcps_get_subtitle( $pid ), $this->get_element(), $pid, $this->is_product_linked() );
 	}
 }
