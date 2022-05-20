@@ -3,10 +3,10 @@
 **Tags:** WooCommerce, product, product title,product subtitle, wc product, product subtitle for wc, subtitle, post subtitle, extra title,wc extra title, wc product name, product code, product, product title,product subtitle, WooCommerce product, subtitle, post subtitle, extra title, WooCommerce product name, product code, WooCommerce extra title  
 **Donate link:** https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9L76L92SD8YAQ  
 **Requires at least:** 5.0  
-**Tested up to:** 5.9  
+**Tested up to:** 5.9.3  
 **WC requires at least:** 3.0  
-**WC tested up to:** 6.1.1  
-**Stable tag:** 4.6.1  
+**WC tested up to:** 6.5.1  
+**Stable tag:** 4.6.2  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -134,6 +134,12 @@ The manual installation method involves downloading our plugin and uploading it 
 
 
 ## Changelog 
+
+### 4.6.2 
+* Added Option to enable product link in subtitle
+* Tested : With Latest WP `5.9.3`
+* Tested : With Latest WC `6.5.1`
+
 
 ### 4.6.1 
 * Improved Content Escaping
