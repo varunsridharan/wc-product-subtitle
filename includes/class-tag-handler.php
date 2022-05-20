@@ -34,18 +34,18 @@ class Tag_Handler {
 	 *
 	 * @return false|string
 	 */
-	public function get_subtitle( $title, $tag, $pid ) {
-		$defaults = $this->get_element_defaults( $pid );
+	public function get_subtitle( $title, $tag, $product_id, $is_linkback ) {
+		$defaults = $this->get_element_defaults( $product_id );
 
 		if ( wc_ps_option( 'admin_wp_editor' ) && 'p' === $tag ) {
 			$tag = 'div';
 		}
 
 		if ( in_array( $tag, array_keys( wcps_subtitle_default_tags() ), true ) ) {
-			$return = $this->get_subtitle_in_element( $tag, $title, $pid );
+			$return = $this->get_subtitle_in_element( $tag, $title, $product_id, $is_linkback );
 		} else {
 			ob_start();
-			do_action( 'wc_ps_subtitle_' . $tag, $title, $tag, $pid, $defaults );
+			do_action( 'wc_ps_subtitle_' . $tag, $title, $tag, $product_id, $is_linkback, $defaults );
 			$return = ob_get_clean();
 			ob_flush();
 		}
@@ -56,14 +56,15 @@ class Tag_Handler {
 	/**
 	 * Echo The Subtitle.
 	 *
-	 * @param $title
-	 * @param $tag
-	 * @param $pid
+	 * @param string $title
+	 * @param mixed  $tag
+	 * @param int    $product_id
+	 * @param bool   $is_linkback
 	 *
 	 * @return false|string
 	 */
-	public function print_subtitle( $title, $tag, $pid ) {
-		return $this->get_subtitle( $title, $tag, $pid );
+	public function print_subtitle( $title, $tag, $product_id, $is_linkback ) {
+		return $this->get_subtitle( $title, $tag, $product_id, $is_linkback );
 	}
 
 	/**
@@ -86,14 +87,27 @@ class Tag_Handler {
 	 * @param string $ntag
 	 * @param string $value
 	 * @param bool   $id
+	 * @param bool   $linkback
 	 *
 	 * @return string
 	 */
-	public function get_subtitle_in_element( $ntag = '', $value = '', $id = false ) {
+	public function get_subtitle_in_element( $ntag = '', $value = '', $id = false, $linkback = false ) {
 		if ( empty( $value ) ) {
 			return '';
 		}
-		$arg = $this->get_element_defaults( $id );
-		return '<' . $ntag . ' id="' . $arg['id'] . '" class="' . $arg['class'] . '" >' . $value . '</' . $ntag . '>';
+		$arg    = $this->get_element_defaults( $id );
+		$return = '<' . $ntag . ' id="' . $arg['id'] . '" class="' . $arg['class'] . '" >' . $value . '</' . $ntag . '>';
+
+		if ( wponion_is_bool_val( $linkback ) ) {
+			$permalink = get_permalink( $id );
+			$title     = get_the_title( $id );
+			$attr      = wponion_array_to_html_attributes( apply_filters( 'wc_product_subtitle_link_attributes', array(
+				'href'  => esc_attr( $permalink ),
+				'title' => esc_attr( $title ),
+				'class' => 'product-subtitle-link product-' . $id . '-subtitle-link',
+			) ) );
+			$return    = '<a ' . $attr . '>' . $return . '</a> ';
+		}
+		return $return;
 	}
 }

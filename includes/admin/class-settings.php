@@ -34,16 +34,24 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 				'desc_field'   => sprintf( __( 'If %1$sBefore%2$s Selected Then Title Will Be Displayed Before The Selected Position', 'wc-product-subtitle' ), '<code>', '</code>' ),
 			) );
 			$this->template['placement']->dependency( 'position', 'not-empty' );
-			$this->template['position'] = wpo_field( 'select', 'position', __( 'Position', 'wc-product-subtitle' ), array(
+			$this->template['position']     = wpo_field( 'select', 'position', __( 'Position', 'wc-product-subtitle' ), array(
 				'style'      => 'width:15%',
 				'desc_field' => __( 'Where to show the subtitle', 'wc-product-subtitle' ),
 				'select2'    => true,
 			) );
-			$this->template['element']  = wpo_field( 'select', 'element', __( 'Element Tag', 'wc-product-subtitle' ), array(
+			$this->template['element']      = wpo_field( 'select', 'element', __( 'Element Tag', 'wc-product-subtitle' ), array(
 				'style'      => 'width:10%',
 				'options'    => wcps_subtitle_tags(),
 				'desc_field' => __( 'Which Type of html tag you need to have', 'wc-product-subtitle' ),
 				'select2'    => true,
+			) );
+			$this->template['product_link'] = wpo_field( 'switcher', 'product_link', __( 'Link To Product', 'wc-product-subtitle' ), array(
+				'switch_style' => 'style-11',
+				'switch_width' => '5em',
+				'on'           => __( 'Yes', 'wc-product-subtitle' ),
+				'off'          => __( 'No', 'wc-product-subtitle' ),
+				// translators: Added Code Tag
+				'desc_field'   => __( 'Enabling this feature will add product\'s to the subtitle', 'wc-product-subtitle' ),
 			) );
 		}
 
@@ -156,6 +164,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$fieldset->add_field( clone( $this->template['position'] ) )
 				->options( wcps_subtitle_placement_areas( 'order_view' ) );
 			$fieldset->add_field( clone( $this->template['placement'] ) );
+			$fieldset->add_field( clone( $this->template['product_link'] ) );
 			$fieldset->add_field( clone( $this->template['element'] ) );
 
 			$container->subheading( __( 'Frequently Asked Questions', 'wc-product-subtitle' ) );
@@ -178,6 +187,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$fieldset->add_field( clone( $this->template['position'] ) )
 				->options( wcps_subtitle_placement_areas( 'shop' ) );
 			$fieldset->add_field( clone( $this->template['placement'] ) );
+			$fieldset->add_field( clone( $this->template['product_link'] ) );
 			$fieldset->add_field( clone( $this->template['element'] ) );
 
 			$container->subheading( __( 'Frequently Asked Questions', 'wc-product-subtitle' ) );
@@ -199,6 +209,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$fieldset->add_field( clone( $this->template['position'] ) )
 				->options( wcps_subtitle_placement_areas( 'single' ) );
 			$fieldset->add_field( clone( $this->template['placement'] ) );
+			$fieldset->add_field( clone( $this->template['product_link'] ) );
 			$fieldset->add_field( clone( $this->template['element'] ) );
 
 			$container->subheading( __( 'Frequently Asked Questions', 'wc-product-subtitle' ) );
@@ -223,6 +234,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$container->add_field( clone( $this->template['position'] ) )
 				->options( wcps_subtitle_placement_areas( 'cart' ) );
 			$container->add_field( clone( $this->template['placement'] ) );
+			$container->add_field( clone( $this->template['product_link'] ) );
 			$container->add_field( clone( $this->template['element'] ) );
 
 			$container->subheading( __( 'Frequently Asked Questions', 'wc-product-subtitle' ) );
@@ -247,6 +259,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 				->options( wcps_subtitle_placement_areas( 'mini_cart' ) );
 
 			$fieldset->add( clone $this->template['placement'] );
+			$fieldset->add( clone( $this->template['product_link'] ) );
 			$fieldset->add( clone $this->template['element'] );
 		}
 
@@ -272,6 +285,7 @@ if ( ! class_exists( '\WC_Product_Subtitle\Admin\Settings' ) ) {
 			$fieldset = $container->set_group( 'email' );
 			$fieldset->add( clone $this->template['position'] )->options( wcps_subtitle_placement_areas( 'email' ) );
 			$fieldset->add( clone $this->template['placement'] );
+			$fieldset->add( clone( $this->template['product_link'] ) );
 			$fieldset->add( clone $this->template['element'] );
 
 			$before = wpo_field( 'text', 'before_subtitle', __( 'Before Subtitle', 'wc-product-subtitle' ) )
